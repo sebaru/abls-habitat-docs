@@ -1,6 +1,7 @@
 # Présentation de la programmation D.L.S
 
-Les modules d'intelligence sont nommés Module D.L.S. Ils permettent, via un langage de programmation issu des automates, de définir quel doit etre l'état de sortie d'un objet en fonction d'un ensemble d'états d'entrées.
+Les modules portant l'intelligence sont nommés ***Module D.L.S***.
+Ils permettent, via un langage de programmation inspirés des automates, de définir quel doit être l'état de sortie d'un objet en fonction d'un ensemble d'états d'entrés.
 
 Dans l'interface web, vous pouvez lister et éditer ces modules D.L.S en utilisant le menu **Configuration->Modules D.L.S**.
 
@@ -23,6 +24,18 @@ Deux bits de deux modules différents peuvent porter le même acronyme, dans la 
 
 Par construction, dans un code source D.L.S, si un bit interne ne spécifie pas son tech_id, celui du module D.L.S d'appartenance est utilisé.
 
+---
+## Architecture d'un module D.L.S
+
+Un module D.L.S présentera plusieurs zones de code :
+
+* la zone de définition des [**Acronymes**](dls_acronymes.md)
+* la zone de définition des [**Liens**](dls_link.md)
+* la zone de description du fonctionnement portant la [**logique**](dls_logique.md) et les [**calculs**](dls_calcul.md)
+
+---
+## Les classes de zone mémoire
+
 Les différentes classes utilisées sont les suivantes:
 
 | Classe    | Représentation 	|	Exemple |	Description |
@@ -42,19 +55,9 @@ Les différentes classes utilisées sont les suivantes:
 | [_MSG](dls_messages.md)     	| Messages 	        | EDF:PRESENCE_TENSION   	  | Les messages peremttent de notifier les utilisateurs. Ils sont diffusés dans l'interface,<br>par SMS ou par messagerie instantanée ou par mail.
 | [_I](dls_visuels.md)        	| Visuels  	        | ENTREE:PORTE           	  | Les visuels représentent des images associés aux objets, sous différentes formes et couleurs.
 
----
-## Grammaire D.L.S
+##Les commentaires
 
-Un module D.L.S présentera deux zones distinctes :
-
-* la zone de description des [**ALIAS**](dls_alias.md)
-* la zone de description des [**Liens**](dls_link.md)
-* la zone de description du fonctionnement [**logique**](dls_logique.md)
-* la zone de description des [**calculs**](dls_calcul.md)
-
-###Les commentaires
-
-Dans tout le code D.L.S, il est possible d'intégrer des commentaires. Utiles pour augmenter le niveau de lisibilité du code, ils permettent
+Dans tout code D.L.S, il est possible d'intégrer des commentaires. Utiles pour augmenter le niveau de lisibilité du code, ils permettent
 aussi d'accélérer la compréhension du mode de fonctionnement.
 
 Un commentaire commence par la chaine « /\* » et se finit par la chaine « \*/ »
@@ -62,25 +65,22 @@ Exemple de syntaxe:
 
      - a . b → c;                /* Ceci est un commentaire */
 
-##Exemple de module D.L.S simple
+##Exemple
 
-    /* Zone d'Alias */
+    /* Zone de définition des acronymes */
     #define POS_CAPTEUR  <-> _E(libelle="Position du capteur d'ouverture");
     #define MON_COMPTEUR <-> _CI(libelle="Nombre d'ouvertures de la porte");
 
-    /* Zone de liens */
+    /* Zone de définition des liens */
     #link EDF:VISUEL_ECLAIR; /* Lien vers le visuels de l'éclair du module D.L.S EDF. Celui-ci apparaitra sur la page syntoptique de ce module */
 
     /* Zone de logique et de calcul */
     - POS_CAPTEUR -> MON_COMPTEUR; /* Si la porte est ouverte, on augmente de 1 la valeur de compteur */
 
-
-
-
-
-
 ---
-## Bits locaux à chaque module
+## Bits locaux
+
+Par construction, certains bits internes sont créés automatiquement. Ces bits sont présentés ci dessous.
 
 | Nom du bit 	| Classe  | 	Positionné par |	Défaut 	| Description
 |:------------|:--------|:----------------|:-------:|:-----------
