@@ -14,9 +14,17 @@ N'hésitez pas à prendre contact avec nous !
 
 ##Nous aider ou faire un don
 
-Pour nous aider, vous pouvez [faire un don](https://www.paypal.com/paypalme/ablshabitat) ou bien nous proposer vos services.
+Nous oeuvrons sur ces outils depuis de nombreuses années, mais sur notre temps libre. C'est une passion, clairement, mais la vie
+est faites de priorité et de choix.
+
+!!! tip
+    Pour nous aider, vous pouvez [faire un don](https://www.paypal.com/paypalme/ablshabitat) ou bien nous proposer vos services.
+
 Nous recherchons par exemple:
 
 * des infographistes pour compléter les visuels disponibles
 * des developpeurs web (javascript)
 * toutes bonnes volontés pour nous aider dans ce périple de plus de 20 ans maintenant !
+
+En attendant, nous vous souhaitons une bonne journée !
+L'équipe Abls-Habitat.

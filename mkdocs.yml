@@ -17,6 +17,15 @@ nav:
    - Guide de démarrage: guide_demarrage.md
  - Guide de l'utilisateur:
    - Typologie des Utilisateurs: users.md
+ - Les connecteurs:
+   - I/O Wago modbus: io_modbus.md
+   - Audio output: io_audio.md
+   - Instant Messaging: io_imsgs.md
+   - SMS Short Message System: io_smsg.md
+   - E.D.F Teleinfo: io_teleinfoedf.md
+   - UPS Uninterruptible Power Supply: io_ups.md
+   - DMX Projecteurs: io_dmx.md
+   - Benq Projecteurs: io_projo.md
  - Programmation D.L.S:
    - Le concept: dls.md
    - Les acronymes: dls_acronymes.md
@@ -35,3 +44,6 @@ nav:
 theme:
  name: readthedocs
  locale: fr
+
+markdown_extensions:
+  - admonition

@@ -31,7 +31,7 @@ Un module D.L.S présentera plusieurs zones de code :
 
 * la zone de définition des [**Acronymes**](dls_acronymes.md)
 * la zone de définition des [**Liens**](dls_link.md)
-* la zone de description du fonctionnement portant la [**logique**](dls_logique.md) et les [**calculs**](dls_calcul.md)
+* la zone de description du fonctionnement portant la [**logique**](dls_logique.md) et les [**calculs**](dls_calculs.md)
 
 ---
 ## Les classes de zone mémoire
