@@ -12,8 +12,12 @@ Elle commence par un tiret « - », suivi d'une **EXPRESSION**, suivi par une fl
 ---
 ##Lier une expression à une action
 
-Une **EXPRESSION** est un ensemble d'unités [Booléennes](#les-unites-boolennes) ou [Arithmétiques](#les-unites-arithmetique)
+Une **EXPRESSION** est un ensemble d'unités [`Booléennes`](#les-unites-boolennes) ou [`Arithmétiques`](#les-unites-arithmetique)
 liées entre elles par des [opérateurs de base](#operateurs-de-base).
+
+!!! warning
+    Les operateurs ne peuvent être appliqués a des **EXPRESSION** de types différents. Par exemple, il n'est pas possible
+    d'ajouter un `booléen` à une valeur `arithmétique`.
 
 La « LISTE_ACTIONS » est une liste d'une ou plusieurs [actions](#actions), séparées par des virgules.
 
@@ -22,9 +26,9 @@ Voici un exemple de syntaxe :
     - PORTE:OUVERTE . ( /VERROU + TEMPO_BIPE ) → VISUEL_PORTE(mode="ouvert,couleur="red"); /* Un exemple */
 
 ---
-## Les unités booléennes
+## Les unités `booléennes`
 
-Les unités booléennes sont les suivantes:
+Les unités `booléennes` sont les suivantes:
 
 | Classe    | Représentation 	|	Exemple |	Description |
 |:---------:|:----------------|:--------|:----------- |
@@ -40,9 +44,9 @@ Les unités booléennes sont les suivantes:
 
 
 ---
-## Les unités arithmétiques
+## Les unités `arithmétiques`
 
-Les unités arithmétiques sont les suivantes:
+Les unités `arithmétiques` sont les suivantes:
 
 | Classe    | Représentation 	|	Exemple |	Description |
 |:---------:|:----------------|:--------|:----------- |
@@ -54,12 +58,13 @@ Les unités arithmétiques sont les suivantes:
 | | nombre a virgule | 22,3 | représente le nombre décimal 22,3 |
 | | nombre a virgule | -1.2 | représente le nombre décimal -1.2 |
 
+---
 ## Opérateurs de base pour lier les unités
 
 ###Le « . »
 
-Dans une **EXPRESSION**, le « . » permet d'opérer la fonction logique ET entre deux sous-expressions de type booléennes.
-Le résultat associé sera booléen lui aussi.
+Dans une **EXPRESSION**, le « . » permet d'opérer la fonction logique ET entre deux sous-expressions de type `booléennes`.
+Le résultat associé sera `booléen` lui aussi.
 
 « a . b est vrai » si et seulement si « a est vrai » et « b est vrai ».
 
@@ -67,38 +72,43 @@ Exemple de syntaxe :
 
     - a . b → c;                /* Si a et b sont vrais alors nous positionnons c */
 
-Le ET n'a pas de sens dans une « LISTE_ACTIONS ».
+!!! warning
+    Le ET n'a pas de sens dans une « LISTE_ACTIONS ».
 
 ### Le « + »
 
 Dans une **EXPRESSION**, le « + » permet d'opérer deux fonctions:
 
-* la fonction logique OU entre deux sous-expressions de type booléennes. Dans ce cas le résultat sera booléen.
-* la fonction mathématique d'addition entre deux sous-expressions de type arithmétique. Dans ce cas le résultat sera arithmétique.
+* la fonction logique OU entre deux sous-expressions de type `booléennes`. Dans ce cas le résultat sera `booléen`.
 
-    - a + b → c;              /* Si a, ou b, est vrai alors nous positionnons c */
+* la fonction mathématique d'addition entre deux sous-expressions de type `arithmétique`. Dans ce cas le résultat sera `arithmétique`.
+
+Exemple de syntaxe :
+
     - 4.0 + 6.0 → c;          /* c aura la valeur de 10.0 (4+6) */
+    - a + b → c;              /* Si a, ou b, est vrai alors nous positionnons c */
 
-Le OU n'a pas de sens dans une « LISTE_ACTIONS ».
+!!! warning
+    Le OU n'a pas de sens dans une « LISTE_ACTIONS ».
 
 ### Le « - »
 
-Dans une **EXPRESSION**, le « - » permet d'opérer la fonction mathématique de soustraction entre deux sous-expression de type arithmétiques.
-Dans ce cas le résultat sera également arithmétique.
+Dans une **EXPRESSION**, le « - » permet d'opérer la fonction mathématique de soustraction entre deux sous-expression de type `arithmétiques`.
+Dans ce cas le résultat sera également `arithmétique`.
 
-    - a + b → c;              /* Si a, ou b, est vrai alors nous positionnons c */
-    - 4.0 + 6.0 → c;          /* c aura la valeur de 10.0 (4+6) */
+    - a - b → c;              /* c prendra la valeur de a - b */
 
-Le « - » n'a pas de sens dans une « LISTE_ACTIONS ».
+!!! warning
+    Le « - » n'a pas de sens dans une « LISTE_ACTIONS ».
 
 ### Le « / » : complément et division
 
-Dans une **EXPRESSION** booléenne ou une « LISTE_ACTIONS », le complément « / » permet d'opérer la fonction logique NON sur l'expression booléenne suivante.
-Dans ce cas, le résultat est booléen.
+Dans une **EXPRESSION** `booléen`ne ou une « LISTE_ACTIONS », le complément « / » permet d'opérer la fonction logique NON sur l'expression `booléen`ne suivante.
+Dans ce cas, le résultat est `booléen`.
 
     « /a est vrai » si « a est faux ».
 
-Dans une **EXPRESSION** arithmétique, le « / » permet d'opérer la fonction mathématique de division entre deux sous-expressions arithmétiques.
+Dans une **EXPRESSION** arithmétique, le « / » permet d'opérer la fonction mathématique de division entre deux sous-expressions `arithmétiques`.
 « 10 / 2.0 » sera la valeur 5.0.
 
     - /a → c;                      /* Si a est faux alors nous positionnons c à 1 */
@@ -107,7 +117,7 @@ Dans une **EXPRESSION** arithmétique, le « / » permet d'opérer la fonction m
 
 ### Le « * » : multiplication
 
-Dans une **EXPRESSION** arithmétique, le « * » permet d'opérer la fonction mathématique de multiplication entre deux sous-expressions arithmétiques.
+Dans une **EXPRESSION** arithmétique, le « * » permet d'opérer la fonction mathématique de multiplication entre deux sous-expressions `arithmétiques`.
 « 10 / 2.0 » sera la valeur 5.0.
 
     - /a → c;                      /* Si a est faux alors nous positionnons c à 1 */
@@ -116,8 +126,8 @@ Dans une **EXPRESSION** arithmétique, le « * » permet d'opérer la fonction m
 
 ### Les comparaisons
 
-Dans une **EXPRESSION** arithmétique, les opérateurs « <, <=, =, >=, > » permettent d'opérer une comparaison entre deux valeurs arithmétiques.
-le résultat sera lui booléen.
+Dans une **EXPRESSION** arithmétique, les opérateurs « <, <=, =, >=, > » permettent d'opérer une comparaison entre deux valeurs `arithmétiques`.
+le résultat sera lui `booléen`.
 
     - TEMP > 15.0 → c;             /* Si TEMP est strictement supérieure à 15, c est positionné à 1 */
     - TEMP <= -5.0 → c;            /* Si TEMP est inférieure ou égale à -5, c est positionné à 1 */
@@ -125,7 +135,7 @@ le résultat sera lui booléen.
 ### Les comparaisons horaire
 
 Dans une **EXPRESSION** arithmétique, le mot clef « _HEURE » peut s'utiliser dans une comparaison pour agir selon l'heure de la journée.
-le résultat sera lui booléen.
+le résultat sera lui `booléen`.
 
     - _HEURE = 07:00 → c;                              /* c est positioné à 1 à 7 heure du matin */
     - _HEURE >=09:00 . _HEURE <=18:00 -> HEURE_OUVREE; /* HEURE_OUVREE est vraie entre 09h et 18h */
@@ -163,8 +173,8 @@ Exemples:
 
 ##Les actions
 
-Comming soon.
+Coming soon.
 
 ## Les options
-Chaque unités ou action peut être complétée par une [liste d'options](dls_options.md) pour moduler son interprétation ou configurer ses paramètres.
+Chaque unités ou action peut être complétée par une liste d'options pour moduler son interprétation ou configurer ses paramètres.
 Ces options sont décrites dans chacune des pages présentants les classes de bit internes.

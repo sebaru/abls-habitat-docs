@@ -19,6 +19,8 @@ nav:
    - Typologie des Utilisateurs: users.md
  - Les connecteurs:
    - I/O Wago modbus: io_modbus.md
+   - I/O RaspberryPI: io_gpiod.md
+   - I/O Phidget: io_phidget.md
    - Audio output: io_audio.md
    - Instant Messaging: io_imsgs.md
    - SMS Short Message System: io_smsg.md

@@ -24,9 +24,10 @@ Les options sont ajoutées sous la forme d'une liste de clef=valeur séparées p
 
 ##Exemples
 
-    #define VOLET_OUVERT <-> _E; /* VOLET_OUVERT sera mappé à une Entrée Physique (par exemple, à un module MODBUS, ou à la reception d'un SMS) */
-    #define CDE_VOLET    <-> _M;    /* CDE_VOLET sera utilisé en tant que monostable dans la suite du code D.L.S */
+    #define VOLET_OUVERT <-> _E;            /* VOLET_OUVERT sera mappé à une Entrée Physique (par exemple, à un module MODBUS, ou à la reception d'un SMS) */
+    #define CDE_VOLET    <-> _M;            /* CDE_VOLET sera utilisé en tant que monostable dans la suite du code D.L.S */
     #define TEMPO        <-> _T(daa=50);    /* TEMPO est une temporisation retard d'une consigne de 5 secondes */
     #define VISUEL_POMPE <-> _I(forme="pompe", color="red");    /* VISUEL_POMPE est un visuel représenté par une pompe de couleur rouge */
 
-Les différentes [classes](dls.md#memoire-d'informations) sont décrites dans la page [concept](dls.md).
+!!! Note
+    Les différentes [classes](dls.md#memoire-d'informations) sont décrites dans la page [concept](dls.md).

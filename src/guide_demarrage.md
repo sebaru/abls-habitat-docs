@@ -43,14 +43,14 @@ Via votre navigateur, et en supposant que vous venez d'installer localement votr
 
 Entrez ensuite les paramètres de votre domaine qui vous ont été diffusés lors de sa création dans la page qui s'affiche à vous:
 
-![install](/img/ihm_install.png)
-
-Entrez alors les deux paramètres spécifiques de votre domaine:
-1. Le domain_uuid
-1. Le domain_secret
+1. Le **domain_uuid**: Il s'agit de l'identifiant principal de votre domaine, auquel vous pourrez relier tous vos agents
+1. Le **domain_secret**: Il s'agit du secret protégeant les communications entre vos agents et l'API principale.
+1. L'**URL** de API principale. En cas de doute, laissez la valeur par défaut.
 
 !!! Danger
-    Le ***domain_secret*** est une données confidentielle qui ne doit jamais être diffusée
+    Le ***domain_secret*** est une donnée confidentielle qui ne doit jamais être diffusée
+
+![install](/img/ihm_install.png)
 
 ---
 ## Arrêt/Relance et suivi de votre agent
