@@ -1,11 +1,11 @@
-# <img src="/img/abls.svg" width=100> Abls-Habitat, ou comment gérer simplement votre habitat !
+# <img src="https://static.abls-habitat.fr/img/abls.svg" width=100> Abls-Habitat, ou comment gérer simplement votre habitat !
 
  Le logiciel libre **Abls-Habitat** est un ensemble de composants distribués selon les termes de la licence GPL:
 
-* un ou plusieurs Agent
+* un ou plusieurs Agents
 * une console d'administration
 * une interface de navigation
-* un client lourd
+* un client lourd (en cours decomm!)
 * et (plus tard !) une application mobile native.
 
 Le composant serveur fédère un ensemble de capteurs et d'actionneurs au travers d'un [langage de programmation](dls.md) simple qui vous permettra de gérer votre habitat facilement !

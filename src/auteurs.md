@@ -1,4 +1,4 @@
-# <img src="/img/abls.svg" width=100> Notre petite équipe
+# <img src="https://static.abls-habitat.fr/img/abls.svg" width=100> Notre petite équipe
 
 N'hésitez pas à prendre contact avec nous !
 

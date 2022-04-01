@@ -1,7 +1,8 @@
 docs_dir: src
 site_name: Abls-Habitat Docs
 site_url: https://docs.abls-habitat.fr/
-repo_url: https://github.com/sebaru
+repo_url: https://github.com/sebaru/abls-habitat-docs
+edit_uri: blob/main/src
 repo_name: Abls-Habitat Repository
 site_description: Home Automation by Abls-Habitat
 site_author: Sébastien et Bruno Lefèvre
@@ -15,8 +16,9 @@ nav:
    - Galerie: galerie.md
  - Prise en main:
    - Guide de démarrage: guide_demarrage.md
+   - Architecture: architecture.md
  - Guide de l'utilisateur:
-   - Typologie des Utilisateurs: users.md
+   - Les Utilisateurs: users.md
  - Les connecteurs:
    - I/O Wago modbus: io_modbus.md
    - I/O RaspberryPI: io_gpiod.md
