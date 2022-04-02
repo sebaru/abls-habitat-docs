@@ -20,6 +20,7 @@ nav:
  - Guide de l'utilisateur:
    - Les Utilisateurs: users.md
  - Les connecteurs:
+   - Description: connecteurs.md
    - I/O Wago modbus: io_modbus.md
    - I/O RaspberryPI: io_gpiod.md
    - I/O Phidget: io_phidget.md
@@ -38,6 +39,8 @@ nav:
    - Les calculs: dls_calculs.md
    - Les entrées T.O.R: dls_entre_tor.md
    - Les Visuels: dls_visuels.md
+ - Le mapping:
+   - Lien entre connecteur et D.L.S: mapping.md
  - Les formes de visuels:
    - Les boutons: dls_visuel_bouton.md
    - Les commentaires: dls_visuel_comment.md

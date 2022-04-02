@@ -7,7 +7,7 @@ Un domaine repréesente un univers dans lequel tous les composants pourront int�
 
     A contrario, deux éléments de deux domaines différents ***ne pourront pas*** intérargir.
 
-Généralement, vous disposez d'un unique domaine représentant l'enemble de votre habitat. Vu d'un plus près, les composants
+Généralement, vous disposez d'un unique domaine représentant l'enemble de votre habitat. Vu d'un peu plus près, les composants
 d'un domaine sont les suivants:
 
 ![imgmax700](/img/architecture_schema.png)
@@ -16,6 +16,8 @@ d'un domaine sont les suivants:
 
 Il s'agit de tous les éléments capturant l'environnement ou pouvant agir dessus. Par exemple, une prise electrique commandable,
 un télérupteur ou encore un contacteur.
+
+Tous ces capteurs et actionneurs sont pilotés au travers des différents [connecteurs](connecteurs.md).
 
 ##Les Agents
 
