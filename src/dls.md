@@ -38,28 +38,27 @@ Un module D.L.S présentera plusieurs zones de code :
 ---
 ## Les classes de zone mémoire
 
-Les différentes classes utilisées sont les suivantes:
+Les différentes classes proposées sont les suivantes:
 
-| Classe    | Représentation 	|	Exemple |	Description |
-|:---------:|:----------------|:--------|:----------- |
-| [_E](dls_entre_tor.md)       | Entrée TOR        |	PORTE:OUVERTE             |	Une entrée TOR peut avoir 2 valeurs : 0 ou 1 et représente l'état physique d'un capteur
-| [_EA](dls_entre_ana.md) 	    | Entrée Analogique | TEMP:JARDIN 	             | Une entrée Analogique représente une valeur d'un capteur analogique.<br> Celle-ci dispose d'options permettant au systeme de savoir comment interpréter<br>les informations fournies par les capteurs (4/20mA, 0-10V, ...)
-| [_A](dls_sortie_tor.md) 	    | Sortie TOR 	      | VANNE:OUVRIR 	            | Une sortie TOR peut avoir 2 valeurs : 0 ou 1, et représente l'état souhaité d'un actionneur
-| [_AA](dls_sortie_ana.md) 	   | Sortie Analogique |	CHAUDIERE:CONSIGNE 	      | Une sortie Analogique represente la valeur souhaitée d'un actionneur analogique. <br> Elle dispose d'options permettant au systeme de traduire une valeur reelle en valeur<br>compréhensible par les actionneurs.
-| [_B](dls_bistables.md) 	     | Bistable          |	SYS:FLIPFLOP_1SEC 	       | Bit dont la valeur est 0 ou 1, maintenu dans le temps. <br>Il faut explicitement coder la mise à zero du bit pour que celui-ci soit effectivement remis à 0.
-| [_M](dls_monostables.md) 	   | Monostable 	      |SYS:TOP_1SEC 	             | Les monostables sont des bits furtifs, non maintenus dans le temps.<br>Si la condition initiale qui imposait le maintien du bit n'est plus vraie,<br>ce bit va alors tomber de lui-meme à 0.
-| [_CI](dls_cpti.md) 	         | Compteur d'impulsions | 	PUIT:LITRE 	         | Incrémenté à chaque front montant de sa condition de pilotage
-| [_CH](dls_cpth.md) 	         | Compteur Horaire 	| POMPE:DUREE_VIE 	         | Temps seconde représentant la durée effective de maintien de sa condition de pilotage
-| [_T](dls_tempo.md) 	         | Temporisation 	   | GARAGE:TEMPO_OUV_PORTE 	  | Les temporisations permettent de décaler, maintenir ou limiter dans le temps<br> un evenement particulier
-| [_R](dls_registres.md) 	     | Registre 	        | EDF:EQUIV_KWH 	           | Les registres permettent de manipuler des points de consignes, de seuil,<br>et permettent de réaliser des calculs
-| [_HORLOGE](dls_horloge.md) 	 | Horloge 	         | SALON:DMD_FERMETURE_VOLET |	Les horloges sont des valeurs binaires positionnées a une heure bien précise de la journée
-| [_WATCHDOG](dls_watchdog.md)	| Watchdog 	        | PRESENCE:CPT_A_REBOURS 	  | Les comptes a rebours permettent de decompter le temps à partir d'un evenement<br>et de réagir si cet evenement n'est pas revenu au bout d'une consigne précise.
-| [_MSG](dls_messages.md)     	| Messages 	        | EDF:PRESENCE_TENSION   	  | Les messages peremttent de notifier les utilisateurs. Ils sont diffusés dans l'interface,<br>par SMS ou par messagerie instantanée ou par mail.
-| [_I](dls_visuels.md)        	| Visuels  	        | ENTREE:PORTE           	  | Les visuels représentent des images associés aux objets, sous différentes formes et couleurs.
+* [_E ou _DI](dls_entre_tor.md) est une **entrée TOR**. L'entrée peut avoir 2 valeurs: 0 ou 1 et représente l'état physique d'un capteur.
+* [_EA ou _AI](dls_entre_ana.md) est une **entrée analogique** est représentée par la classe . Une entrée Analogique représente une valeur d'un capteur analogique. Celle-ci dispose d'options permettant au systeme de savoir comment interpréter les informations fournies par les capteurs (4/20mA, 0-10V, ...)
+* [_A](dls_sortie_tor.md) est une **sortie TOR** est représentée par la classe . Une sortie TOR peut avoir 2 valeurs : 0 ou 1, et représente l'état souhaité d'un actionneur.
+* [_AA](dls_sortie_ana.md) est une **sortie analogique** est représentée par la classe . Une sortie Analogique represente la valeur souhaitée d'un actionneur analogique. Elle dispose d'options permettant au systeme de traduire une valeur reelle en valeurcompréhensible par les actionneurs.
+* [_B](dls_bistables.md) est un **bistable**. Bit dont la valeur est 0 ou 1, maintenu dans le temps. Il faut explicitement coder la mise à zero du bit pour que celui-ci soit effectivement remis à 0.
+* [_M](dls_monostables.md) est un **monostable**. Les monostables sont des bits furtifs, non maintenus dans le temps. Si la condition initiale qui imposait le maintien du bit n'est plus vraie,ce bit va alors tomber de lui-meme à 0.
+* [_CI](dls_cpti.md) est un **compteur d'impulsions**. Incrémenté à chaque front montant de sa condition de pilotage.
+* [_CH](dls_cpth.md) est un **compteur Horaire**. Temps seconde représentant la durée effective de maintien de sa condition de pilotage.
+* [_T](dls_tempo.md) est une **temporisation**. Les temporisations permettent de décaler, maintenir ou limiter dans le temps un evenement particulier.
+* [_R](dls_registres.md) est un **registre**. Les registres permettent de manipuler des points de consignes, de seuil,et permettent de réaliser des calculs.
+* [_HORLOGE](dls_horloge.md) est une **horloge**. Les horloges sont des éléments binaires positionnées en fonction d'une heure bien précise de la journée.
+* [_WATCHDOG](dls_watchdog.md) est un **watchdog**. Les comptes a rebours permettent de decompter le temps à partir d'un evenementet de réagir si cet evenement n'est pas revenu au bout d'une consigne précise.
+* [_MSG](dls_messages.md) est un **message**. Les messages permettent de notifier les utilisateurs. Ils sont diffusés dans l'interface, par SMS ou par messagerie instantanée ou par mail.
+* [_I](dls_visuels.md) est un **visuels**. Les visuels représentent des images associés aux objets, sous différentes formes et couleurs.
 
-##Les commentaires
+---
+## Les commentaires
 
-Dans tout code D.L.S, il est possible d'intégrer des commentaires. Utiles pour augmenter le niveau de lisibilité du code, ils permettent
+Il est possible d'intégrer des commentaires dans un code D.L.S. Utiles pour augmenter le niveau de lisibilité du code, ils permettent
 aussi d'accélérer la compréhension du mode de fonctionnement.
 
 Un commentaire commence par la chaine « /\* » et se finit par la chaine « \*/ »
