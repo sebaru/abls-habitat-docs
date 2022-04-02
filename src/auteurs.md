@@ -2,7 +2,7 @@
 
 N'hésitez pas à prendre contact avec nous !
 
-##Nous contacter
+## Nous contacter
 
 **Sébastien**, developpeur principal.
 
@@ -12,7 +12,7 @@ N'hésitez pas à prendre contact avec nous !
 
     bruno.lefevre@abls-habitat.fr
 
-##Nous aider ou faire un don
+## Nous aider ou faire un don
 
 Nous oeuvrons sur ces outils depuis de nombreuses années, mais sur notre temps libre. C'est une passion, clairement, mais la vie
 est faites de priorité et de choix.
@@ -28,3 +28,12 @@ Nous recherchons par exemple:
 
 En attendant, nous vous souhaitons une bonne journée !
 L'équipe Abls-Habitat.
+
+## Feuille de route
+
+Nos ambitions pour la suite:
+
+* **v3.10** Revoir complétement les echanges entre agents via libsoup HTTP+Websocket.
+* **v3.11** Migrer l'interface technicient vers console.abls-habitat.fr
+* **v3.12** Migrer ou refaire l'interface utilisateur sur home/abls-habitat.fr
+* **v4.0** Activer completement la plateforme Cloud
