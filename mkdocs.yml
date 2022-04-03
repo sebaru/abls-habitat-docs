@@ -19,7 +19,7 @@ nav:
    - Architecture: architecture.md
  - Guide de l'utilisateur:
    - Les Utilisateurs: users.md
- - Les connecteurs:
+ - Connecteurs:
    - Description: connecteurs.md
    - I/O Wago modbus: io_modbus.md
    - I/O RaspberryPI: io_gpiod.md
@@ -31,7 +31,7 @@ nav:
    - UPS Uninterruptible Power Supply: io_ups.md
    - DMX Projecteurs: io_dmx.md
    - Benq Projecteurs: io_projo.md
- - Programmation D.L.S:
+ - D.L.S:
    - Le concept: dls.md
    - Les acronymes: dls_acronymes.md
    - Les liens: dls_link.md
@@ -39,18 +39,31 @@ nav:
    - Les calculs: dls_calculs.md
    - Les entrées T.O.R: dls_entre_tor.md
    - Les Visuels: dls_visuels.md
- - Le mapping:
+ - Mapping:
    - Lien entre connecteur et D.L.S: mapping.md
- - Les formes de visuels:
+ - Visuels:
+   - L'inventaire de visuels: visuels.md
    - Les boutons: dls_visuel_bouton.md
    - Les commentaires: dls_visuel_comment.md
-   - Inventaire des Visuels: visuels.md
- - Pour nous aider:
+ - Contacts:
    - Qui sommes-nous ?: auteurs.md
 
 theme:
- name: readthedocs
+ name: material
+ logo: https://static.abls-habitat.fr/img/abls.svg
  locale: fr
+ features:
+  - navigation.tabs
+ palette:
+  - scheme: default
+
+extra:
+  social:
+    - icon: fontawesome/brands/github # (1)!
+      link: https://github.com/sebaru
+
+plugins:
+  - git-revision-date
 
 markdown_extensions:
   - admonition

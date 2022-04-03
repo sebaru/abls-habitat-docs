@@ -1,6 +1,6 @@
-# Programmation D.L.S: les Entrées T.O.R
+# Les Entrées T.O.R _E ou _DI
 
-Une entrée TOR (Tout Ou Rien) est un bit interne de la [mémoire d'information](dls.md#memoire-d'informations), de classse *_E*.
+Une entrée TOR (Tout Ou Rien) est un bit interne de la [mémoire d'information](dls.md#memoire-d'informations), de classse *_E* ou *_DI*.
 
 Chaque entrée TOR à pour valeur booléenne soit 0, soit 1, et ne peut être positionnée que dans une **EXPRESSION**.
 
@@ -29,9 +29,14 @@ Exemple de syntaxe dans une **EXPRESSION**:
     - MON_ENTREE → MON_BISTABLE;       /* Si MON_ENTREE = 1 alors MON_BISTABLE = 1 */
     - /MON_ENTREE → /MON_BISTABLE;     /* Si MON_ENTREE = 0 alors MON_BISTABLE = 0 */
 
-## Variation DLS
+## Options d'une entrée TOR
 
 Dans une **EXPRESSION**, il est possible de moduler la sémantique du bit interne en utilisant les options suivantes:
 
-* MON_ENTREE(edge_up): permet de ne prendre en compte que les fronts montants (vrai lorsque l'entrée passe de 0 à 1)
-* MON_ENTREE(edge_down): permet de ne prendre en compte que les fronts descendants (vrai lorsque l'entrée passe de 1 à 0)
+**MON_ENTREE(edge_up)**: permet de ne prendre en compte que les fronts montants (vrai lorsque l'entrée passe de 0 à 1)
+
+    - MON_ENTREE(edge_up) → MON_BISTABLE; /* Si MON_ENTREE passe de 0 à 1, MON_BISTABLE est positionné à 1 */
+
+**MON_ENTREE(edge_down)**: permet de ne prendre en compte que les fronts descendants (vrai lorsque l'entrée passe de 1 à 0)
+
+    - MON_ENTREE(edge_down) → MON_BISTABLE; /* Si MON_ENTREE passe de 1 à 0, MON_BISTABLE est positionné à 0 */

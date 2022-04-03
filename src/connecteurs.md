@@ -1,10 +1,10 @@
 # Les connecteurs
 
-Un connecteur est un composant logiciel embarqués sur chaque [agent](architecture.md#les-agents) permettant de se doter de la capacité
-d'intéragir avec certaines technologies.
+Les connecteurs sont des composants logiciels embarqués dans chaque [agent](architecture.md#les-agents) permettant
+d'intéragir avec les technologies qu'ils portent.
 
 Les technologies proposées sont présentées dans les pages qui suivent.
 
-Ils sont accessibles via le menu **Connecteurs** de l'interface d'administration.
+L'administration des connecteurs est accessible via le menu **Connecteurs** de l'[interface d'administration](https://console.abls-habitat.fr).
 
 ![](img/connecteurs_list.png)
