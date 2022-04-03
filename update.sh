@@ -21,7 +21,7 @@ for CAT in $(cat categorie.sql)
   echo "# Liste des visuels de la catégorie '"$CAT"'" >> $RESULT
   echo "" >> $RESULT
 
-  curl https://api.abls-habitat.fr/icons | jq -j '.icons[] | .forme, " ", .extension, " ", .ihm_affichage, "\n"' > forme.sql
+  curl https://api.abls-habitat.fr/icons | jq -j '.icons[] | select (.categorie=="'$CAT'")  | .forme, " ", .extension, " ", .ihm_affichage, "\n"' > forme.sql
 
   cat forme.sql | while read -r line
    do

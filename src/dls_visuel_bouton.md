@@ -25,13 +25,13 @@ Exemple:
 Il existe 2 modes de boutons.
 Ceux-ci sont les suivants:
 
-| `mode` | Description |
-|:------:|-------------|
-| enabled  | Le bouton est actif et l'utilisateur peut cliquer dessus |
-| disabled | Le bouton est inactif et l'utilisateur ne peut pas cliquer dessus |
+* `enabled`: Le bouton est actif et l'utilisateur peut cliquer dessus.
+* `disabled`: Le bouton est inactif et l'utilisateur ne peut pas cliquer dessus.
 
-Si le `mode` n'est pas renseigné, celui-ci sera considéré par défaut comme **enabled**.
 
+Si le `mode` n'est pas renseigné, celui-ci sera considéré par défaut comme `enabled`.
+
+---
 ##Les couleurs des boutons
 
 Les couleurs possibles des boutons sont les suivantes:
@@ -43,7 +43,14 @@ Les couleurs possibles des boutons sont les suivantes:
 * grey
 * black
 
+---
 ##Attribut de clignotement
 
 Un bouton, peut éventuellement etre clignotant, si l'option `cligno` est renseignée dans ses options.
 Cependant, l'usage de cet attribut peut nuire a la compréhension.
+
+Exemple:
+
+    #define MON_BOUTON <-> _I(forme="bouton", libelle="Cliquez moi !", color="blue");
+    - TEMPS:IL_PLEUT -> MON_BOUTON(cligno);  /* En cas de pluie, le bouton est clignotant */
+    - TEMPS:IL_PLEUT -> MON_BOUTON(cligno=1);/* Cette syntaxe est autorisée également */
