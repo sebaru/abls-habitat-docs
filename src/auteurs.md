@@ -33,7 +33,16 @@ L'équipe Abls-Habitat.
 
 Nos ambitions pour la suite:
 
+### Pour l'API
+
+* **v0.4** Intégrer l'archivage des données via archives.abls-habitat.fr
+* **v0.5**
+* **v.??** Intégrer l'authentification via keycloak
+
+### Pour l'agent
+
 * **v3.10** Revoir complétement les echanges entre agents via libsoup HTTP+Websocket.
-* **v3.11** Migrer l'interface technicient vers console.abls-habitat.fr
-* **v3.12** Migrer ou refaire l'interface utilisateur sur home/abls-habitat.fr
+* **v3.11** Migrer l'interface technicien vers console.abls-habitat.fr
+* **v3.12** Déporter les valeurs des visuels sur le cloud
+* **v3.13** Migrer ou refaire l'interface utilisateur sur home/abls-habitat.fr
 * **v4.0** Activer completement la plateforme Cloud

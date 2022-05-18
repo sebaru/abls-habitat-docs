@@ -61,7 +61,7 @@ Les unités `arithmétiques` sont les suivantes:
 ---
 ## Opérateurs de base pour lier les unités
 
-###Le « . »
+### Le « . », ET
 
 Dans une **EXPRESSION**, le « . » permet d'opérer la fonction logique ET entre deux sous-expressions de type `booléennes`.
 Le résultat associé sera `booléen` lui aussi.
@@ -75,7 +75,7 @@ Exemple de syntaxe :
 !!! warning
     Le ET n'a pas de sens dans une « LISTE_ACTIONS ».
 
-### Le « + »
+### Le « + », OU, Addition
 
 Dans une **EXPRESSION**, le « + » permet d'opérer deux fonctions:
 
@@ -91,7 +91,7 @@ Exemple de syntaxe :
 !!! warning
     Le OU n'a pas de sens dans une « LISTE_ACTIONS ».
 
-### Le « - »
+### Le « - », Soustraction
 
 Dans une **EXPRESSION**, le « - » permet d'opérer la fonction mathématique de soustraction entre deux sous-expression de type `arithmétiques`.
 Dans ce cas le résultat sera également `arithmétique`.
@@ -101,48 +101,52 @@ Dans ce cas le résultat sera également `arithmétique`.
 !!! warning
     Le « - » n'a pas de sens dans une « LISTE_ACTIONS ».
 
-### Le « / » : complément et division
+### Le « / » : Complément et division
 
 Dans une **EXPRESSION** `booléen`ne ou une « LISTE_ACTIONS », le complément « / » permet d'opérer la fonction logique NON sur l'expression `booléen`ne suivante.
 Dans ce cas, le résultat est `booléen`.
 
     « /a est vrai » si « a est faux ».
 
-Dans une **EXPRESSION** arithmétique, le « / » permet d'opérer la fonction mathématique de division entre deux sous-expressions `arithmétiques`.
+Dans une **EXPRESSION** `arithmétique`, le « / » permet d'opérer la fonction mathématique de division entre deux sous-expressions `arithmétiques`.
 « 10 / 2.0 » sera la valeur 5.0.
 
     - /a → c;                      /* Si a est faux alors nous positionnons c à 1 */
     - a . b → /c;                  /* Si a et b sont vrais alors nous positionnons c à 0 */
     - TEMP_CHAUD / TEMP_FROID → c; /* c représentera le coefficient temp_chaud divisé par temp_froid */
 
-### Le « * » : multiplication
+### Le « * » : Multiplication
 
-Dans une **EXPRESSION** arithmétique, le « * » permet d'opérer la fonction mathématique de multiplication entre deux sous-expressions `arithmétiques`.
+Dans une **EXPRESSION** `arithmétique`, le « * » permet d'opérer la fonction mathématique de multiplication entre deux sous-expressions `arithmétiques`.
 « 10 / 2.0 » sera la valeur 5.0.
 
     - /a → c;                      /* Si a est faux alors nous positionnons c à 1 */
     - a . b → /c;                  /* Si a et b sont vrais alors nous positionnons c à 0 */
     - TEMP_CHAUD / TEMP_FROID → c; /* c représentera le coefficient temp_chaud divisé par temp_froid */
 
-### Les comparaisons
+---
+## Les comparaisons
 
-Dans une **EXPRESSION** arithmétique, les opérateurs « <, <=, =, >=, > » permettent d'opérer une comparaison entre deux valeurs `arithmétiques`.
+### La comparaison `arithmétique`
+
+Dans une **EXPRESSION** `arithmétique`, les opérateurs « <, <=, =, >=, > » permettent d'opérer une comparaison entre deux valeurs `arithmétiques`.
 le résultat sera lui `booléen`.
 
     - TEMP > 15.0 → c;             /* Si TEMP est strictement supérieure à 15, c est positionné à 1 */
     - TEMP <= -5.0 → c;            /* Si TEMP est inférieure ou égale à -5, c est positionné à 1 */
 
-### Les comparaisons horaire
+### Les comparaisons horaires
 
-Dans une **EXPRESSION** arithmétique, le mot clef « _HEURE » peut s'utiliser dans une comparaison pour agir selon l'heure de la journée.
+Dans une **EXPRESSION** `arithmétique`, le mot clef **_HEURE** peut s'utiliser dans une comparaison pour agir selon l'heure de la journée.
 le résultat sera lui `booléen`.
 
     - _HEURE = 07:00 → c;                              /* c est positioné à 1 à 7 heure du matin */
     - _HEURE >=09:00 . _HEURE <=18:00 -> HEURE_OUVREE; /* HEURE_OUVREE est vraie entre 09h et 18h */
 
-### Précédences et parenthèses
+---
+## Précédences et parenthèses
 
-Les priorités d'opérations sont les suivantes, dans l'ordre décroissant de priorité :
+Les priorités d'opérations sont les suivantes, dans l'ordre décroissant de priorité (du plus prioritaire au moins prioritaire):
 
 1. Le NON
 1. Le ET
@@ -156,6 +160,7 @@ Exemple de syntaxe:
     - (a+b) . c  → d;        /* Si a ou b est vrai, et c est vrai alors nous positionnons d à 1 */
     - a . /(b+c) → /c;      /* Si a est vrai, et que l'on a ni b ni c, alors nous positionnons c à 0 */
 
+---
 ##Logique étendue
 
 Il est possible de compléter un comportement par des options. La modification du comportement sera fonction des options elles-mêmes.
@@ -171,10 +176,12 @@ Exemples:
 
     - EXPRESSION -- daa = 100 -> ACTION; /* ACTION sera lancée 10 secondes après que l'EXPRESSION devienne vraie. */
 
+---
 ##Les actions
 
 Coming soon.
 
+---
 ## Les options
 Chaque unités ou action peut être complétée par une liste d'options pour moduler son interprétation ou configurer ses paramètres.
 Ces options sont décrites dans chacune des pages présentants les classes de bit internes.

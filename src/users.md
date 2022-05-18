@@ -10,10 +10,9 @@ Un utilisateur d'un niveau *N* peut:
 
 !!! note
 
-    Il ne pourra pas accéder ou modifier les ressources de rang plus élevé.
+    Il ne pourra pas accéder ou modifier les ressources d'un rang plus élevé.
 
 Par défaut, un utilisateur nouvellement créé sera associé au niveau *1*.
-Au demarrage, deux [utilisateurs par défaut](utilisateurs-par-defaut) sont créés.
 
 ##Utilisateurs non privilègiés
 
@@ -22,18 +21,23 @@ L'usage des différents niveaux est laissé a l'appréciation du client.
 
 ##Utilisateurs privilégiés
 
-Les niveaux *6* à *9* sont les niveaux reservés aux utilisateurs de profil **techniciens**.
+Les niveaux *6* à *9* sont les niveaux reservés aux utilisateurs de profils **techniciens**.
 Ces utilisateurs à privilèges possèdent les droits de modifier le coeur du système:
 
-* L'édition, l'ajout ou la suppression des [modules D.L.S](dls.md)
-* L'édition, l'ajout ou la suppression des synoptiques
-* La configuration des [connecteurs](connecteurs.md)
 
 ---
-##Utilisateurs par défaut
+##Grille des privilèges
 
-A l'installation, deux comptes sont pre-enregistrés: les comptes **root** et **guest**
+Un utilisateur de niveau *N*
 
-* Le compte **root** est un compte administrateur (privilège maximum : Level 9). Son mot de passe par défaut est **password**
-* Le compte **guest** est un compte utilisateur avec des privilèges minimaux (Level 1). Son mot de passe par défaut est **guest**
-
+* Niveau 9 - Administrateur du domaine
+** Peut transférer le domaine à un nouveau propriétaire
+** Peut supprimer complétement le domaine
+* Niveau 8 - Administrateur délégué du domaine
+** Peut modifier le `domain_name` ainsi que changer l'`image` du domaine
+* Niveau 7 - Technicien du domaine
+* Niveau 6 - Technicien délégué du domaine
+** Peut voir le `domain_secret`
+** Peut éditer, ajouter ou supprimer des [modules D.L.S](dls.md)
+** Peut éditer, ajouter ou supprimer des synoptiques
+** Peut éditer, ajouter ou supprimer des [connecteurs](connecteurs.md)
