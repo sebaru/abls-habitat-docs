@@ -2,7 +2,7 @@
 
 Vous trouverez sur ce site l'ensemble de la documentation technique permettant de prendre en main ce système de gestion d'habitat.
 Cette documentation s'adresse aux personnes ayant la responsabilité de l'installation et du maintien des systèmes et sous-systèmes composant un domaine complet.
-Elle présente les guides d'installation, l'architecture, les concepts, les modes d'emploi, ainsi les bonnes pratiques de mise en oeuvre.
+Elle présente les guides d'installation, l'architecture, les concepts, les modes d'emploi, ainsi que les bonnes pratiques de mise en oeuvre.
 
 ---
 ## Pré-requis
@@ -10,11 +10,11 @@ Elle présente les guides d'installation, l'architecture, les concepts, les mode
 Les socles minimums sur lesquels le système a été testé puis validé:
 
 * Fedora 34 ou supérieure
-* Debian Bullseye ou supérieure
+* Debian Bullseye ou supérieure, avec les **backports** installés
 * RaspiOS (basée sur Bullseye)
 
 !!! Note
-    Vous aurez également besoin des droits d'administration, via *sudo* par exemple.
+    Vous aurez également besoin des droits d'administration, via **sudo** par exemple.
 
 ---
 ##Installation d'un agent

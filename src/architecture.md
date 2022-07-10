@@ -1,13 +1,13 @@
 # Architecture du projet
 
-Les éléments constituant le projet sont architecturés dans un domaine.
-Un domaine repréesente un univers dans lequel tous les composants pourront intérargir ensemble.
+Les éléments constituant le projet sont architecturés au sein d'un domaine.
+Un domaine représente un univers dans lequel tous les composants pourront intéragir ensemble.
 
 !!! note
 
-    A contrario, deux éléments de deux domaines différents ***ne pourront pas*** intérargir.
+    A contrario, deux éléments de deux domaines différents ***ne pourront pas*** intéragir.
 
-Généralement, vous disposez d'un unique domaine représentant l'enemble de votre habitat. Vu d'un peu plus près, les composants
+Généralement, vous disposez d'un unique domaine représentant l'ensemble de votre habitat. Vu d'un peu plus près, les composants
 d'un domaine sont les suivants:
 
 ![imgmax700](/img/architecture_schema.png)
