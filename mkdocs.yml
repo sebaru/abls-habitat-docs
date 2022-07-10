@@ -63,7 +63,10 @@ extra:
       link: https://github.com/sebaru
 
 plugins:
-  - git-revision-date
+  - git-revision-date-localized:
+      type: datetime
+      enable_creation_date: true
+  - search
 
 markdown_extensions:
   - admonition
