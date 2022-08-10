@@ -9,9 +9,9 @@ Elle présente les guides d'installation, l'architecture, les concepts, les mode
 
 Les socles minimums sur lesquels le système a été testé puis validé:
 
-* Fedora 34 ou supérieure
 * Debian Bullseye ou supérieure, avec les **backports** installés
 * RaspiOS (basée sur Bullseye)
+* Certains agents tournent sur Fedora, cependant l'instabilité de la distribution, notamment concernant les librairies tierces, peut induire des dysfonctionnements sur certains connecteurs
 
 !!! Note
     Vous aurez également besoin des droits d'administration, via **sudo** par exemple.
@@ -58,7 +58,7 @@ Entrez ensuite les paramètres de votre domaine qui vous ont été diffusés lor
 Si besoin de configuration plus fine, vous pouvez positionner explicitement l'UUID de votre agent ainsi que l'URL de l'API maitresse
 en déroulant le cadre ***Advanced Options***:
 
-1. Instance UUID: Utilisez cette options en cas de restauration de l'agent.
+1. Agent UUID: Utilisez cette options en cas de restauration de l'agent.
 1. **API URL**: Utile en cas d'utilisation d'une API OnPremise.
 
 ![install](/img/ihm_install_advanced.png)
@@ -102,7 +102,7 @@ Pour cela, tapez les commandes suivantes dans un terminal:
 ---
 ##Reinstaller un agent
 
-Pour relancer la phase d'installation, supprimer le fichier de configuration puis relancer l'agent:
+Pour relancer la phase d'installation, supprimez le fichier de configuration puis relancez l'agent:
 
     $ sudo rm /etc/abls-habitat-agent.conf
     $ sudo systemctl restart Watchdogd
