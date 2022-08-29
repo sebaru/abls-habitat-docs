@@ -41,9 +41,19 @@ Modes:
 
 Modes:
 
+* 0%
+* 100%
+* 25%
+* 50%
+* 75%
 * ferme
 * ouvert
 
+![imgvisuel](https://static.abls-habitat.fr/img/volet_roulant_0%.png)
+![imgvisuel](https://static.abls-habitat.fr/img/volet_roulant_100%.png)
+![imgvisuel](https://static.abls-habitat.fr/img/volet_roulant_25%.png)
+![imgvisuel](https://static.abls-habitat.fr/img/volet_roulant_50%.png)
+![imgvisuel](https://static.abls-habitat.fr/img/volet_roulant_75%.png)
 ![imgvisuel](https://static.abls-habitat.fr/img/volet_roulant_ferme.png)
 ![imgvisuel](https://static.abls-habitat.fr/img/volet_roulant_ouvert.png)
 

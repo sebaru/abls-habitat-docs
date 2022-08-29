@@ -64,7 +64,7 @@ for CAT in $(cat categorie.sql)
       echo "Modes:" >> $RESULT
       echo "" >> $RESULT
 
-       for FILE in $(ls ../SRC/Watchdogd/IHM/img/$FORME*$EXTENSION)
+       for FILE in $(ls ../STATIC/img/$FORME*$EXTENSION)
         do
           step=$(basename $FILE .$EXTENSION)
           taille=$((${#FORME}+1))
@@ -73,7 +73,7 @@ for CAT in $(cat categorie.sql)
         done
 
        echo "" >> $RESULT
-       for FILE in $(ls ../SRC/Watchdogd/IHM/img/$FORME*$EXTENSION)
+       for FILE in $(ls ../STATIC/img/$FORME*$EXTENSION)
         do
           step=$(basename $FILE)
           echo "![imgvisuel](https://static.abls-habitat.fr/img/"$step")" >> $RESULT
@@ -86,7 +86,7 @@ for CAT in $(cat categorie.sql)
       echo "Modes:" >> $RESULT
       echo "" >> $RESULT
 
-       for FILE in $(ls ../SRC/Watchdogd/IHM/img/$FORME*_source.$EXTENSION)
+       for FILE in $(ls ../STATIC/img/$FORME*_source.$EXTENSION)
         do
           step=$(basename $FILE _source.$EXTENSION)
           taille=$((${#FORME}+1))
@@ -95,7 +95,7 @@ for CAT in $(cat categorie.sql)
         done
 
        echo "" >> $RESULT
-       for FILE in $(ls ../SRC/Watchdogd/IHM/img/$FORME*_source.$EXTENSION)
+       for FILE in $(ls ../STATIC/img/$FORME*_source.$EXTENSION)
         do
           step=$(basename $FILE _source.$EXTENSION)
           echo "![imgvisuel](https://static.abls-habitat.fr/img/"$step"_white."$EXTENSION")" >> $RESULT

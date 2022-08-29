@@ -49,3 +49,17 @@ Modes:
 
 ![imgvisuel](https://static.abls-habitat.fr/img/question.png)
 
+---
+## `forme`='plus'
+
+![imgvisuel](https://static.abls-habitat.fr/img/plus_white.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/plus_lightblue.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/plus_blue.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/plus_darkgreen.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/plus_gray.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/plus_green.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/plus_orange.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/plus_red.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/plus_yellow.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/plus_black.svg)
+
