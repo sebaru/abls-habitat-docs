@@ -79,3 +79,34 @@ Modes:
 ![imgvisuel](https://static.abls-habitat.fr/img/moteur_2_yellow.png)
 ![imgvisuel](https://static.abls-habitat.fr/img/moteur_2_black.png)
 
+---
+## `forme`='2d_contacteur'
+
+Modes:
+
+* ferme
+* ouvert
+
+![imgvisuel](https://static.abls-habitat.fr/img/2d_contacteur_ferme_white.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/2d_contacteur_ferme_lightblue.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/2d_contacteur_ferme_blue.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/2d_contacteur_ferme_darkgreen.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/2d_contacteur_ferme_gray.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/2d_contacteur_ferme_green.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/2d_contacteur_ferme_orange.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/2d_contacteur_ferme_red.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/2d_contacteur_ferme_yellow.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/2d_contacteur_ferme_black.svg)
+
+![imgvisuel](https://static.abls-habitat.fr/img/2d_contacteur_ouvert_white.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/2d_contacteur_ouvert_lightblue.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/2d_contacteur_ouvert_blue.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/2d_contacteur_ouvert_darkgreen.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/2d_contacteur_ouvert_gray.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/2d_contacteur_ouvert_green.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/2d_contacteur_ouvert_orange.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/2d_contacteur_ouvert_red.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/2d_contacteur_ouvert_yellow.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/2d_contacteur_ouvert_black.svg)
+
+
