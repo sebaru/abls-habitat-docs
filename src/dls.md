@@ -85,19 +85,19 @@ Par construction, certains bits internes sont créés automatiquement. Ces bits 
 
 | Nom du bit 	| Classe  | 	Positionné par |	Défaut 	| Description
 |:------------|:--------|:----------------|:-------:|:-----------
-| _MEMSA_COMM | 	Activité 	| Module | 	TRUE | TRUE si la communication est OK, sinon FALSE.
-| _MEMSA_DEFAUT|  	Activité | 	Module | 	FALSE | TRUE si le module est en défaut
-| _MEMSA_DEFAUT_FIXE|  	Activité | 	Module | 	FALSE | TRUE si le module est en défaut fixe
-| _MEMSA_ALARME|  	Activité | 	Module | 	FALSE| TRUE si le module est en alarme
-| _MEMSA_ALARME_FIXE | 	Activité | 	Module | 	FALSE| TRUE si le module est en alarme fixe
-| _MEMSA_OK | 	Activité 	| Système 	| TRUE | Bit de synthèse de l'activité. Calculé par rapport aux 5 bits précédents
-| _MEMSSB_VEILLE | 	Sécurité des Biens | 	Module|  	FALSE | TRUE si le module est en veille
-| _MEMSSB_ALERTE | 	Sécurité des Biens | 	Module | 	FALSE | TRUE si le module est en alerte
-| _MEMSSB_ALERTE_FUGITIVE | 	Sécurité des Biens | 	Module | 	FALSE | TRUE si le module est en alerte fugitive
-| _MEMSSB_ALERTE_FIXE | 	Sécurité des Biens | 	Module | 	FALSE | 	TRUE si le module est en alerte fixe
-| _MEMSSP_DERANGEMENT | 	Sécurité des Personnes | 	Module | 	FALSE | TRUE si le module est en dérangement
-| _MEMSSP_DERANGEMENT_FIXE | 	Sécurité des Personnes | 	Module|  	FALSE | TRUE si le module est en dérangement fixe
-| _MEMSSP_DANGER | 	Sécurité des Personnes | 	Module | 	FALSE | TRUE si le module remonte un danger imminent
-| _MEMSSP_DANGER_FIXE | 	Sécurité des Personnes 	| Module | 	FALSE | 	TRUE si le module remonte un danger imminent (fixe).
-| _MEMSSP_OK 	| Sécurité des Personnes 	| Système 	| TRUE | 	Bit de synthèse de la sécurité des personnes. Calculé par rapport aux 4 bits précédents.
-| _OSYN_ACQUIT | 	Acquit 	| Système | 	FALSE | Bit positionné par le système lors d'une demande d'acquit synoptique
+| MEMSA_COMM | 	Activité 	| Module | 	TRUE | TRUE si la communication est OK, sinon FALSE.
+| MEMSA_DEFAUT|  	Activité | 	Module | 	FALSE | TRUE si le module est en défaut
+| MEMSA_DEFAUT_FIXE|  	Activité | 	Module | 	FALSE | TRUE si le module est en défaut fixe
+| MEMSA_ALARME|  	Activité | 	Module | 	FALSE| TRUE si le module est en alarme
+| MEMSA_ALARME_FIXE | 	Activité | 	Module | 	FALSE| TRUE si le module est en alarme fixe
+| MEMSA_OK | 	Activité 	| Système 	| TRUE | Bit de synthèse de l'activité. Calculé par rapport aux 5 bits précédents
+| MEMSSB_VEILLE | 	Sécurité des Biens | 	Module|  	FALSE | TRUE si le module est en veille
+| MEMSSB_ALERTE | 	Sécurité des Biens | 	Module | 	FALSE | TRUE si le module est en alerte
+| MEMSSB_ALERTE_FUGITIVE | 	Sécurité des Biens | 	Module | 	FALSE | TRUE si le module est en alerte fugitive
+| MEMSSB_ALERTE_FIXE | 	Sécurité des Biens | 	Module | 	FALSE | 	TRUE si le module est en alerte fixe
+| MEMSSP_DERANGEMENT | 	Sécurité des Personnes | 	Module | 	FALSE | TRUE si le module est en dérangement
+| MEMSSP_DERANGEMENT_FIXE | 	Sécurité des Personnes | 	Module|  	FALSE | TRUE si le module est en dérangement fixe
+| MEMSSP_DANGER | 	Sécurité des Personnes | 	Module | 	FALSE | TRUE si le module remonte un danger imminent
+| MEMSSP_DANGER_FIXE | 	Sécurité des Personnes 	| Module | 	FALSE | 	TRUE si le module remonte un danger imminent (fixe).
+| MEMSSP_OK 	| Sécurité des Personnes 	| Système 	| TRUE | 	Bit de synthèse de la sécurité des personnes. Calculé par rapport aux 4 bits précédents.
+| OSYN_ACQUIT | 	Acquit 	| Système | 	FALSE | Bit positionné par le système lors d'une demande d'acquit synoptique
