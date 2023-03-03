@@ -1,7 +1,7 @@
 # La programmation D.L.S
 
 Les modules portant l'intelligence sont nommés ***Module D.L.S***.
-Ils permettent, via un langage de programmation inspirés des automates, de définir quel doit être l'état de sortie d'un objet en fonction d'un ensemble d'états d'entrés.
+Ils permettent, via un langage de programmation inspiré des automates, de définir quel doit être l'état de sortie d'un objet en fonction d'un ensemble d'états d'entrés.
 
 !!! note
     Dans l'interface web, vous pouvez lister et éditer ces modules D.L.S en utilisant le menu **Configuration->Modules D.L.S**.

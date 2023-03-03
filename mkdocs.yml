@@ -1,7 +1,7 @@
 docs_dir: src
 site_name: Abls-Habitat Docs
 site_url: https://docs.abls-habitat.fr/
-repo_url: https://github.com/sebaru/abls-habitat-docs
+repo_url: https://github.com/sebaru/
 edit_uri: blob/main/src
 repo_name: Abls-Habitat Repository
 site_description: Home Automation by Abls-Habitat
@@ -38,6 +38,8 @@ nav:
    - La logique: dls_logique.md
    - Les calculs: dls_calculs.md
    - Les entrées T.O.R: dls_entre_tor.md
+   - Les compteurs d'impulsions: dls_cpti.md
+   - Les compteurs horaire: dls_cpth.md
    - Les Visuels: dls_visuels.md
  - Mapping:
    - Lien entre connecteur et D.L.S: mapping.md
