@@ -1,6 +1,5 @@
 #/bin/sh
 
-#echo "SELECT * from icone" | mysql -u watchdog WatchdogDB -p$PASSWORD | tail -n +2 > categorie.sql
 curl https://api.abls-habitat.fr/icons | jq '.icons[].categorie' | sort -u | sed -e 's/"//g' > categorie.sql
 
 SOMMAIRE=src/visuels.md
@@ -64,7 +63,7 @@ for CAT in $(cat categorie.sql)
       echo "Modes:" >> $RESULT
       echo "" >> $RESULT
 
-       for FILE in $(ls ../STATIC/img/$FORME*$EXTENSION)
+       for FILE in $(ls ../abls-habitat-static/img/$FORME*$EXTENSION)
         do
           step=$(basename $FILE .$EXTENSION)
           taille=$((${#FORME}+1))
@@ -86,7 +85,7 @@ for CAT in $(cat categorie.sql)
       echo "Modes:" >> $RESULT
       echo "" >> $RESULT
 
-       for FILE in $(ls ../STATIC/img/$FORME*_source.$EXTENSION)
+       for FILE in $(ls ../abls-habitat-static/img/$FORME*_source.$EXTENSION)
         do
           step=$(basename $FILE _source.$EXTENSION)
           taille=$((${#FORME}+1))
