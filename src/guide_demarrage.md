@@ -17,9 +17,18 @@ Les socles minimums sur lesquels les agents ont été testés puis validés:
     Vous aurez également besoin des droits d'administration, via **sudo** par exemple.
 
 ---
-##Installation d'un agent
+##Installation d'un agent depuis un container
 
-La solution la plus simple est de vous connecter à la console et de cliquez sur le menu [Ajouter un agent](https://console.abls-habitat.fr/agent/add)
+La solution la plus simple pour installer un agent est d'utiliser le format container.
+
+Depuis votre hote, tapez la commande suivante:
+
+    [watchdog@Server ~]$ podman run --name abls-agent --tz local -p 5559:5559 --env ABLS_API_URL=api.abls-habitat.fr --env ABLS_DOMAIN_UUID=`domain_uuid` --env ABLS_DOMAIN_SECRET=`domain_secret` --group-add keep-groups --device /dev/serial/ docker.io/sebaru/abls-agent:latest
+
+Retrouvez aussi ces instructions sur la console, en cliquant sur le menu [Ajouter un agent](https://console.abls-habitat.fr/agent/add)
+
+---
+##Installation d'un agent en natif
 
 Si vous souhaitez ajouter manuellement un agent
 
@@ -39,17 +48,20 @@ Depuis un terminal, lancez la commande suivante:
 
 ### Lier un agent
 
-Depuis votre [console](https://console.abls-habitat.fr), récupérez les données suivantes:
+La solution la plus simple est de vous connecter à la console, de cliquez sur le menu [Ajouter un agent](https://console.abls-habitat.fr/agent/add)
+et de suivre les instructions.
 
-1. Le **domain_uuid**: Il s'agit de l'identifiant principal de votre domaine, auquel vous pourrez relier tous vos agents
-1. Le **domain_secret**: Il s'agit du secret protégeant les communications entre vos agents et l'API principale.
+Manuellement, vous pouvez également, depuis votre [console](https://console.abls-habitat.fr), récupérer les données suivantes:
+
+1. Le `domain_uuid`: Il s'agit de l'identifiant principal de votre domaine, auquel vous pourrez relier tous vos agents
+1. Le `domain_secret`: Il s'agit du secret protégeant les communications entre vos agents et l'API principale.
 
 !!! Danger
     Le ***domain_secret*** est une donnée confidentielle qui ne doit jamais être diffusée
 
 Via votre terminal, tapez ensuite la commande suivante:
 
-     [watchdog@Server ~]$ sudo Watchdogd --link --domain-uuid domain_uuid --domain-secret domain-secret
+    [watchdog@Server ~]$ sudo Watchdogd --link --domain-uuid `domain_uuid` --domain-secret `domain-secret`
 
 Votre agent est désormais lié à l'API.
 
@@ -68,7 +80,7 @@ via les options de démarrage suivantes:
 
 Via votre terminal, tapez ensuite la commande suivante:
 
-     [watchdog@Server ~]$ sudo Watchdogd --link --domain-uuid domain_uuid --domain-secret domain-secret --api-url api_url --agent-uuid agent_uuid
+    [watchdog@Server ~]$ sudo Watchdogd --link --domain-uuid `domain_uuid` --domain-secret `domain-secret` --api-url `api_url` --agent-uuid `agent_uuid`
 
 Votre agent est désormais lié à l'API.
 
@@ -113,4 +125,4 @@ Pour relancer la phase d'installation, supprimez le fichier de configuration pui
     $ sudo rm /etc/abls-habitat-agent.conf
     $ sudo systemctl restart Watchdogd
 
-Et enfin recommencer la [procédure](#installation-dun-agent)
+Et enfin recommencer la [procédure](#installation-dun-agent).
