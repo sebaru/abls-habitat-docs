@@ -2,7 +2,7 @@
 
 Un compteur horaire est un bit interne de la [mémoire d'information](dls.md#memoire-d'informations), de classse *_CH*.
 
-Un compteur horaire permet compter le temps cumulé durant lequel une **CONDITION** est vraie.
+Un compteur horaire permet de compter le temps cumulé durant lequel une **CONDITION** est vraie.
 
 Chaque compteur horaire est une valeur entière positive, représentant une durée en dixième de seconde.
 Il peut etre positionné dans une **EXPRESSION**, ou bien sous la forme d'une [comparaison](dls_logique.md#les-comparaisons) dans une **CONDITION**.
