@@ -10,7 +10,7 @@ Cette zone est composée d'une suite de lignes (appelée dans la suite « ligne 
 Elle commence par un tiret « - », suivi d'une **EXPRESSION**, suivi par une flèche (tiret « - » puis supérieur « > »), une liste d'actions séparées par des virgules et enfin, un point virgule terminal.
 
 ---
-##Lier une expression à une action
+## Lier une expression à une action
 
 Une **EXPRESSION** est un ensemble d'unités [`Booléennes`](#les-unites-boolennes) ou [`Arithmétiques`](#les-unites-arithmetique)
 liées entre elles par des [opérateurs de base](#operateurs-de-base).

@@ -6,7 +6,7 @@ Chaque entrée TOR a pour valeur booléenne soit 0, soit 1, et ne peut être uti
 
 ## Déclarer une Entrée TOR
 
-Dans la zone d'[ALIAS](dls_alias.md), déclarez une entrée TOR de la manière suivante:
+Dans la zone d'[ALIAS](dls_acronymes.md), déclarez une entrée TOR de la manière suivante:
 
     #define ACRONYME <-> _E();
 

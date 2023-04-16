@@ -20,7 +20,7 @@ Exemple:
 
 
 ---
-##Désactivé un bouton
+##Désactiver le clic bouton
 
 Un bouton peut ne plus être cliquable, en utilisant l'option `disable`.
 Ainsi, il devient grisé et un appui dessus restera sans suite.

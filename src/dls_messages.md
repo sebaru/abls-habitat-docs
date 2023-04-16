@@ -7,7 +7,7 @@ Chaque message peut etre positionné dans une **ACTION**. Il n'est cependant pas
 
 ## Déclarer un Message
 
-Dans la zone d'[ALIAS](dls_alias.md), déclarez un Message de la manière suivante:
+Dans la zone d'[ALIAS](dls_acronymes.md), déclarez un Message de la manière suivante:
 
     #define ACRONYME <-> _MSG(parametre=valeur);
 
