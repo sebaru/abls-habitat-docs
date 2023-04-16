@@ -38,6 +38,7 @@ nav:
    - La logique: dls_logique.md
    - Les calculs: dls_calculs.md
    - Les entrées T.O.R: dls_entre_tor.md
+   - Les messages: dls_messages.md
    - Les compteurs d'impulsions: dls_cpti.md
    - Les compteurs horaire: dls_cpth.md
    - Les Visuels: dls_visuels.md

@@ -20,16 +20,12 @@ Exemple:
 
 
 ---
-##Les modes associés aux boutons
+##Désactivé un bouton
 
-Il existe 2 modes de boutons.
-Ceux-ci sont les suivants:
+Un bouton peut ne plus être cliquable, en utilisant l'option `disable`.
+Ainsi, il devient grisé et un appui dessus restera sans suite.
 
-* `enabled`: Le bouton est actif et l'utilisateur peut cliquer dessus.
-* `disabled`: Le bouton est inactif et l'utilisateur ne peut pas cliquer dessus.
-
-
-Si le `mode` n'est pas renseigné, celui-ci sera considéré par défaut comme `enabled`.
+Par défaut, un bouton n'est pas `disable`, et reste donc cliquable.
 
 ---
 ##Les couleurs des boutons
@@ -40,7 +36,7 @@ Les couleurs possibles des boutons sont les suivantes:
 * red
 * orange
 * green
-* grey
+* gray
 * black
 
 ---

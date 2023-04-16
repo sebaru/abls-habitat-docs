@@ -91,7 +91,7 @@ Exemple de syntaxe :
 !!! warning
     Le OU n'a pas de sens dans une « LISTE_ACTIONS ».
 
-### Le « - », Soustraction
+### Le « - »: Soustraction
 
 Dans une **EXPRESSION**, le « - » permet d'opérer la fonction mathématique de soustraction entre deux sous-expression de type `arithmétiques`.
 Dans ce cas le résultat sera également `arithmétique`.
