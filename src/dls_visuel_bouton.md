@@ -11,12 +11,15 @@ Par exemple, voici la définition complète d'un visuel **bouton**:
 Cette déclaration permet de creer un bouton **Cliquez moi !**, de couleur **bleu**, et **clignotant**.
 
 Afin de capter l'évènement de clic de la part de l'utilisateur,
-a chaque bouton est automatiquement accroché un bit **DI** nommé par la concaténation de son acronyme et de **_CLIC**.
+bit **DI** nommé par la concaténation de son acronyme et de **_CLIC** lui est automatiquement accroché.
 
 Exemple:
 
     #define MON_BOUTON <-> _I(forme="bouton", libelle="Cliquez moi !", color="blue");
     /*------MON_BOUTON_CLIC <-> _DI; Automatiquement le bit DI MON_BOUTON_CLIC est créé */
+
+    /* En cas de clic, UNE_ACTION est lancée */
+    - MON_BOUTON_CLIC -> UNE_ACTION;
 
 
 ---
@@ -26,6 +29,13 @@ Un bouton peut ne plus être cliquable, en utilisant l'option `disable`.
 Ainsi, il devient grisé et un appui dessus restera sans suite.
 
 Par défaut, un bouton n'est pas `disable`, et reste donc cliquable.
+
+Exemple:
+
+    /* Déclaration d'un visuel de forme 'bouton' */
+    #define MON_BOUTON <-> _I(forme="bouton", libelle="Fermer", color="blue");
+    /* Si la porte est ouverte, le bouton "fermer" n'est plus cliquable */
+    - PORTE_OUVERTE -> MON_BOUTON(disable);
 
 ---
 ##Les couleurs des boutons
