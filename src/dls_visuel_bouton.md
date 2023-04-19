@@ -6,9 +6,9 @@ Par exemple, voici la définition complète d'un visuel **bouton**:
 
     /* Nous sommes dans le D.L.S "TECH_ID" */
     /* Déclaration d'un visuel de forme 'bouton' */
-    #define MON_BOUTON <-> _I(forme="bouton", libelle="Cliquez moi !", mode="enabled", color="blue");
+    #define MON_BOUTON <-> _I(forme="bouton", libelle="Cliquez moi !", color="blue", cligno);
 
-Cette déclaration permet de creer un bouton "Cliquez moi !", de couleur **bleu**, et clignotant.
+Cette déclaration permet de creer un bouton **Cliquez moi !**, de couleur **bleu**, et **clignotant**.
 
 Afin de capter l'évènement de clic de la part de l'utilisateur,
 a chaque bouton est automatiquement accroché un bit **DI** nommé par la concaténation de son acronyme et de **_CLIC**.

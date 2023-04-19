@@ -10,7 +10,7 @@ Il peut etre positionné dans une **EXPRESSION**, ou bien sous la forme d'une [c
 
 ## Déclarer un compteur d'impulsion
 
-Dans la zone d'[ALIAS](dls_alias.md), déclarez un compteur d'impulsion de la manière suivante:
+Dans la zone d'[ALIAS](dls_acronyme.md), déclarez un compteur d'impulsion de la manière suivante:
 
     #define ACRONYME <-> _CI(options);
 

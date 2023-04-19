@@ -9,7 +9,7 @@ Il peut etre positionné dans une **EXPRESSION**, ou bien sous la forme d'une [c
 
 ## Déclarer un compteur horaire
 
-Dans la zone d'[ALIAS](dls_alias.md), déclarez un compteur horaire de la manière suivante:
+Dans la zone d'[ALIAS](dls_acronyme.md), déclarez un compteur horaire de la manière suivante:
 
     #define ACRONYME <-> _CH(options);
 
