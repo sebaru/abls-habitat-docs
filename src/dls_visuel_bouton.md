@@ -34,6 +34,7 @@ Exemple:
 
     /* Déclaration d'un visuel de forme 'bouton' */
     #define MON_BOUTON <-> _I(forme="bouton", libelle="Fermer", color="blue");
+
     /* Si la porte est ouverte, le bouton "fermer" n'est plus cliquable */
     - PORTE_OUVERTE -> MON_BOUTON(disable);
 

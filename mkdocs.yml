@@ -42,6 +42,7 @@ nav:
    - Les compteurs d'impulsions: dls_cpti.md
    - Les compteurs horaire: dls_cpth.md
    - Les Visuels: dls_visuels.md
+   - Exemple d'anatomie: dls_anatomie.md
  - Mapping:
    - Lien entre connecteur et D.L.S: mapping.md
  - Visuels:
