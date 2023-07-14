@@ -21,6 +21,7 @@ Ce connecteur permet de piloter et controler des I/O depuis:
     * [750-513 - Sorties TOR 2 canaux 220V 2.0A](https://www.wago.com/fr/syst%C3%A8mes-i-o/sortie-de-relais-%C3%A0-2-canaux/p/750-513)
     * [750-530 - Sorties TOR 8 canaux 24V 0.5A](https://www.wago.com/fr/syst%C3%A8mes-i-o/sortie-digitale-%C3%A0-4-canaux/p/750-530)
     * [750-531 - Sorties TOR 4 canaux 24V 0.5A](https://www.wago.com/fr/syst%C3%A8mes-i-o/sortie-digitale-%C3%A0-4-canaux/p/750-531)
+    * [750-550 - Sorties TOR 2 canaux 0-10V](https://www.wago.com/fr/syst%C3%A8mes-i-o/sortie-analogique-%C3%A0-2-canaux/p/750-550)
 
 ---
 ## Schéma d'exemple
