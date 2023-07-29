@@ -32,16 +32,17 @@ nav:
    - DMX Projecteurs: io_dmx.md
    - Benq Projecteurs: io_projo.md
  - D.L.S:
-   - Le concept: dls.md
-   - Les acronymes: dls_acronymes.md
-   - Les liens: dls_link.md
-   - La logique: dls_logique.md
-   - Les calculs: dls_calculs.md
-   - Les entrées T.O.R: dls_entre_tor.md
-   - Les messages: dls_messages.md
-   - Les compteurs d'impulsions: dls_cpti.md
-   - Les compteurs horaire: dls_cpth.md
-   - Les Visuels: dls_visuels.md
+   - Concept: dls.md
+   - Acronymes: dls_acronymes.md
+   - Liens: dls_link.md
+   - Logique: dls_logique.md
+   - Calculs: dls_calculs.md
+   - Entrées T.O.R: dls_entre_tor.md
+   - Monostables: dls_monostables.md
+   - Messages: dls_messages.md
+   - Compteurs d'impulsions: dls_cpti.md
+   - Compteurs horaire: dls_cpth.md
+   - Visuels: dls_visuels.md
    - Exemple d'anatomie: dls_anatomie.md
  - Mapping:
    - Lien entre connecteur et D.L.S: mapping.md

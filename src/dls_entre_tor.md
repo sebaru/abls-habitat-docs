@@ -8,10 +8,10 @@ Chaque entrée TOR a pour valeur booléenne soit 0, soit 1, et ne peut être uti
 
 Dans la zone d'[ALIAS](dls_acronymes.md), déclarez une entrée TOR de la manière suivante:
 
-    #define ACRONYME <-> _E();
+    #define ACRONYME <-> _DI();
 
 La définition commence par le mot clé #define, puis une chaine de caractères représentant l'**ACRONYME** de l'entrée, puis une double flèche (un inférieur « < », un tiret « - », un supérieur « > »),
-la classe _E, un couple de parenthèses, et enfin un point virgule terminal.
+la classe _DI, un couple de parenthèses, et enfin un point virgule terminal.
 
 ## Les options d'une entrée TOR
 
@@ -26,7 +26,7 @@ Dans une **EXPRESSION**, il est possible de moduler la sémantique du bit intern
 ## Exemple d'usage
 
     /* Nous sommes dans le DLS "PORTE" */
-    #define MON_ENTREE <-> _E (libelle="Capteur d'ouverture de la porte");
+    #define MON_ENTREE <-> _DI (libelle="Capteur d'ouverture de la porte");
 
 ### Usage dans une EXPRESSION
 
