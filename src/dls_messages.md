@@ -26,7 +26,7 @@ au travers de l'option `type`:
 | Activité | **alarme** | ![alarme Message](https://static.abls-habitat.fr/img/pignon_red.svg) | Une situation de dérive persistante sur le procédé necessitant une intervention de l'utilisateur est rencontrée.
 | Activité | **notification** | ![Notif Message](https://static.abls-habitat.fr/img/notification.svg) | Le message a pour vocation d'informer d'un évènement lié au procédé. Le message reste apparent jusqu'au nouvel évènement du même type.
 | Sécurité des biens | **veille** | ![Info Message](https://static.abls-habitat.fr/img/bouclier_green.svg) | Les biens associés au procédé sont sous surveillance.
-| Sécurité des biens | **alerte** | ![Info Message](https://static.abls-habitat.fr/img/pignon_orange.svg) | Un évènement particulier met à mal la sécurité des biens associés au procédé.
+| Sécurité des biens | **alerte** | ![Info Message](https://static.abls-habitat.fr/img/bouclier_red.svg) | Un évènement particulier met à mal la sécurité des biens associés au procédé.
 | Sécurité des personnes | **derangement** | ![Info Message](https://static.abls-habitat.fr/img/croix_orange.svg) | La surveillance de la sécurité des personnes à proximité du procédé n'est que partielle ou inexistante.
 | Sécurité des personnes | **danger** | ![Info Message](https://static.abls-habitat.fr/img/croix_red.svg) | Un évènement met en péril la sécurité des personnes à proximité du procédé.
 
