@@ -46,9 +46,13 @@ Si MA_CONDITION devient FAUSSE alors MON_MONOSTABLE devient FAUX également.
 
     /* Entre 10h et 11h, on veut chauffer */
     - _HEURE > 10:00 . _HEURE < 11:00 → WANT_CHAUFFE;
-    - WANT_CHAUFFE(edge_up) → MON_BISTABLE; /* Si WANT_CHAUFFE passe de 0 à 1, MON_BISTABLE est positionné à 1 */
-    - WANT_CHAUFFE(edge_down) → MON_BISTABLE; /* Si WANT_CHAUFFE passe de 1 à 0, MON_BISTABLE est positionné à 0 */
+
+    /* Si WANT_CHAUFFE passe de 0 à 1, MON_BISTABLE est positionné à 1 */
+    - WANT_CHAUFFE(edge_up) → MON_BISTABLE;
+
+    /* Si WANT_CHAUFFE passe de 1 à 0, MON_BISTABLE est positionné à 0 */
+    - WANT_CHAUFFE(edge_down) → MON_BISTABLE;
 
 !!! warning
     Un monostable ne peut etre positionné que dans le module D.L.S à qui il appartient.
-    Le positionnement d'un monostable d'un autre module D.L.S lévera une erreur à la compilation.
+    Le positionnement d'un monostable d'un autre module D.L.S lèvera une erreur à la compilation.

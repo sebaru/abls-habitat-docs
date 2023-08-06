@@ -21,21 +21,22 @@ au travers de l'option `type`:
 
 | Périmètre procédé 	| Typologie | Représentation | 	Description
 |:------------|:--------:|:----------------|:-------
-| Activité | **info** | ![Info Message](https://static.abls-habitat.fr/img/info.svg) | Le message a pour vocation d'informer l'utilisateur d'une situation ou d'un évènement sur le procédé.
-| Activité | **defaut** | ![Info Message](https://static.abls-habitat.fr/img/pignon_orange.svg) | Une situation de dérive potentiellement momentanée sur le procédé est rencontrée sur le procédé.
-| Activité | **alarme** | ![Info Message](https://static.abls-habitat.fr/img/pignon_red.svg) | Une situation de dérive persistante sur le procédé necessitant une intervention de l'utilisateur est rencontrée.
+| Activité | **etat** | ![Etat Message](https://static.abls-habitat.fr/img/info.svg) | Le message a pour vocation d'informer l'utilisateur d'une situation ou d'un évènement sur le procédé. Si la situation ne se présente plus, le message disparait.
+| Activité | **defaut** | ![Defaut Message](https://static.abls-habitat.fr/img/pignon_orange.svg) | Une situation de dérive potentiellement momentanée sur le procédé est rencontrée sur le procédé.
+| Activité | **alarme** | ![alarme Message](https://static.abls-habitat.fr/img/pignon_red.svg) | Une situation de dérive persistante sur le procédé necessitant une intervention de l'utilisateur est rencontrée.
+| Activité | **notification** | ![Notif Message](https://static.abls-habitat.fr/img/notification.svg) | Le message a pour vocation d'informer d'un évènement lié au procédé. Le message reste apparent jusqu'au nouvel évènement du même type.
 | Sécurité des biens | **veille** | ![Info Message](https://static.abls-habitat.fr/img/bouclier_green.svg) | Les biens associés au procédé sont sous surveillance.
 | Sécurité des biens | **alerte** | ![Info Message](https://static.abls-habitat.fr/img/pignon_orange.svg) | Un évènement particulier met à mal la sécurité des biens associés au procédé.
 | Sécurité des personnes | **derangement** | ![Info Message](https://static.abls-habitat.fr/img/croix_orange.svg) | La surveillance de la sécurité des personnes à proximité du procédé n'est que partielle ou inexistante.
 | Sécurité des personnes | **danger** | ![Info Message](https://static.abls-habitat.fr/img/croix_red.svg) | Un évènement met en péril la sécurité des personnes à proximité du procédé.
 
-Si non renseignée, la typologie par défaut d'un message est **info**.
+Si non renseignée, la typologie par défaut d'un message est **etat**.
 
 Exemple:
 
     /* Nous sommes dans le DLS "PORTE" */
     /* Définition d'un message */
-    #define MON_MSG <-> _MSG(type=info, libelle="la porte est ouverte")
+    #define MON_MSG <-> _MSG(type=etat, libelle="la porte est ouverte")
 
     /* Le message 'la porte est ouverte', de typologie info, sera diffusé */
     /* quand la condition 'PORTE_OUVERTE' sera vraie. */
@@ -54,10 +55,10 @@ Exemple:
 
     /* Nous sommes dans le DLS "PORTE" */
     /* Définition d'un message, ajout de l'option `debug` en fin de liste d'option */
-    #define MSG_VENT_NORD  <-> _MSG(type=info, libelle="vent du nord", **groupe**=1)
-    #define MSG_VENT_SUD   <-> _MSG(type=info, libelle="vent du sud", **groupe**=1)
-    #define MSG_VENT_EST   <-> _MSG(type=info, libelle="vent d'est", **groupe**=1)
-    #define MSG_VENT_OUEST <-> _MSG(type=info, libelle="vent d'ouest", **groupe**=1)
+    #define MSG_VENT_NORD  <-> _MSG(type=etat, libelle="vent du nord", **groupe**=1)
+    #define MSG_VENT_SUD   <-> _MSG(type=etat, libelle="vent du sud", **groupe**=1)
+    #define MSG_VENT_EST   <-> _MSG(type=etat, libelle="vent d'est", **groupe**=1)
+    #define MSG_VENT_OUEST <-> _MSG(type=etat, libelle="vent d'ouest", **groupe**=1)
 
     /* le passage d'un vent du nord à un vent d'est diffusera le message */
     /* 'vent d'est' tout en désactivant le message 'vent du nord' */
@@ -75,7 +76,7 @@ Exemple:
 
     /* Nous sommes dans le DLS "PORTE" */
     /* Définition d'un message, ajout de l'option `debug` en fin de liste d'option */
-    #define MON_MSG_DE_DEBUG <-> _MSG(type=info, libelle="test", **debug**)
+    #define MON_MSG_DE_DEBUG <-> _MSG(type=etat, libelle="test", **debug**)
 
     /* Meme si 'MA_CONDITION' est vraie, le message */
     /* ne sera diffusé que si le DLS est en debug. */
@@ -85,7 +86,7 @@ Exemple:
 
     /* Nous sommes dans le DLS "PORTE" */
     /* Définition des messages */
-    #define MSG_OUVERTE    <-> _MSG(type=info,   libelle="la porte est ouverte")
+    #define MSG_OUVERTE    <-> _MSG(type=etat,   libelle="la porte est ouverte")
     #define MSG_COINCEE    <-> _MSG(type=defaut, libelle="la porte est coincée")
     #define MSG_EN_VEILLE  <-> _MSG(type=veille, libelle="la porte est sous surveillance")
     #define MSG_EFFRACTION <-> _MSG(type=alerte, libelle="la porte est fracturée")

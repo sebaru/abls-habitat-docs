@@ -45,8 +45,8 @@ Ainsi, pour un tétérupteur pilotant l'éclairage d'une cour par exemple, dont 
      #define VISU_POS_TL         <-> _I(forme="ampoule"); /* Position Télérupteur */
 
     /* MESSAGES */
-     #define MSG_TELE_OFF          <-> _MSG(type=info,libelle="Eclairage Cour éteint"); /* TL désactivé */
-     #define MSG_TELE_ON           <-> _MSG(type=info,libelle="Eclairage Cour actif");  /* TL activé */
+     #define MSG_TELE_OFF          <-> _MSG(type=etat,libelle="Eclairage Cour éteint"); /* TL désactivé */
+     #define MSG_TELE_ON           <-> _MSG(type=etat,libelle="Eclairage Cour actif");  /* TL activé */
      #define MSG_DEF_REPOS         <-> _MSG(type=defaut,libelle="Défaut repos");        /* Defaut repos */
      #define MSG_DEF_TRAVAIL       <-> _MSG(type=defaut,libelle="Défaut travail");      /* Defaut travail */
 
