@@ -1,6 +1,8 @@
 #/bin/sh
 
-curl https://api.abls-habitat.fr/icons | jq '.icons[].categorie' | sort -u | sed -e 's/"//g' > categorie.sql
+source_json=`curl https://static.abls-habitat.fr/inventory.json`
+CATEGORIES=`echo $source_json | jq '.icons[].categorie' | sort -u | sed -e 's/"//g'`
+echo $CATEGORIES
 
 SOMMAIRE=src/visuels.md
 echo "" > $SOMMAIRE
@@ -8,7 +10,7 @@ echo "# Liste des visuels par catégorie" >> $SOMMAIRE
 echo "" >> $SOMMAIRE
 
 
-for CAT in $(cat categorie.sql)
+for CAT in $CATEGORIES
 	do
   echo;
   echo "------------- Processing Categorie $CAT"
@@ -20,7 +22,7 @@ for CAT in $(cat categorie.sql)
   echo "# Liste des visuels de la catégorie '"$CAT"'" >> $RESULT
   echo "" >> $RESULT
 
-  curl https://api.abls-habitat.fr/icons | jq -j '.icons[] | select (.categorie=="'$CAT'")  | .forme, " ", .extension, " ", .ihm_affichage, "\n"' > forme.sql
+  echo $source_json | jq -j '.icons[] | select (.categorie=="'$CAT'")  | .forme, " ", .extension, " ", .ihm_affichage, "\n"' > forme.sql
 
   cat forme.sql | while read -r line
    do
@@ -63,20 +65,14 @@ for CAT in $(cat categorie.sql)
       echo "Modes:" >> $RESULT
       echo "" >> $RESULT
 
-       for FILE in $(ls ../abls-habitat-static/img/$FORME*$EXTENSION)
-        do
-          step=$(basename $FILE .$EXTENSION)
-          taille=$((${#FORME}+1))
-          MODE=${step:$taille}
-          echo "* $MODE" >> $RESULT
-        done
+      MODES=`echo $source_json | jq '.icons[] | select (.categorie=="'$CAT'")  | select (.forme=="'$FORME'") | .modes[]' | sort -u | sed -e 's/"//g' `
 
-       echo "" >> $RESULT
-       for FILE in $(ls ../abls-habitat-static/img/$FORME*$EXTENSION)
+       for MODE in $MODES
         do
-          step=$(basename $FILE)
-          echo "![imgvisuel](https://static.abls-habitat.fr/img/"$step")" >> $RESULT
+          echo "* $MODE<br>" >> $RESULT
+          echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_"$MODE"."$EXTENSION")" >> $RESULT
         done
+       echo "" >> $RESULT
 
     fi
 
@@ -85,30 +81,25 @@ for CAT in $(cat categorie.sql)
       echo "Modes:" >> $RESULT
       echo "" >> $RESULT
 
-       for FILE in $(ls ../abls-habitat-static/img/$FORME*_source.$EXTENSION)
-        do
-          step=$(basename $FILE _source.$EXTENSION)
-          taille=$((${#FORME}+1))
-          MODE=${step:$taille}
-          echo "* $MODE" >> $RESULT
-        done
+      MODES=`echo $source_json | jq '.icons[] | select (.categorie=="'$CAT'")  | select (.forme=="'$FORME'") | .modes[]' | sort -u | sed -e 's/"//g' `
 
-       echo "" >> $RESULT
-       for FILE in $(ls ../abls-habitat-static/img/$FORME*_source.$EXTENSION)
+       for MODE in $MODES
         do
+          echo "* $MODE<br>" >> $RESULT
           step=$(basename $FILE _source.$EXTENSION)
-          echo "![imgvisuel](https://static.abls-habitat.fr/img/"$step"_white."$EXTENSION")" >> $RESULT
-          echo "![imgvisuel](https://static.abls-habitat.fr/img/"$step"_lightblue."$EXTENSION")" >> $RESULT
-          echo "![imgvisuel](https://static.abls-habitat.fr/img/"$step"_blue."$EXTENSION")" >> $RESULT
-          echo "![imgvisuel](https://static.abls-habitat.fr/img/"$step"_darkgreen."$EXTENSION")" >> $RESULT
-          echo "![imgvisuel](https://static.abls-habitat.fr/img/"$step"_gray."$EXTENSION")" >> $RESULT
-          echo "![imgvisuel](https://static.abls-habitat.fr/img/"$step"_green."$EXTENSION")" >> $RESULT
-          echo "![imgvisuel](https://static.abls-habitat.fr/img/"$step"_orange."$EXTENSION")" >> $RESULT
-          echo "![imgvisuel](https://static.abls-habitat.fr/img/"$step"_red."$EXTENSION")" >> $RESULT
-          echo "![imgvisuel](https://static.abls-habitat.fr/img/"$step"_yellow."$EXTENSION")" >> $RESULT
-          echo "![imgvisuel](https://static.abls-habitat.fr/img/"$step"_black."$EXTENSION")" >> $RESULT
+          echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_"$MODE"_white."$EXTENSION")" >> $RESULT
+          echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_"$MODE"_lightblue."$EXTENSION")" >> $RESULT
+          echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_"$MODE"_blue."$EXTENSION")" >> $RESULT
+          echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_"$MODE"_darkgreen."$EXTENSION")" >> $RESULT
+          echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_"$MODE"_gray."$EXTENSION")" >> $RESULT
+          echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_"$MODE"_green."$EXTENSION")" >> $RESULT
+          echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_"$MODE"_orange."$EXTENSION")" >> $RESULT
+          echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_"$MODE"_red."$EXTENSION")" >> $RESULT
+          echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_"$MODE"_yellow."$EXTENSION")" >> $RESULT
+          echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_"$MODE"_black."$EXTENSION")" >> $RESULT
           echo "" >> $RESULT
         done
+       echo "" >> $RESULT
 
     fi
 
@@ -116,5 +107,3 @@ for CAT in $(cat categorie.sql)
    done
   rm forme.sql
 done
-
-rm categorie.sql

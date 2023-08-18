@@ -99,3 +99,17 @@
 ![imgvisuel](https://static.abls-habitat.fr/img/croix_yellow.png)
 ![imgvisuel](https://static.abls-habitat.fr/img/croix_black.png)
 
+---
+## `forme`='voyant'
+
+![imgvisuel](https://static.abls-habitat.fr/img/voyant_white.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/voyant_lightblue.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/voyant_blue.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/voyant_darkgreen.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/voyant_gray.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/voyant_green.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/voyant_orange.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/voyant_red.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/voyant_yellow.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/voyant_black.svg)
+

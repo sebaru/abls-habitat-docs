@@ -11,11 +11,11 @@
 
 Modes:
 
-* ferme
-* ouvert
-
+* ferme<br>
 ![imgvisuel](https://static.abls-habitat.fr/img/cadena_ferme.png)
+* ouvert<br>
 ![imgvisuel](https://static.abls-habitat.fr/img/cadena_ouvert.png)
+
 
 ---
 ## `forme`='fleche'
@@ -36,13 +36,13 @@ Modes:
 
 Modes:
 
-* checked
-* unchecked_but_ok
-* unchecked
-
+* checked<br>
 ![imgvisuel](https://static.abls-habitat.fr/img/check_checked.png)
-![imgvisuel](https://static.abls-habitat.fr/img/check_unchecked_but_ok.png)
+* unchecked<br>
 ![imgvisuel](https://static.abls-habitat.fr/img/check_unchecked.png)
+* unchecked_but_ok<br>
+![imgvisuel](https://static.abls-habitat.fr/img/check_unchecked_but_ok.png)
+
 
 ---
 ## `forme`='question'

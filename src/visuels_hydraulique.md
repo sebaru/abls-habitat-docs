@@ -43,3 +43,29 @@
 ![imgvisuel](https://static.abls-habitat.fr/img/goutte_eau_yellow.png)
 ![imgvisuel](https://static.abls-habitat.fr/img/goutte_eau_black.png)
 
+---
+## `forme`='pompe'
+
+![imgvisuel](https://static.abls-habitat.fr/img/pompe_white.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/pompe_lightblue.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/pompe_blue.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/pompe_darkgreen.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/pompe_gray.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/pompe_green.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/pompe_orange.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/pompe_red.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/pompe_yellow.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/pompe_black.svg)
+
+---
+## `forme`='pressostat_simple'
+
+![imgvisuel](https://static.abls-habitat.fr/img/pressostat_simple.svg)
+
+---
+## `forme`='réservoir_eau'
+
+Modes:
+
+
+

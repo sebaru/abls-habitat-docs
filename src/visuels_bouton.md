@@ -11,15 +11,15 @@
 
 Modes:
 
-* auto
-* maintenance
-* manu
-* sauto
-
+* auto<br>
 ![imgvisuel](https://static.abls-habitat.fr/img/auto_manu_auto.svg)
+* maintenance<br>
 ![imgvisuel](https://static.abls-habitat.fr/img/auto_manu_maintenance.svg)
+* manu<br>
 ![imgvisuel](https://static.abls-habitat.fr/img/auto_manu_manu.svg)
+* sauto<br>
 ![imgvisuel](https://static.abls-habitat.fr/img/auto_manu_sauto.svg)
+
 
 ---
 ## `forme`='bouton_raz'
@@ -66,14 +66,31 @@ Modes:
 ---
 ## `forme`='bouton_io'
 
-![imgvisuel](https://static.abls-habitat.fr/img/bouton_io_white.png)
-![imgvisuel](https://static.abls-habitat.fr/img/bouton_io_lightblue.png)
-![imgvisuel](https://static.abls-habitat.fr/img/bouton_io_blue.png)
-![imgvisuel](https://static.abls-habitat.fr/img/bouton_io_darkgreen.png)
-![imgvisuel](https://static.abls-habitat.fr/img/bouton_io_gray.png)
-![imgvisuel](https://static.abls-habitat.fr/img/bouton_io_green.png)
-![imgvisuel](https://static.abls-habitat.fr/img/bouton_io_orange.png)
-![imgvisuel](https://static.abls-habitat.fr/img/bouton_io_red.png)
-![imgvisuel](https://static.abls-habitat.fr/img/bouton_io_yellow.png)
-![imgvisuel](https://static.abls-habitat.fr/img/bouton_io_black.png)
+![imgvisuel](https://static.abls-habitat.fr/img/bouton_io_white.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/bouton_io_lightblue.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/bouton_io_blue.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/bouton_io_darkgreen.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/bouton_io_gray.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/bouton_io_green.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/bouton_io_orange.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/bouton_io_red.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/bouton_io_yellow.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/bouton_io_black.svg)
+
+---
+## `forme`='switch'
+
+Modes:
+
+* NF<br>
+![imgvisuel](https://static.abls-habitat.fr/img/switch_NF.svg)
+* NO<br>
+![imgvisuel](https://static.abls-habitat.fr/img/switch_NO.svg)
+* NO_NF<br>
+![imgvisuel](https://static.abls-habitat.fr/img/switch_NO_NF.svg)
+* off<br>
+![imgvisuel](https://static.abls-habitat.fr/img/switch_off.svg)
+* on<br>
+![imgvisuel](https://static.abls-habitat.fr/img/switch_on.svg)
+
 

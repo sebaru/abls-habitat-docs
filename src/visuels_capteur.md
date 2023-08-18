@@ -6,9 +6,7 @@
 
 Modes:
 
-* off
-* on
-
+* off<br>
 ![imgvisuel](https://static.abls-habitat.fr/img/detecteur_mouvement_off_white.png)
 ![imgvisuel](https://static.abls-habitat.fr/img/detecteur_mouvement_off_lightblue.png)
 ![imgvisuel](https://static.abls-habitat.fr/img/detecteur_mouvement_off_blue.png)
@@ -20,6 +18,7 @@ Modes:
 ![imgvisuel](https://static.abls-habitat.fr/img/detecteur_mouvement_off_yellow.png)
 ![imgvisuel](https://static.abls-habitat.fr/img/detecteur_mouvement_off_black.png)
 
+* on<br>
 ![imgvisuel](https://static.abls-habitat.fr/img/detecteur_mouvement_on_white.png)
 ![imgvisuel](https://static.abls-habitat.fr/img/detecteur_mouvement_on_lightblue.png)
 ![imgvisuel](https://static.abls-habitat.fr/img/detecteur_mouvement_on_blue.png)
@@ -30,6 +29,7 @@ Modes:
 ![imgvisuel](https://static.abls-habitat.fr/img/detecteur_mouvement_on_red.png)
 ![imgvisuel](https://static.abls-habitat.fr/img/detecteur_mouvement_on_yellow.png)
 ![imgvisuel](https://static.abls-habitat.fr/img/detecteur_mouvement_on_black.png)
+
 
 
 ---

@@ -57,10 +57,32 @@ theme:
  name: material
  logo: https://static.abls-habitat.fr/img/abls.svg
  locale: fr
+ language: fr
  features:
+  - navigation.instant
   - navigation.tabs
- palette:
-  - scheme: default
+  - navigation.tracking
+  - navigation.tabs.sticky
+  - navigation.sections
+  - toc.integrate
+  - navigation.top
+  - search.suggest
+  - search.share
+#  - navigation.indexes
+ palette: # (1)!
+    - media: "(prefers-color-scheme: dark)"
+      primary: indigo
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+    - media: "(prefers-color-scheme: light)"
+      primary: indigo
+      scheme: default
+      toggle:
+        icon: material/brightness-7 # (2)!
+        name: Switch to dark mode
 
 extra:
   social:

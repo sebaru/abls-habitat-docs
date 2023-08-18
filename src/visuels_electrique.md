@@ -6,36 +6,40 @@
 
 Modes:
 
-* action_off
-* action_on
-* off
-* on
+* action_off<br>
+![imgvisuel](https://static.abls-habitat.fr/img/ampoule_action_off.svg)
+* action_on<br>
+![imgvisuel](https://static.abls-habitat.fr/img/ampoule_action_on.svg)
+* off<br>
+![imgvisuel](https://static.abls-habitat.fr/img/ampoule_off.svg)
+* on<br>
+![imgvisuel](https://static.abls-habitat.fr/img/ampoule_on.svg)
+* tout_allumer<br>
+![imgvisuel](https://static.abls-habitat.fr/img/ampoule_tout_allumer.svg)
+* tout_eteindre<br>
+![imgvisuel](https://static.abls-habitat.fr/img/ampoule_tout_eteindre.svg)
 
-![imgvisuel](https://static.abls-habitat.fr/img/ampoule_action_off.png)
-![imgvisuel](https://static.abls-habitat.fr/img/ampoule_action_on.png)
-![imgvisuel](https://static.abls-habitat.fr/img/ampoule_off.png)
-![imgvisuel](https://static.abls-habitat.fr/img/ampoule_on.png)
 
 ---
 ## `forme`='pile'
 
 Modes:
 
-* 0
-* 100
-* 20
-* 40
-* 60
-* 80
-* en_charge
-
+* 0<br>
 ![imgvisuel](https://static.abls-habitat.fr/img/pile_0.png)
+* 100<br>
 ![imgvisuel](https://static.abls-habitat.fr/img/pile_100.png)
+* 20<br>
 ![imgvisuel](https://static.abls-habitat.fr/img/pile_20.png)
+* 40<br>
 ![imgvisuel](https://static.abls-habitat.fr/img/pile_40.png)
+* 60<br>
 ![imgvisuel](https://static.abls-habitat.fr/img/pile_60.png)
+* 80<br>
 ![imgvisuel](https://static.abls-habitat.fr/img/pile_80.png)
+* en_charge<br>
 ![imgvisuel](https://static.abls-habitat.fr/img/pile_en_charge.png)
+
 
 ---
 ## `forme`='vmc'
@@ -84,9 +88,7 @@ Modes:
 
 Modes:
 
-* ferme
-* ouvert
-
+* ferme<br>
 ![imgvisuel](https://static.abls-habitat.fr/img/2d_contacteur_ferme_white.svg)
 ![imgvisuel](https://static.abls-habitat.fr/img/2d_contacteur_ferme_lightblue.svg)
 ![imgvisuel](https://static.abls-habitat.fr/img/2d_contacteur_ferme_blue.svg)
@@ -98,6 +100,7 @@ Modes:
 ![imgvisuel](https://static.abls-habitat.fr/img/2d_contacteur_ferme_yellow.svg)
 ![imgvisuel](https://static.abls-habitat.fr/img/2d_contacteur_ferme_black.svg)
 
+* ouvert<br>
 ![imgvisuel](https://static.abls-habitat.fr/img/2d_contacteur_ouvert_white.svg)
 ![imgvisuel](https://static.abls-habitat.fr/img/2d_contacteur_ouvert_lightblue.svg)
 ![imgvisuel](https://static.abls-habitat.fr/img/2d_contacteur_ouvert_blue.svg)
@@ -109,4 +112,33 @@ Modes:
 ![imgvisuel](https://static.abls-habitat.fr/img/2d_contacteur_ouvert_yellow.svg)
 ![imgvisuel](https://static.abls-habitat.fr/img/2d_contacteur_ouvert_black.svg)
 
+
+
+---
+## `forme`='2d_ampoule'
+
+![imgvisuel](https://static.abls-habitat.fr/img/2d_ampoule_white.png)
+![imgvisuel](https://static.abls-habitat.fr/img/2d_ampoule_lightblue.png)
+![imgvisuel](https://static.abls-habitat.fr/img/2d_ampoule_blue.png)
+![imgvisuel](https://static.abls-habitat.fr/img/2d_ampoule_darkgreen.png)
+![imgvisuel](https://static.abls-habitat.fr/img/2d_ampoule_gray.png)
+![imgvisuel](https://static.abls-habitat.fr/img/2d_ampoule_green.png)
+![imgvisuel](https://static.abls-habitat.fr/img/2d_ampoule_orange.png)
+![imgvisuel](https://static.abls-habitat.fr/img/2d_ampoule_red.png)
+![imgvisuel](https://static.abls-habitat.fr/img/2d_ampoule_yellow.png)
+![imgvisuel](https://static.abls-habitat.fr/img/2d_ampoule_black.png)
+
+---
+## `forme`='chauffe_eau'
+
+![imgvisuel](https://static.abls-habitat.fr/img/chauffe_eau_white.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/chauffe_eau_lightblue.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/chauffe_eau_blue.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/chauffe_eau_darkgreen.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/chauffe_eau_gray.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/chauffe_eau_green.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/chauffe_eau_orange.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/chauffe_eau_red.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/chauffe_eau_yellow.svg)
+![imgvisuel](https://static.abls-habitat.fr/img/chauffe_eau_black.svg)
 

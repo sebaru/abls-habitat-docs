@@ -6,49 +6,42 @@
 
 Modes:
 
-* off
-* on
-
+* off<br>
 ![imgvisuel](https://static.abls-habitat.fr/img/chaudiere_gaz_off.png)
+* on<br>
 ![imgvisuel](https://static.abls-habitat.fr/img/chaudiere_gaz_on.png)
+
 
 ---
 ## `forme`='radiateur'
 
 Modes:
 
-* chaud
-* clim
-* froid
-* 
-
+* chaud<br>
 ![imgvisuel](https://static.abls-habitat.fr/img/radiateur_chaud.png)
+* clim<br>
 ![imgvisuel](https://static.abls-habitat.fr/img/radiateur_clim.png)
+* froid<br>
 ![imgvisuel](https://static.abls-habitat.fr/img/radiateur_froid.png)
-![imgvisuel](https://static.abls-habitat.fr/img/radiateur.png)
+
 
 ---
 ## `forme`='soufflant'
 
 Modes:
 
-* off
-* on
-
+* off<br>
 ![imgvisuel](https://static.abls-habitat.fr/img/soufflant_off.png)
+* on<br>
 ![imgvisuel](https://static.abls-habitat.fr/img/soufflant_on.png)
+
 
 ---
 ## `forme`='thermometre'
 
 Modes:
 
-* nb
-* nh
-* ntb
-* nth
-* ok
-
+* nb<br>
 ![imgvisuel](https://static.abls-habitat.fr/img/thermometre_nb_white.png)
 ![imgvisuel](https://static.abls-habitat.fr/img/thermometre_nb_lightblue.png)
 ![imgvisuel](https://static.abls-habitat.fr/img/thermometre_nb_blue.png)
@@ -60,6 +53,7 @@ Modes:
 ![imgvisuel](https://static.abls-habitat.fr/img/thermometre_nb_yellow.png)
 ![imgvisuel](https://static.abls-habitat.fr/img/thermometre_nb_black.png)
 
+* nh<br>
 ![imgvisuel](https://static.abls-habitat.fr/img/thermometre_nh_white.png)
 ![imgvisuel](https://static.abls-habitat.fr/img/thermometre_nh_lightblue.png)
 ![imgvisuel](https://static.abls-habitat.fr/img/thermometre_nh_blue.png)
@@ -71,6 +65,7 @@ Modes:
 ![imgvisuel](https://static.abls-habitat.fr/img/thermometre_nh_yellow.png)
 ![imgvisuel](https://static.abls-habitat.fr/img/thermometre_nh_black.png)
 
+* ntb<br>
 ![imgvisuel](https://static.abls-habitat.fr/img/thermometre_ntb_white.png)
 ![imgvisuel](https://static.abls-habitat.fr/img/thermometre_ntb_lightblue.png)
 ![imgvisuel](https://static.abls-habitat.fr/img/thermometre_ntb_blue.png)
@@ -82,6 +77,7 @@ Modes:
 ![imgvisuel](https://static.abls-habitat.fr/img/thermometre_ntb_yellow.png)
 ![imgvisuel](https://static.abls-habitat.fr/img/thermometre_ntb_black.png)
 
+* nth<br>
 ![imgvisuel](https://static.abls-habitat.fr/img/thermometre_nth_white.png)
 ![imgvisuel](https://static.abls-habitat.fr/img/thermometre_nth_lightblue.png)
 ![imgvisuel](https://static.abls-habitat.fr/img/thermometre_nth_blue.png)
@@ -93,6 +89,7 @@ Modes:
 ![imgvisuel](https://static.abls-habitat.fr/img/thermometre_nth_yellow.png)
 ![imgvisuel](https://static.abls-habitat.fr/img/thermometre_nth_black.png)
 
+* ok<br>
 ![imgvisuel](https://static.abls-habitat.fr/img/thermometre_ok_white.png)
 ![imgvisuel](https://static.abls-habitat.fr/img/thermometre_ok_lightblue.png)
 ![imgvisuel](https://static.abls-habitat.fr/img/thermometre_ok_blue.png)
@@ -103,5 +100,6 @@ Modes:
 ![imgvisuel](https://static.abls-habitat.fr/img/thermometre_ok_red.png)
 ![imgvisuel](https://static.abls-habitat.fr/img/thermometre_ok_yellow.png)
 ![imgvisuel](https://static.abls-habitat.fr/img/thermometre_ok_black.png)
+
 
 
