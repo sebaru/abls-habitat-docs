@@ -22,15 +22,15 @@ for CAT in $CATEGORIES
   echo "# Liste des visuels de la catégorie '"$CAT"'" >> $RESULT
   echo "" >> $RESULT
 
-  echo $source_json | jq -j '.icons[] | select (.categorie=="'$CAT'")  | .forme, " ", .extension, " ", .ihm_affichage, "\n"' > forme.sql
+  echo $source_json | jq -j '.icons[] | select (.categorie=="'$CAT'")  | .forme, " ", .extension, " ", .controle, "\n"' > forme.sql
 
   cat forme.sql | while read -r line
    do
     FORME=$(echo $line | cut -d ' ' -f1 -)
     EXTENSION=$(echo $line | cut -d ' ' -f2 -)
-    IHM_AFFICHAGE=$(echo $line | cut -d ' ' -f3 -)
+    CONTROLE=$(echo $line | cut -d ' ' -f3 -)
 
-    if [ $IHM_AFFICHAGE = "complexe" ]
+    if [ $CONTROLE = "complexe" ]
      then
       continue
     fi
@@ -41,12 +41,12 @@ for CAT in $CATEGORIES
     echo "## \`forme\`='$FORME'" >> $RESULT
     echo "" >> $RESULT
 
-    if [ $IHM_AFFICHAGE = "static" ]
+    if [ $CONTROLE = "static" ]
      then
        echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"."$EXTENSION")" >> $RESULT
     fi
 
-    if [ $IHM_AFFICHAGE = "by_color" ]
+    if [ $CONTROLE = "by_color" ]
      then
        echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_white."$EXTENSION")" >> $RESULT
        echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_lightblue."$EXTENSION")" >> $RESULT
@@ -60,7 +60,7 @@ for CAT in $CATEGORIES
        echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_black."$EXTENSION")" >> $RESULT
     fi
 
-    if [ $IHM_AFFICHAGE = "by_mode" ]
+    if [ $CONTROLE = "by_mode" ]
      then
       echo "Modes:" >> $RESULT
       echo "" >> $RESULT
@@ -76,7 +76,7 @@ for CAT in $CATEGORIES
 
     fi
 
-    if [ $IHM_AFFICHAGE = "by_mode_color" ]
+    if [ $CONTROLE = "by_mode_color" ]
      then
       echo "Modes:" >> $RESULT
       echo "" >> $RESULT
@@ -99,6 +99,13 @@ for CAT in $CATEGORIES
           echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_"$MODE"_black."$EXTENSION")" >> $RESULT
           echo "" >> $RESULT
         done
+       echo "" >> $RESULT
+
+    fi
+
+    if [ $CONTROLE = "by_js" ]
+     then
+       echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"."$EXTENSION")" >> $RESULT
        echo "" >> $RESULT
 
     fi
