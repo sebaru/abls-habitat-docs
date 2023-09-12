@@ -19,7 +19,7 @@ for CAT in $CATEGORIES
 
   RESULT=src/visuels_$CAT.md
   echo "" > $RESULT
-  echo "# Liste des visuels de la catégorie '"$CAT"'" >> $RESULT
+  echo "# Liste des visuels de la catégorie **"$CAT"**" >> $RESULT
   echo "" >> $RESULT
 
   echo $source_json | jq -j '.icons[] | select (.categorie=="'$CAT'")  | .forme, " ", .extension, " ", .controle, "\n"' > forme.sql
@@ -38,8 +38,8 @@ for CAT in $CATEGORIES
     echo "------------- processing $CAT - $FORME - $EXTENSION - $IHM_AFFICHAGE"
 
     echo "---" >> $RESULT
-    echo "## \`forme\`='$FORME'" >> $RESULT
-    echo "" >> $RESULT
+    echo "## La forme '**$FORME**'" >> $RESULT
+    echo "    #define VISUEL <-> _I(forme='$FORME')" >> $RESULT
 
     if [ $CONTROLE = "static" ]
      then
