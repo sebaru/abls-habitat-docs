@@ -27,7 +27,7 @@ Si le `mode` n'est pas renseigné, celui-ci sera considéré comme **annotation*
 
 ##Les couleurs des commentaires
 
-Toutes les [couleurs](dls_visuels.md#les-couleurs) traditionnelles sont reconnues.
+Toutes les [couleurs](dls_visuels.md#les-couleurs) sont reconnues.
 
 Quelques exemples pilotant un commentaire :
 

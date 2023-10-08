@@ -58,6 +58,7 @@ for CAT in $CATEGORIES
        echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_red."$EXTENSION")" >> $RESULT
        echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_yellow."$EXTENSION")" >> $RESULT
        echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_black."$EXTENSION")" >> $RESULT
+       echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_brown."$EXTENSION")" >> $RESULT
     fi
 
     if [ $CONTROLE = "by_mode" ]
@@ -97,6 +98,7 @@ for CAT in $CATEGORIES
           echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_"$MODE"_red."$EXTENSION")" >> $RESULT
           echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_"$MODE"_yellow."$EXTENSION")" >> $RESULT
           echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_"$MODE"_black."$EXTENSION")" >> $RESULT
+          echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_"$MODE"_brown."$EXTENSION")" >> $RESULT
           echo "" >> $RESULT
         done
        echo "" >> $RESULT

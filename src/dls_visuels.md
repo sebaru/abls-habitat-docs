@@ -39,6 +39,7 @@ Voici des exemples de déclinaisons d'une même forme selon plusieurs `mode` et 
 Les couleurs HTML sont reconnues, dans le format string, comme ci dessous:
 
 * black
+* brown
 * white
 * blue
 * darkgreen

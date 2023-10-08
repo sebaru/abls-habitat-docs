@@ -41,14 +41,7 @@ Exemple:
 ---
 ##Les couleurs des boutons
 
-Les couleurs possibles des boutons sont les suivantes:
-
-* blue
-* red
-* orange
-* green
-* gray
-* black
+Toutes les [couleurs](dls_visuels.md#les-couleurs) traditionnelles sont reconnues.
 
 ---
 ##Attribut de clignotement
