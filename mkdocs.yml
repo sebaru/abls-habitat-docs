@@ -34,15 +34,15 @@ nav:
  - D.L.S:
    - Concept: dls.md
    - Acronymes: dls_acronymes.md
-   - Liens: dls_link.md
    - Logique: dls_logique.md
-   - Calculs: dls_calculs.md
    - Entrées T.O.R: dls_entre_tor.md
+   - Registres: dls_registres.md
    - Monostables: dls_monostables.md
    - Messages: dls_messages.md
    - Compteurs d'impulsions: dls_cpti.md
    - Compteurs horaire: dls_cpth.md
    - Visuels: dls_visuels.md
+   - Liens: dls_link.md
    - Exemple d'anatomie: dls_anatomie.md
  - Mapping:
    - Lien entre connecteur et D.L.S: mapping.md

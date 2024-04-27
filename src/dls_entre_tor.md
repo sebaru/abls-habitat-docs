@@ -23,12 +23,12 @@ Dans une **EXPRESSION**, il est possible de moduler la sémantique du bit intern
 !!! tip
     Une entrée TOR dispose d'un libellé (une description), qui est héritée de la configuration du [connecteur](connecteurs.md) qui lui est associé.
 
-## Exemple d'usage
+## Exemple de définition
 
     /* Nous sommes dans le DLS "PORTE" */
     #define MON_ENTREE <-> _DI (libelle="Capteur d'ouverture de la porte");
 
-### Usage dans une EXPRESSION
+## Usage dans une EXPRESSION
 
     - MON_ENTREE → MON_BISTABLE;       /* Si MON_ENTREE = 1 alors MON_BISTABLE = 1 */
     - /MON_ENTREE → /MON_BISTABLE;     /* Si MON_ENTREE = 0 alors MON_BISTABLE = 0 */

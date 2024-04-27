@@ -20,7 +20,7 @@ liées entre elles par des [opérateurs de base](#operateurs-de-base).
     Les operateurs ne peuvent être appliqués à des **EXPRESSION** de types différents. Par exemple, il n'est pas possible
     d'ajouter un `booléen` à une valeur `arithmétique`.
 
-La « LISTE_ACTIONS » est une liste d'une ou plusieurs [actions](#lesactions), séparées par des virgules.
+La « LISTE_ACTIONS » est une liste d'une ou plusieurs [ACTIONS](#lesactions), séparées par des virgules.
 
 Voici un exemple de syntaxe :
 

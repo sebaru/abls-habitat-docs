@@ -106,14 +106,14 @@ Ainsi, pour un tétérupteur pilotant l'éclairage d'une cour par exemple, dont 
 
 ### La gestion des défauts
 
-Le template de detection de defaut est le suivant:
+Le template de détection des défauts est le suivant:
 
     /* Detections du défaut */
     - TR_DEF . **Condition_du_defaut** . /MDEF_FIXE -> MDEF;
     /* Acquit intéractif du defaut */
     - OSYN_ACQUIT . MDEF ->/MDEF, MDEF_FIXE;
     /* RAZ du défaut */
-    - *Condition_de_RAZ** -> MDEF_FIXE;
+    - **Condition_de_RAZ** -> MDEF_FIXE;
     /* Notification du défaut */
     - MDEF + MDEF_FIXE -> MSG_DEFAUT;
 
