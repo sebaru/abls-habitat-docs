@@ -40,20 +40,20 @@ Un module D.L.S présentera plusieurs zones de code :
 
 Les différentes classes proposées sont les suivantes:
 
-* [_E ou _DI](dls_entre_tor.md) est une **entrée TOR**. L'entrée peut avoir 2 valeurs: 0 ou 1 et représente l'état physique d'un capteur.
-* [_EA ou _AI](dls_entre_ana.md) est une **entrée analogique** est représentée par la classe . Une entrée Analogique représente une valeur d'un capteur analogique. Celle-ci dispose d'options permettant au systeme de savoir comment interpréter les informations fournies par les capteurs (4/20mA, 0-10V, ...)
-* [_A](dls_sortie_tor.md) est une **sortie TOR** est représentée par la classe . Une sortie TOR peut avoir 2 valeurs : 0 ou 1, et représente l'état souhaité d'un actionneur.
-* [_AA](dls_sortie_ana.md) est une **sortie analogique** est représentée par la classe . Une sortie Analogique represente la valeur souhaitée d'un actionneur analogique. Elle dispose d'options permettant au systeme de traduire une valeur reelle en valeurcompréhensible par les actionneurs.
+* [_DI](dls_entre_tor.md) est une **entrée TOR**. L'entrée peut avoir 2 valeurs: 0 ou 1 et représente l'état physique d'un capteur.
+* [_AI](dls_entre_ana.md) est une **entrée analogique** est représentée par la classe . Une entrée Analogique représente une valeur d'un capteur analogique. Celle-ci dispose d'options permettant au systeme de savoir comment interpréter les informations fournies par les capteurs (4/20mA, 0-10V, ...)
+* [_DO](dls_sortie_tor.md) est une **sortie TOR** est représentée par la classe . Une sortie TOR peut avoir 2 valeurs : 0 ou 1, et représente l'état souhaité d'un actionneur.
+* [_AO](dls_sortie_ana.md) est une **sortie analogique** est représentée par la classe . Une sortie Analogique represente la valeur souhaitée d'un actionneur analogique. Elle dispose d'options permettant au systeme de traduire une valeur reelle en valeurcompréhensible par les actionneurs.
 * [_B](dls_bistables.md) est un **bistable**. Bit dont la valeur est 0 ou 1, maintenu dans le temps. Il faut explicitement coder la mise à zero du bit pour que celui-ci soit effectivement remis à 0.
 * [_M](dls_monostables.md) est un **monostable**. Les monostables sont des bits furtifs, non maintenus dans le temps. Si la condition initiale qui imposait le maintien du bit n'est plus vraie,ce bit va alors tomber de lui-meme à 0.
 * [_CI](dls_cpti.md) est un **compteur d'impulsions**. Incrémenté à chaque front montant de sa condition de pilotage.
 * [_CH](dls_cpth.md) est un **compteur Horaire**. Temps seconde représentant la durée effective de maintien de sa condition de pilotage.
 * [_T](dls_tempo.md) est une **temporisation**. Les temporisations permettent de décaler, maintenir ou limiter dans le temps un evenement particulier.
-* [_R](dls_registres.md) est un **registre**. Les registres permettent de manipuler des points de consignes, de seuil,et permettent de réaliser des calculs.
+* [_REGISTRE](dls_registres.md) est un **registre**. Les registres permettent de manipuler des points de consignes, de seuil,et permettent de réaliser des calculs.
 * [_HORLOGE](dls_horloge.md) est une **horloge**. Les horloges sont des éléments binaires positionnées en fonction d'une heure bien précise de la journée.
 * [_WATCHDOG](dls_watchdog.md) est un **watchdog**. Les comptes a rebours permettent de decompter le temps à partir d'un evenementet de réagir si cet evenement n'est pas revenu au bout d'une consigne précise.
 * [_MSG](dls_messages.md) est un **message**. Les messages permettent de notifier les utilisateurs. Ils sont diffusés dans l'interface, par SMS ou par messagerie instantanée ou par mail.
-* [_I](dls_visuels.md) est un **visuels**. Les visuels représentent des images associés aux objets, sous différentes formes et couleurs.
+* [_VISUEL](dls_visuels.md) est un **visuel**. Les visuels représentent des images associés aux objets, sous différentes formes et couleurs.
 
 ---
 ## Les commentaires

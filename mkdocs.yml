@@ -28,6 +28,7 @@ nav:
    - Instant Messaging: io_imsgs.md
    - SMS Short Message System: io_smsg.md
    - E.D.F Teleinfo: io_teleinfoedf.md
+   - SHELLY: io_shelly.md
    - UPS Uninterruptible Power Supply: io_ups.md
    - DMX Projecteurs: io_dmx.md
    - Benq Projecteurs: io_projo.md
