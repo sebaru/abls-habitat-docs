@@ -1,5 +1,7 @@
 # Les Shelly
 
+![](/img/io_shelly.jpg)
+
 Ces entrées/sorties s'appuient sur du matériel de la marque Shelly et permettent de mesurer les voltages, intensités, et énergies liés
 à un circuit monophasé ou triphasé.
 
@@ -76,9 +78,9 @@ Pour le module triphasé:
 | FREQ1       | HZ | Fréquence Phase 1
 | FREQ2       | HZ | Fréquence Phase 2
 | FREQ3       | HZ | Fréquence Phase 3
-| PF1         | cos phi | Facteur de charg Phase 1
-| PF2         | cos phi | Facteur de charg Phase 2
-| PF3         | cos phi | Facteur de charg Phase 3
+| PF1         | cos phi | Facteur de charge Phase 1
+| PF2         | cos phi | Facteur de charge Phase 2
+| PF3         | cos phi | Facteur de charge Phase 3
 | ENERGY1     | Wh | Energie consommée Phase 1
 | ENERGY2     | Wh | Energie consommée Phase 2
 | ENERGY3     | Wh | Energie consommée Phase 3
