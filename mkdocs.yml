@@ -53,6 +53,7 @@ nav:
    - Les commentaires: dls_visuel_comment.md
  - Contacts:
    - Qui sommes-nous ?: auteurs.md
+ - Console: https://console.abls-habitat.fr
 
 theme:
  name: material
