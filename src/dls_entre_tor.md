@@ -1,6 +1,6 @@
 # Les Entrées T.O.R _E ou _DI
 
-Une entrée TOR (Tout Ou Rien) est un bit interne de la [mémoire d'information](dls.md#memoire-d'informations), de classse *_E* ou *_DI*.
+Une entrée TOR (Tout Ou Rien) est un bit interne de la [mémoire d'information](dls.md#memoire-d'informations), de classe *_E* ou *_DI*.
 
 Chaque entrée TOR a pour valeur booléenne soit 0, soit 1, et ne peut être utilisée que dans une **EXPRESSION**.
 

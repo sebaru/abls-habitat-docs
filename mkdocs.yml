@@ -40,6 +40,7 @@ nav:
    - Registres: dls_registres.md
    - Monostables: dls_monostables.md
    - Messages: dls_messages.md
+   - Watchdog: dls_watchdog.md
    - Compteurs d'impulsions: dls_cpti.md
    - Compteurs horaire: dls_cpth.md
    - Visuels: dls_visuels.md

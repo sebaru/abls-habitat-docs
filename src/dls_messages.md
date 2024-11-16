@@ -1,6 +1,6 @@
 # Les Messages _MSG
 
-Un message est un bit interne de la [mémoire d'information](dls.md#memoire-d'informations), de classse *_MSG*.
+Un message est un bit interne de la [mémoire d'information](dls.md#memoire-d'informations), de classe *_MSG*.
 
 Chaque message peut etre positionné dans une **ACTION**. Il n'est cependant pas possible de l'utiliser avec le complément */*.
 
