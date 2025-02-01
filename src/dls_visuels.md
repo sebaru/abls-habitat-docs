@@ -21,6 +21,7 @@ Ces options sont représentées dans la grammaire [D.L.S](/dls.md) par les mots 
 * `mode`: il s'agit du mode principal d'affichage du visuel. Pour une porte, il peut s'agir du mode `ouverte` ou `fermée` par exemple.
 * `color`: il s'agit de la couleur souhaitée d'affichage du visuel. Les couleurs sont représentées par leurs noms en anglais.
 * `cligno`: cette option permet de faire clignoter le visuel dans l'interface.
+* `noshow`: cette option permet de faire disparaitre le visuel à l'écran.
 
 Voici des exemples de déclinaisons d'une même forme selon plusieurs `mode` et `color`:
 
