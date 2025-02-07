@@ -83,21 +83,34 @@ Exemple de syntaxe:
 
 Par construction, certains bits internes sont créés automatiquement. Ces bits sont présentés ci dessous.
 
-| Nom du bit 	| Classe  | 	Positionné par |	Défaut 	| Description
+| Nom du bit  | Classe  |  Positionné par | Défaut  | Description
 |:------------|:--------|:----------------|:-------:|:-----------
-| MEMSA_COMM | 	Activité 	| Module | 	TRUE | TRUE si la communication est OK, sinon FALSE.
-| MEMSA_DEFAUT|  	Activité | 	Module | 	FALSE | TRUE si le module est en défaut
-| MEMSA_DEFAUT_FIXE|  	Activité | 	Module | 	FALSE | TRUE si le module est en défaut fixe
-| MEMSA_ALARME|  	Activité | 	Module | 	FALSE| TRUE si le module est en alarme
-| MEMSA_ALARME_FIXE | 	Activité | 	Module | 	FALSE| TRUE si le module est en alarme fixe
-| MEMSA_OK | 	Activité 	| Système 	| TRUE | Bit de synthèse de l'activité. Calculé par rapport aux 5 bits précédents
-| MEMSSB_VEILLE | 	Sécurité des Biens | 	Module|  	FALSE | TRUE si le module est en veille
-| MEMSSB_ALERTE | 	Sécurité des Biens | 	Module | 	FALSE | TRUE si le module est en alerte
-| MEMSSB_ALERTE_FUGITIVE | 	Sécurité des Biens | 	Module | 	FALSE | TRUE si le module est en alerte fugitive
-| MEMSSB_ALERTE_FIXE | 	Sécurité des Biens | 	Module | 	FALSE | 	TRUE si le module est en alerte fixe
-| MEMSSP_DERANGEMENT | 	Sécurité des Personnes | 	Module | 	FALSE | TRUE si le module est en dérangement
-| MEMSSP_DERANGEMENT_FIXE | 	Sécurité des Personnes | 	Module|  	FALSE | TRUE si le module est en dérangement fixe
-| MEMSSP_DANGER | 	Sécurité des Personnes | 	Module | 	FALSE | TRUE si le module remonte un danger imminent
-| MEMSSP_DANGER_FIXE | 	Sécurité des Personnes 	| Module | 	FALSE | 	TRUE si le module remonte un danger imminent (fixe).
-| MEMSSP_OK 	| Sécurité des Personnes 	| Système 	| TRUE | 	Bit de synthèse de la sécurité des personnes. Calculé par rapport aux 4 bits précédents.
-| OSYN_ACQUIT | 	Acquit 	| Système | 	FALSE | Bit positionné par le système lors d'une demande d'acquit synoptique
+| MEMSA_COMM |  Activité  | Module |  TRUE | TRUE si la communication est OK, sinon FALSE.
+| MEMSA_DEFAUT|   Activité |  Module |  FALSE | TRUE si le module est en défaut
+| MEMSA_DEFAUT_FIXE|   Activité |  Module |  FALSE | TRUE si le module est en défaut fixe
+| MEMSA_ALARME|   Activité |  Module |  FALSE| TRUE si le module est en alarme
+| MEMSA_ALARME_FIXE |  Activité |  Module |  FALSE| TRUE si le module est en alarme fixe
+| MEMSA_OK |  Activité  | Système  | TRUE | Bit de synthèse de l'activité. Calculé par rapport aux 5 bits précédents
+| MEMSSB_VEILLE |  Sécurité des Biens |  Module|   FALSE | TRUE si le module est en veille
+| MEMSSB_ALERTE |  Sécurité des Biens |  Module |  FALSE | TRUE si le module est en alerte
+| MEMSSB_ALERTE_FUGITIVE |  Sécurité des Biens |  Module |  FALSE | TRUE si le module est en alerte fugitive
+| MEMSSB_ALERTE_FIXE |  Sécurité des Biens |  Module |  FALSE |  TRUE si le module est en alerte fixe
+| MEMSSP_DERANGEMENT |  Sécurité des Personnes |  Module |  FALSE | TRUE si le module est en dérangement
+| MEMSSP_DERANGEMENT_FIXE |  Sécurité des Personnes |  Module|   FALSE | TRUE si le module est en dérangement fixe
+| MEMSSP_DANGER |  Sécurité des Personnes |  Module |  FALSE | TRUE si le module remonte un danger imminent
+| MEMSSP_DANGER_FIXE |  Sécurité des Personnes  | Module |  FALSE |  TRUE si le module remonte un danger imminent (fixe).
+| MEMSSP_OK  | Sécurité des Personnes  | Système  | TRUE |  Bit de synthèse de la sécurité des personnes. Calculé par rapport aux 4 bits précédents.
+| OSYN_ACQUIT |  Acquit  | Système |  FALSE | Bit positionné par le système lors d'une demande d'acquit synoptique
+
+## Les chaines réservées
+
+Il est possible d'utiliser des chaines de caratères dynamique dans les modules DLS. Celles sont les suivantes:
+
+| Usage        |  Description
+|:-------------|:-----------
+| $DLS_TECH_ID |  Cette chaine de caractère est remplacée par le TECH_ID du module en cours d'édition.
+| $THIS        |  Cette chaine de caractère est remplacée par le TECH_ID du module en cours d'édition.
+| $DLS_ID      |  Cette chaine de caractère est remplacée par l'ID numérique du module en cours d'édition.
+| $DATE        |  Cette chaine de caractère est remplacée par la date au format JJ/MM/AAAA au moment de la compilation du module.
+| $SYN_PAGE    |  Cette chaine de caractère est remplacée par le nom de la page synoptique a laquelle est rattaché le module, au moment de sa compilation.
+| $SYN_ID      |  Cette chaine de caractère est remplacée par l'ID numérique de la page synoptique à laquelle est rattaché le module, au moment de sa compilation.
