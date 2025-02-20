@@ -1,6 +1,6 @@
 # Les I/O Wago sur Modbus
 
-![](/img/io_modbus.jpg)
+![](img/io_modbus.jpg)
 
 Ces entrées/sorties s'appuient sur du matériel de la marque allemande WAGO. Essentiellement sur des interfaces de la gamme 750-000.
 

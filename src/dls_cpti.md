@@ -1,6 +1,6 @@
 # Les Compteurs d'Impulsions _CI
 
-Un compteur d'impulsion est un bit interne de la [mémoire d'information](dls.md#memoire-d'informations), de classe *_CI*.
+Un compteur d'impulsion est un bit interne de la [mémoire d'information](dls.md#memoire-dinformations), de classe *_CI*.
 
 Un compteur d'impulsion permet de compter le nombre de fois qu'une **CONDITION** passe de l'état 0 à l'état 1.
 

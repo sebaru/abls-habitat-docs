@@ -1,6 +1,6 @@
 # Les Compteurs Horaire _CH
 
-Un compteur horaire est un bit interne de la [mémoire d'information](dls.md#memoire-d'informations), de classe *_CH*.
+Un compteur horaire est un bit interne de la [mémoire d'information](dls.md#memoire-dinformations), de classe *_CH*.
 
 Un compteur horaire permet de compter le temps cumulé durant lequel une **CONDITION** est vraie.
 

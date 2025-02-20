@@ -36,7 +36,7 @@ Si vous souhaitez ajouter manuellement un agent
 1. Puis complétez par [lier l'agent à l'API](#lier-un-agent).
 1. Si besoin, vous pouvez également positionner les [options avancées](#options-avancees)
 
-Vous pouvez également, dans le cadre d'upgrade par exemple, utiliser la méthode de mise à jour basée sur [le repository GIT](#upgrader-un-agent-deja-installe).
+Vous pouvez également, dans le cadre d'upgrade par exemple, utiliser la méthode de mise à jour basée sur [le repository GIT](#upgrader-un-agent-natif-deja-installe).
 
 ###Installation en ligne de commande
 
@@ -104,11 +104,11 @@ Les commandes suivantes permettent d'afficher les logs de l'agent:
     [watchdog@Server ~]$ sudo journalctl -f -u Watchdogd.service
 
 ---
-##Upgrader un agent natif deja installé
+##Upgrader un agent natif déjà installé
 
 Un agent peut etre automatiquement upgradé depuis la console, via la page de [gestion des agents](https://console.abls-habitat.fr/agents).
 
-Vous pouvez également le mettre à niveau via l'utilisation du repository **[Github](https://github.com/sebaru/Watchdog.git)**.
+Vous pouvez également le mettre à niveau via l'utilisation du repository [**Github**](https://github.com/sebaru/Watchdog.git).
 
 Pour cela, tapez les commandes suivantes dans un terminal:
 
@@ -128,4 +128,4 @@ Pour relancer la phase d'installation, supprimez le fichier de configuration pui
     $ sudo rm /etc/abls-habitat-agent.conf
     $ sudo systemctl restart Watchdogd
 
-Et enfin recommencer la [procédure](#installation-dun-agent).
+Et enfin recommencer la [procédure](#installation-dun-agent-en-natif).

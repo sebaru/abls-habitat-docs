@@ -1,6 +1,6 @@
 # Les Registres _REGISTRE
 
-Un registre est un bit interne de la [mémoire d'information](dls.md#memoire-d'informations), de classe *_R* ou *_REGISTRE*.
+Un registre est un bit interne de la [mémoire d'information](dls.md#memoire-dinformations), de classe *_R* ou *_REGISTRE*.
 
 Chaque registre est un contenant pour une valeur réelle.
 

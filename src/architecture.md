@@ -10,7 +10,7 @@ Un domaine représente un univers dans lequel tous les composants pourront inté
 Généralement, vous disposez d'un unique domaine représentant l'ensemble de votre habitat. Vu d'un peu plus près, les composants
 d'un domaine sont les suivants:
 
-![imgmax700](/img/architecture_schema.png)
+![imgmax700](img/architecture_schema.png)
 
 ##Les capteurs et actionneurs
 

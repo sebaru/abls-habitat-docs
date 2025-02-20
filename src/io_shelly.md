@@ -1,6 +1,6 @@
 # Les Shelly
 
-![](/img/io_shelly.jpg)
+![](img/io_shelly.jpg)
 
 Ces entrées/sorties s'appuient sur du matériel de la marque Shelly et permettent de mesurer les voltages, intensités, et énergies liés
 à un circuit monophasé ou triphasé.

@@ -1,6 +1,6 @@
 # Les Watchdog _WATCHDOG
 
-Un Watchdog est un bit interne de la [mémoire d'information](dls.md#memoire-d'informations), de classe *_WATCHDOG*.
+Un Watchdog est un bit interne de la [mémoire d'information](dls.md#memoire-dinformations), de classe *_WATCHDOG*.
 
 
 Un watchdog est un bit interne qui décompte le temps depuis sa consigne, et jusqu'à ce que cette consigne soit dépassée, et
