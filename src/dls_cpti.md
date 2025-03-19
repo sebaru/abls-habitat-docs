@@ -23,8 +23,6 @@ la classe _CI, éventuellement des options entre parenthèses, et enfin un point
 A la définition:
 
 * **libelle**: La description du bit interne, ce qu'il représente.
-* **ratio**: Permet de définir le nombre de passage de 0 à 1 de la condition avant d'augmenter de 1 la valeur du compteur.
-* **multi**: considère que la valeur du compteur est multipliée par cet entier avant d'etre évaluée.
 
 Dans le corps d'un module D.L.S:
 
@@ -34,8 +32,7 @@ Dans le corps d'un module D.L.S:
 
     /* Nous sommes dans le DLS "PORTE" */
     #define MON_COMPTEUR_OUVERTURE <-> _CI (libelle="Nombre d'ouverture de la porte d'entrée");
-    #define MON_COMPTEUR_LITRE     <-> _CI (libelle="Nombre de litres de chasse d'eau", multi=6); /* Une chasse d'eau est équivalente à 6 litres d'eau */
-    #define MON_COMPTEUR_RALENTI   <-> _CI (libelle="Nombre de litres d'eau", multi=10); /* Si le capteur de debit donne une impulsion tous les 1/10 de litre */
+    #define MON_COMPTEUR_LITRE     <-> _CI (libelle="Nombre de litres de chasse d'eau");
 
 ### Usage dans une CONDITION
 
