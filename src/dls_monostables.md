@@ -1,6 +1,6 @@
 # Les Monostables _M
 
-Un monostable est un bit interne de la [mémoire d'information](dls.md#memoire-d'informations), de classe *_M*.
+Un monostable est un bit interne de la [mémoire d'information](dls.md#memoire-dinformations), de classe *_M*.
 
 Chaque monostable a pour valeur booléenne soit 0, soit 1.
 Il peut etre utilisé dans une **EXPRESSION**, ou dans une **LISTE_ACTIONS**

@@ -51,9 +51,10 @@ for CAT in $CATEGORIES
        echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_white."$EXTENSION")" >> $RESULT
        echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_lightblue."$EXTENSION")" >> $RESULT
        echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_blue."$EXTENSION")" >> $RESULT
+       echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_lightgreen."$EXTENSION")" >> $RESULT
+       echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_green."$EXTENSION")" >> $RESULT
        echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_darkgreen."$EXTENSION")" >> $RESULT
        echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_gray."$EXTENSION")" >> $RESULT
-       echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_green."$EXTENSION")" >> $RESULT
        echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_orange."$EXTENSION")" >> $RESULT
        echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_red."$EXTENSION")" >> $RESULT
        echo "![imgvisuel](https://static.abls-habitat.fr/img/"$FORME"_yellow."$EXTENSION")" >> $RESULT

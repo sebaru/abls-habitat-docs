@@ -3,11 +3,10 @@
 Le logiciel libre **Abls-Habitat** est un ensemble de composants distribués selon les termes de la licence GPL
 et hébergés sur [GitHub](https://github.com/sebaru?tab=repositories):
 
-* un ou plusieurs [Agents]((https://github.com/sebaru/Watchdog.git))
+* un ou plusieurs [Agents](https://github.com/sebaru/Watchdog.git)
 * une [console](https://github.com/sebaru/abls-habitat-console.git) d'administration
 * une [interface](https://github.com/sebaru/abls-habitat-home.git) de navigation
 * une [API](https://github.com/sebaru/abls-habitat-api.git) pour lier les composants entre eux
-* un client lourd (en cours decomm!)
 
 L'agent, à l'image d'un chef d'orchestre, fédère un ensemble de capteurs et d'actionneurs au travers d'un [langage de programmation](dls.md) simple qui vous permettra de gérer votre habitat facilement !
 

@@ -13,9 +13,9 @@ Le découpage proposé est le suivant:
 Ainsi, pour un tétérupteur pilotant l'éclairage d'une cour par exemple, dont le `tech_id` serait **ECLCOUR**, les modules seront les suivants:
 
 * [ECLCOUR](#anatomie-du-module-maitre-eclcour)
-* [ECLCOUR_CTRL](#anatomie-dun-module-de-controle-eclcour-ctrl)
-* [ECLCOUR_CMDE](#anatomie-dun-module-de-commande)
-* [ECLCOUR_MTCE](#anatomie-dun-module-de-maintenance)
+* [ECLCOUR_CTRL](#anatomie-dun-module-de-controle-eclcour)
+* [ECLCOUR_CMDE](#anatomie-dun-module-de-commande-eclcour)
+* [ECLCOUR_MTCE](#anatomie-dun-module-de-maintenance-eclcour)
 
 ---
 ## Anatomie du module maitre ECLCOUR
@@ -158,3 +158,9 @@ Ces remontées servent à gérer les indices de défaut sur la page synoptique a
     /* Edition des messages */
     -/POS_TL                        -> MSG_TELE_OFF;
     - POS_TL                        -> MSG_TELE_ON;
+
+
+
+## Anatomie d'un module de controle ECLCOUR
+## Anatomie d'un module de commande ECLCOUR
+## Anatomie d'un module de maintenance ECLCOUR

@@ -13,14 +13,14 @@ Elle commence par un tiret « - », suivi d'une **EXPRESSION**, suivi par une fl
 
 ## Lier une expression à une action
 
-Une **EXPRESSION** est un ensemble d'unités [`Booléennes`](#les-unites-boolennes) ou [`Arithmétiques`](#les-unites-arithmetique)
-liées entre elles par des [opérateurs de base](#operateurs-de-base).
+Une **EXPRESSION** est un ensemble d'unités [`Booléennes`](#les-unites-booleennes) ou [`Arithmétiques`](#les-unites-arithmetiques)
+liées entre elles par des [opérateurs de base](#operateurs-de-base-pour-lier-les-unites).
 
 !!! warning
     Les operateurs ne peuvent être appliqués à des **EXPRESSION** de types différents. Par exemple, il n'est pas possible
     d'ajouter un `booléen` à une valeur `arithmétique`.
 
-La « LISTE_ACTIONS » est une liste d'une ou plusieurs [ACTIONS](#lesactions), séparées par des virgules.
+La « LISTE_ACTIONS » est une liste d'une ou plusieurs [ACTIONS](#les-actions), séparées par des virgules.
 
 Voici un exemple de syntaxe :
 

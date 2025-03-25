@@ -15,8 +15,8 @@ Pour faire apparaitre ce visuel sur un autre D.L.S, il faudra utiliser un [lien]
 ---
 ## Comment piloter un visuel
 
-Chaque visuel s'appui sur des options, permettant de définir facilement la déclinaison souhaitée par le [technicien](/users.md)
-Ces options sont représentées dans la grammaire [D.L.S](/dls.md) par les mots clefs suivants:
+Chaque visuel s'appui sur des options, permettant de définir facilement la déclinaison souhaitée par le [technicien](users.md)
+Ces options sont représentées dans la grammaire [D.L.S](dls.md) par les mots clefs suivants:
 
 * `mode`: il s'agit du mode principal d'affichage du visuel. Pour une porte, il peut s'agir du mode `ouverte` ou `fermée` par exemple.
 * `color`: il s'agit de la couleur souhaitée d'affichage du visuel. Les couleurs sont représentées par leurs noms en anglais.

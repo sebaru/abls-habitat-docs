@@ -1,6 +1,6 @@
 # Programmation D.L.S: les Acronymes
 
-Un acronyme permet de créer un bit interne dans la [mémoire d'information](dls.md#memoire-d'informations) en lui affectant une classe et des paramètres de configuration.
+Un acronyme permet de créer un bit interne dans la [mémoire d'information](dls.md#memoire-dinformations) en lui affectant une classe et des paramètres de configuration.
 
 ---
 ## Déclarer un ACRONYME

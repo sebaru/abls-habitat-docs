@@ -1,6 +1,6 @@
 # Les Phidgets
 
-![](/img/io_phidget.jpg)
+![](img/io_phidget.jpg)
 
 Ces entrées/sorties s'appuient sur du matériel de la marque Phidgets et permettent de mesurer des entrées analogiques, tout ou rien,
 ou de piloter des sorties analogiques ou tout ou rien.
