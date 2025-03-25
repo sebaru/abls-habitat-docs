@@ -30,6 +30,7 @@ nav:
    - E.D.F Teleinfo: io_teleinfoedf.md
    - SHELLY: io_shelly.md
    - UPS Uninterruptible Power Supply: io_ups.md
+   - Météo API: io_meteo.md
    - DMX Projecteurs: io_dmx.md
    - Benq Projecteurs: io_projo.md
  - D.L.S:
