@@ -18,21 +18,31 @@ Pour faire apparaitre ce visuel sur un autre D.L.S, il faudra utiliser un [lien]
 Chaque visuel s'appui sur des options, permettant de définir facilement la déclinaison souhaitée par le [technicien](users.md)
 Ces options sont représentées dans la grammaire [D.L.S](dls.md) par les mots clefs suivants:
 
+* `forme`: il s'agit de la forme principale du visuel. Pour choisir un visuel representant une porte, le champ forme sera `porte`.
 * `mode`: il s'agit du mode principal d'affichage du visuel. Pour une porte, il peut s'agir du mode `ouverte` ou `fermée` par exemple.
 * `color`: il s'agit de la couleur souhaitée d'affichage du visuel. Les couleurs sont représentées par leurs noms en anglais.
 * `cligno`: cette option permet de faire clignoter le visuel dans l'interface.
 * `noshow`: cette option permet de faire disparaitre le visuel à l'écran.
+* `disable`: cette option permet de rendre inactif un viuel. Il n'est plus cliquable.
+* `input`: cette option permet de relier un visuel à un bit interne, par exemple, un registre ou une entrée analogique. Le visuel permet ainsi d'afficher la valeur de ce bit interne en temps réel.
+* `rw`: cette option permet à l'utilisateur de positionner une valeur dans la cible du visuel. Par exemple, pour appliquer une consigne de température de chauffage
 
 Voici des exemples de déclinaisons d'une même forme selon plusieurs `mode` et `color`:
 
     /* Nous sommes dans le D.L.S "SONO" */
-    /* Déclaration d'un visuel MON_VISUEL, de forme 'haut_parleur' */
+    /* Déclaration d'un visuel MON_HAUT_PARLEUR, de forme 'haut_parleur' */
     /* Par défaut, le visuel est dans le mode inactif, en blanc */
     #define MON_HAUT_PARLEUR <-> _I(forme="haut_parleur", mode="inactif", color="white");
 
     /* Si MA_CONDITION est vraie, le visuel est actif, de couleur rouge, */
     /* et clignotant */
     - MA_CONDITION -> MON_HAUT_PARLEUR(mode="actif", color="red", cligno);
+
+Un exemple de pilotage d'une consigne de chauffage:
+
+    /* Nous sommes dans le D.L.S "CHAUFFAGE" */
+    /* Déclaration d'un visuel MON_VISUEL_CONSIGNE' */
+    #define MON_VISUEL_CONSIGNE <-> _I(input=CHAUFFAGE:CONSIGNE, rw);
 
 ---
 ##Les couleurs
