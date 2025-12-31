@@ -37,10 +37,27 @@ Dans un domaine, un agent particulier a pour objet de faire tourner [l'intellige
 
     Un seul et unique agent est ***principal*** à l'intérieur d'un même domaine. Les autres sont des agents secondaires.
 
-##La plateforme Cloud
+##L'interface de navigation et de contrôle
 
-Cette plateforme est le point d'entrée pour les utilisateurs, [privilégiés ou non](users.md), afin d'atteindre votre domaine. Elle
-est disponible a travers ces liens
+Elle permet aux [utilisateurs](users.md) de visualiser et d'interagir avec leur habitat connecté via une interface web conviviale.
+On y retrouve des tableaux de bord personnalisables pour suivre en temps réel :
 
-* [https://home.abls-habitat.fr](https://home.abls-habitat.fr) pour les utilisateurs réguliers.
-* [https://console.abls-habitat.fr](https://console.abls-habitat.fr) pour les utilisateurs à privilèges.
+* Les températures (intérieures/extérieures)
+* La consommation électrique
+* L'état des capteurs et actionneurs (ex : volets, éclairage, pompes)
+* Les alertes et notifications (ex : fuite d'eau, température anormale)
+
+Cette plateforme est le point d'entrée pour les utilisateurs réguliers.
+Elle est disponible à travers [ce lien](https://home.abls-habitat.fr).
+
+
+##La plateforme des utilisateurs à privilèges
+
+Cette plateforme est reservée aux utilisateurs à privilèges.
+Elle permet:
+* de centraliser la gestion des agents
+* de définir les synoptiques et les tableaux de bord
+* de rediger les modules D.L.S
+* de configurer les messages et les zones de diffusion audio
+
+Elle est disponible a travers [ce lien](https://console.abls-habitat.fr).

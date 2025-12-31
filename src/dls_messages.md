@@ -42,31 +42,6 @@ Exemple:
     /* quand la condition 'PORTE_OUVERTE' sera vraie. */
     - PORTE_OUVERTE -> MON_MSG;
 
-
-## L'option `groupe`
-
-L'option `groupe` peut etre ajoutée à la liste des options d'un message, lors de sa définition.
-Cette option permet de creer un groupe de message dans lequel la mise à un d'un message met à zero tous les autres messages du meme groupe.
-
-Le groupe est représenté par un entier, dont la portée est limitée au DLS parent du message. Ainsi, il est possible d'avoir un
-`groupe`=1 dans le DLS "**PORTE**", et un autre `groupe`=1 dans le DLS "**PORTAIL**", ces groupes sont différents puisque issus de DLS différents.
-
-Exemple:
-
-    /* Nous sommes dans le DLS "PORTE" */
-    /* Définition d'un message, ajout de l'option `debug` en fin de liste d'option */
-    #define MSG_VENT_NORD  <-> _MSG(type=etat, libelle="vent du nord", groupe=1)
-    #define MSG_VENT_SUD   <-> _MSG(type=etat, libelle="vent du sud", groupe=1)
-    #define MSG_VENT_EST   <-> _MSG(type=etat, libelle="vent d'est", groupe=1)
-    #define MSG_VENT_OUEST <-> _MSG(type=etat, libelle="vent d'ouest", groupe=1)
-
-    /* le passage d'un vent du nord à un vent d'est diffusera le message */
-    /* 'vent d'est' tout en désactivant le message 'vent du nord' */
-    - VENT_DU_NORD  -> MSG_VENT_NORD;
-    - VENT_DU_SUD   -> MSG_VENT_SUD;
-    - VENT_DE_EST   -> MSG_VENT_EST;
-    - VENT_DE_OUEST -> MSG_VENT_OUEST;
-
 ## L'option de `debug`
 
 L'option `debug` peut etre ajoutée à la liste des options d'un message, lors de sa définition.
@@ -81,6 +56,55 @@ Exemple:
     /* Meme si 'MA_CONDITION' est vraie, le message */
     /* ne sera diffusé que si le DLS est en debug. */
     - MA_CONDITION -> MON_MSG_DE_DEBUG;
+
+## L'option `freeze`
+
+L'option `freeze` peut etre ajoutée à la liste des options d'un message, lors de sa définition.
+Quand le libellé d'un message contient une référence vers un bit interne, le message est dit **dynamique**.
+Ces libellés sont mis à jour à chaque modification de la valeur du bit interne référencé.
+
+L'option `freeze` permet d'empécher la mise à jour du libellé pendant un temps défini
+
+Exemple:
+
+    /* Nous sommes dans le DLS "TEMPERATURE" */
+    /* Définition d'un message, ajout de l'option `freeze` en fin de liste d'option */
+    /* avec une valeur de 36000 soit 1 heure */
+    #define MON_MSG_TEMP <-> _MSG(type=etat, libelle="Dehors il fait $TEMP:EXTERIEURE", freeze=36000)
+
+    /* Meme si 'MA_CONDITION' est vraie, le libellé */
+    /* du message ne sera mis à jour qu'au mieux toutes les heures (36000 1/10s = 1h). */
+    - MA_CONDITION -> MON_MSG_TEMP;
+
+!!! tip
+L'option `freeze=-1`, ou tout autre valeur négative, interdit la mise à jour du libellé dans le temps.
+
+## L'option `groupe`
+
+L'option `groupe` peut etre ajoutée à la liste des options d'un message, lors de sa définition.
+Cette option permet de creer un groupe de message dans lequel la mise à un d'un message met à zero tous les autres messages du meme groupe.
+
+Le groupe est représenté par un entier, dont la portée est limitée au DLS propriétaire du message.
+
+
+Exemple:
+
+    /* Nous sommes dans le DLS "PORTE" */
+    /* Définition d'un message, ajout de l'option `groupe` en fin de liste d'option */
+    #define MSG_VENT_NORD  <-> _MSG(type=etat, libelle="vent du nord", groupe=1)
+    #define MSG_VENT_SUD   <-> _MSG(type=etat, libelle="vent du sud", groupe=1)
+    #define MSG_VENT_EST   <-> _MSG(type=etat, libelle="vent d'est", groupe=1)
+    #define MSG_VENT_OUEST <-> _MSG(type=etat, libelle="vent d'ouest", groupe=1)
+
+    /* le passage d'un vent du nord à un vent d'est diffusera le message */
+    /* 'vent d'est' tout en désactivant le message 'vent du nord' */
+    - VENT_DU_NORD  -> MSG_VENT_NORD;
+    - VENT_DU_SUD   -> MSG_VENT_SUD;
+    - VENT_DE_EST   -> MSG_VENT_EST;
+    - VENT_DE_OUEST -> MSG_VENT_OUEST;
+
+!!! warning
+Un message actif d'un groupe de message ne peut etre désactivé que si un autre message du même groupe est activé.
 
 ## Exemples d'usages
 
