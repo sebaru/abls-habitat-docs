@@ -37,6 +37,7 @@ nav:
    - Concept: dls.md
    - Acronymes: dls_acronymes.md
    - Logique: dls_logique.md
+   - Bits système SYS: dls_bit_systeme.md
    - Entrées T.O.R: dls_entre_tor.md
    - Registres: dls_registres.md
    - Monostables: dls_monostables.md
