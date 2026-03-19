@@ -56,7 +56,15 @@ nav:
    - Les commentaires: dls_visuel_comment.md
  - Contacts:
    - Qui sommes-nous ?: auteurs.md
- - Console: https://console.abls-habitat.fr
+ - Console:
+   - Présentation: console.md
+   - Synoptiques: console_synoptiques.md
+   - Modules D.L.S: console_dls.md
+   - Connecteurs et Agents: console_connecteurs.md
+   - Archives: console_archives.md
+   - Configuration du domaine: console_domaine.md
+   - Utilisateurs et Invitations: console_utilisateurs.md
+   - Accéder à la console: https://console.abls-habitat.fr
 
 theme:
  name: material
