@@ -21,8 +21,13 @@ la classe _R ou _REGISTRE, un couple de parenthèses, et enfin un point virgule 
 
 Dans sa définition, il est possible d'ajouter des options à un registre.
 
-* **libelle**: permet de positionner un registre pour expliciter la finalité du bit interne
-* **unite**: represente l'unité de la valeur du registre
+* **libelle**: permet d'expliciter la finalité du bit interne.
+* **unite**: représente l'unité de la valeur du registre (ex: `"°C"`, `"kWh"`, `"L/s"`).
+
+Exemple :
+
+    /* Consigne de température protégée */
+    #define CONSIGNE_CHAUFFE <-> _REGISTRE(libelle="Consigne de chauffage", unite="°C");
 
 ## Exemple de définition
 

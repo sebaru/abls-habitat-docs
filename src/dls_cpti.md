@@ -20,13 +20,18 @@ la classe _CI, éventuellement des options entre parenthèses, et enfin un point
 
 ## Les options d'un compteur d'impulsion
 
-A la définition:
+### À la déclaration
 
 * **libelle**: La description du bit interne, ce qu'il représente.
+* **unite**: L'unité comptée (ex: `"litres"`, `"tours"`, `"fois"`). Par défaut `"fois"`.
 
-Dans le corps d'un module D.L.S:
+Exemple :
 
-* **reset**: permet de remettre a 0 le compteur d'impulsion si la condition est vraie.
+    #define COMPTEUR_EAU <-> _CI(libelle="Volume d'eau consommé", unite="litres");
+
+### Dans le corps du module
+
+* **reset**: permet de remettre à 0 le compteur d'impulsion si la condition est vraie.
 
 ## Exemple d'usage
 

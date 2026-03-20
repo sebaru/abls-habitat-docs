@@ -106,6 +106,42 @@ Exemple:
 !!! warning
 Un message actif d'un groupe de message ne peut etre désactivé que si un autre message du même groupe est activé.
 
+## L'option `notif_sms`
+
+L'option `notif_sms` peut être ajoutée à la liste des options d'un message.
+Elle déclenche l'envoi d'une **notification par SMS** aux utilisateurs abonnés dès que le message est activé.
+
+Syntaxe : `notif_sms=yes`
+
+Exemple :
+
+    #define MSG_INTRUSION <-> _MSG(type=alerte, libelle="Intrusion détectée", notif_sms=yes)
+
+## L'option `notif_chat`
+
+L'option `notif_chat` peut être ajoutée à la liste des options d'un message.
+Elle déclenche l'envoi d'une **notification via messagerie instantanée** (chat) aux utilisateurs abonnés dès que le message est activé.
+
+Syntaxe : `notif_chat=yes`
+
+Exemple :
+
+    #define MSG_ALERTE_EAU <-> _MSG(type=alarme, libelle="Fuite d'eau détectée", notif_chat=yes)
+
+## L'option `audio_zone`
+
+L'option `audio_zone` peut être ajoutée à la liste des options d'un message.
+Elle déclenche la **lecture d'une alerte audio** dans la zone spécifiée dès que le message est activé.
+
+Syntaxe : `audio_zone="nom_de_zone"`
+
+Exemple :
+
+    #define MSG_FIN_CYCLE <-> _MSG(type=etat, libelle="Cycle terminé", audio_zone="cuisine")
+
+!!! note
+    Les zones audio sont configurées dans la console, section Connecteurs.
+
 ## Exemples d'usages
 
     /* Nous sommes dans le DLS "PORTE" */
@@ -113,5 +149,5 @@ Un message actif d'un groupe de message ne peut etre désactivé que si un autre
     #define MSG_OUVERTE    <-> _MSG(type=etat,   libelle="la porte est ouverte")
     #define MSG_COINCEE    <-> _MSG(type=defaut, libelle="la porte est coincée")
     #define MSG_EN_VEILLE  <-> _MSG(type=veille, libelle="la porte est sous surveillance")
-    #define MSG_EFFRACTION <-> _MSG(type=alerte, libelle="la porte est fracturée")
+    #define MSG_EFFRACTION <-> _MSG(type=alerte, libelle="la porte est fracturée", notif_sms=yes, notif_chat=yes)
 

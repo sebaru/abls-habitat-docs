@@ -19,13 +19,17 @@ la classe _CH, éventuellement des options entre parenthèses, et enfin un point
 
 ## Les options d'un compteur horaire
 
-A la définition:
+### À la déclaration
 
 * **libelle**: La description du bit interne, ce qu'il représente.
 
-Dans le corps d'un module D.L.S:
+Exemple :
 
-* **reset**: permet de remettre a 0 le compteur horaire si la condition est vraie.
+    #define CH_POMPE <-> _CH(libelle="Durée de fonctionnement de la pompe");
+
+### Dans le corps du module
+
+* **reset**: permet de remettre à 0 le compteur horaire si la condition est vraie.
 
 ## Exemple d'usage
 

@@ -18,7 +18,19 @@ De manière optionnelle, il est possible d'adjoindre un libellé au monostable e
 
 ## Les options d'un monostable
 
-Dans une **EXPRESSION**, il est possible de moduler la sémantique du bit interne en utilisant les options suivantes:
+### Options à la déclaration
+
+* **libelle**: permet de documenter le rôle du monostable.
+* **groupe**: permet de créer un groupe de monostables mutuellement exclusifs. Lorsqu'un monostable du groupe est activé, tous les autres monostables du même groupe sont automatiquement remis à 0. Le groupe est représenté par un entier dont la portée est limitée au module D.L.S propriétaire.
+
+Exemple :
+
+    /* Un seul mode actif à la fois parmi les trois */
+    #define MODE_AUTO   <-> _M(libelle="Mode automatique",  groupe=1);
+    #define MODE_MANUEL <-> _M(libelle="Mode manuel",       groupe=1);
+    #define MODE_REPOS  <-> _M(libelle="Mode repos",        groupe=1);
+
+### Options d'usage dans une EXPRESSION
 
 * **edge_up**: permet de ne prendre en compte que les fronts montants (vrai lorsque l'entrée passe de 0 à 1)
 * **edge_down**: permet de ne prendre en compte que les fronts descendants (vrai lorsque l'entrée passe de 1 à 0)

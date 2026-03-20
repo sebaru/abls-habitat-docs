@@ -15,13 +15,22 @@ la classe _DI, un couple de parenthèses, et enfin un point virgule terminal.
 
 ## Les options d'une entrée TOR
 
-Dans une **EXPRESSION**, il est possible de moduler la sémantique du bit interne en utilisant les options suivantes:
+### Options à la déclaration
+
+* **libelle**: permet de documenter le rôle de cette entrée dans le module D.L.S.
+* **map_sms**: associe une commande SMS à cette entrée. Lorsqu'un SMS contenant cette chaîne est reçu par le système, l'entrée est activée ponctuellement.
+
+Exemple :
+
+    #define SONNETTE <-> _DI(libelle="Sonnette d'entrée", map_sms="sonnette");
+
+!!! tip
+    Le libellé d'une entrée TOR est hérité de la configuration du [connecteur](connecteurs.md) qui lui est associé. L'option `libelle` dans le `#define` permet de le surcharger ou de le définir pour les entrées sans connecteur physique.
+
+### Options d'usage dans une EXPRESSION
 
 * **edge_up**: permet de ne prendre en compte que les fronts montants (vrai lorsque l'entrée passe de 0 à 1)
 * **edge_down**: permet de ne prendre en compte que les fronts descendants (vrai lorsque l'entrée passe de 1 à 0)
-
-!!! tip
-    Une entrée TOR dispose d'un libellé (une description), qui est héritée de la configuration du [connecteur](connecteurs.md) qui lui est associé.
 
 ## Exemple de définition
 

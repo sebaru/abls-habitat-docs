@@ -24,8 +24,25 @@ la classe _WATCHDOG, un couple de parenthèses, et enfin un point virgule termin
 
 ## Les options d'un Watchdog
 
-* **consigne**: permet de définir une unité de temps pour le décompte du watchdog. Elle s'exprime en dixième de seconde.
+### À la déclaration
+
 * **libelle**: La description du bit interne, ce qu'il représente.
+* **consigne**: valeur de décompte par défaut exprimée en dixième de seconde. Si non renseignée, la valeur par défaut est 600 (soit 60 secondes).
+
+Exemple :
+
+    /* Watchdog de 60s (600 dixièmes) */
+    #define WD_COMM <-> _WATCHDOG(libelle="Surveillance communication", consigne=600);
+
+### Dans le corps du module (action)
+
+Lors du positionnement en action, deux formes sont possibles :
+
+* `MON_WATCHDOG(consigne=N)` — relance le watchdog avec une valeur fixe (en dixièmes de secondes)
+* `MON_WATCHDOG(consigne=TECH_ID:ACRONYME_R)` — relance le watchdog avec la valeur d'un **registre**, permettant une consigne dynamique
+
+!!! tip
+    Un watchdog est `1` (vrai) tant que son compte à rebours n'a pas atteint zéro. Il passe à `0` (faux, échu) dès l'expiration de la consigne. Le repositionner via une action le relance.
 
 ## Exemple de définition
 
