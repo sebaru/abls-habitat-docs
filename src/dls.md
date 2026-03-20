@@ -31,6 +31,7 @@ Deux bits de deux modules différents peuvent porter le même acronyme, dans la 
 
 Un module D.L.S présentera plusieurs zones de code :
 
+* la zone de définition des [**Paramètres**](dls_param.md)
 * la zone de définition des [**Acronymes**](dls_acronymes.md)
 * la zone de définition des [**Liens**](dls_link.md)
 * la zone de description du fonctionnement portant la [**logique**](dls_logique.md) et les [**calculs**](dls_calculs.md)
