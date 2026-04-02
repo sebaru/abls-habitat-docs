@@ -114,8 +114,8 @@ Pour cela, tapez les commandes suivantes dans un terminal:
 
     [watchdog@Server ~]$ git clone https://github.com/sebaru/Watchdog.git abls-habitat-agent
     [watchdog@Server ~]$ cd abls-habitat-agent
-    [watchdog@Server ~]$ ./autogen.sh
-    [watchdog@Server ~]$ sudo make install
+    [watchdog@Server ~]$ ./build.sh
+    [watchdog@Server ~]$ sudo ./install.sh
     [watchdog@Server ~]$ cd ..
     [watchdog@Server ~]$ rm -rf abls-habitat-agent
     [watchdog@Server ~]$ sudo systemctl restart Watchdogd
