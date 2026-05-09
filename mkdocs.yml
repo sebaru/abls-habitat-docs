@@ -67,6 +67,15 @@ nav:
    - Configuration du domaine: console_domaine.md
    - Utilisateurs et Invitations: console_utilisateurs.md
    - Accéder à la console: https://console.abls-habitat.fr
+ - Guide du Technicien:
+   - Vue d'ensemble et workflow: technicien_overview.md
+   - "Étape 1 : Ajouter un agent": technicien_agents.md
+   - "Étape 2 : Configurer les threads": technicien_threads.md
+   - "Étape 3 : Créer les modules D.L.S": technicien_dls.md
+   - "Étape 4 : Configurer le mapping I/O": technicien_mapping.md
+   - "Étape 5 : Créer les synoptiques": technicien_synoptiques.md
+   - "Étape 6 : Utiliser l'atelier graphique": technicien_atelier.md
+   - Gérer les mnémoniques: technicien_mnemos.md
 
 theme:
  name: material
