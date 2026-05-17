@@ -23,6 +23,7 @@ Il est lu au démarrage du service `abls-habitat-api`. Toute modification néces
   "static_data_url":    "http://static.example.com",
   "idp_realm":          "myrealm",
   "idp_url":            "https://idp.example.com",
+  "idp_token_check":    true,
   "memcached_options":  "--SERVER=localhost:11211",
   "mqtt_hostname":      "mymqtt.example.com",
   "mqtt_port":          1883,
@@ -79,8 +80,12 @@ Il est lu au démarrage du service `abls-habitat-api`. Toute modification néces
 |---|---|---|---|
 | `idp_url` | string | `https://idp.abls-habitat.fr` | URL de base du serveur Keycloak |
 | `idp_realm` | string | `Abls-Habitat` | Nom du realm Keycloak utilisé pour l'authentification |
+| `idp_token_check` | boolean | `true` | Vérifie la signature de l'access token. Si `false`, l'API accepte le token sans contrôle de validité |
 
 L'API valide le champ `iss` des tokens JWT en vérifiant qu'il commence par `idp_url`.
+
+!!! warning "idp_token_check: false"
+    Désactiver cette vérification revient à faire confiance à tout JWT bien formé transmis à l'API. Réservez ce mode aux environnements de développement, de test ou à un proxy d'authentification de confiance placé en amont.
 
 ---
 
