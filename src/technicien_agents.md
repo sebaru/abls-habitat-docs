@@ -84,6 +84,19 @@ sudo Watchdogd --save --domain-uuid <domain_uuid> --domain-secret <domain_secret
 sudo systemctl enable --now watchdogd
 ```
 
+### Configuration MQTT TLS (optionnel)
+
+Si le broker MQTT utilise SSL/TLS, éditez `/etc/abls-habitat-agent.conf` pour y ajouter les clés CA :
+
+```json
+{
+  "mqtt_ca_file": "/chemin/vers/ca.pem",
+  "mqtt_ca_path": ""
+}
+```
+
+Si ces champs sont absents ou vides, l'agent tente une détection automatique du CA système. Voir la [référence de configuration de l'agent](config_agent.md) pour la liste complète des paramètres.
+
 ---
 
 ## 4. Vérifier que l'agent est bien lié

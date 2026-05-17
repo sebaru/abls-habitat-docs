@@ -84,6 +84,22 @@ Via votre terminal, tapez ensuite la commande suivante:
 
 Votre agent est désormais lié à l'API.
 
+###Configuration MQTT_API TLS
+
+Si votre broker MQTT_API est configuré en SSL/TLS, vous pouvez indiquer explicitement le fichier CA ou le répertoire CA à utiliser pour valider le certificat du broker.
+Ces options sont à ajouter manuellement dans `/etc/abls-habitat-agent.conf` :
+
+```json
+{
+  "mqtt_ca_file": "/chemin/vers/ca.pem",
+  "mqtt_ca_path": ""
+}
+```
+
+Si ces champs sont laissés vides, l'agent détecte automatiquement le CA système (bundle Debian ou Fedora).
+
+Consultez la [référence complète de configuration de l'agent](config_agent.md) pour le détail de tous les paramètres.
+
 ---
 ## Arrêt/Relance et suivi de votre agent natif
 

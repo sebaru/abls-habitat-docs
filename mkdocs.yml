@@ -17,6 +17,8 @@ nav:
  - Prise en main:
    - Guide de démarrage: guide_demarrage.md
    - Architecture: architecture.md
+   - Configuration de l'agent: config_agent.md
+   - Configuration de l'API: config_api.md
  - Guide de l'utilisateur:
    - Les Utilisateurs: users.md
  - Connecteurs:
