@@ -40,6 +40,14 @@ Vous pouvez également, dans le cadre d'upgrade par exemple, utiliser la méthod
 
 ###Installation en ligne de commande
 
+Sur un système basé sur RPM (Fedora/RHEL), vous pouvez d'abord ajouter le dépôt **ABLS-RPMS** pour installer et mettre à jour les paquets Abls-Habitat via `dnf`:
+
+    [watchdog@Server ~]$ sudo wget -O /etc/yum.repos.d/abls-rpms.repo https://rpms.abls-habitat.fr/abls-rpms.repo
+    [watchdog@Server ~]$ sudo rpm --import https://rpms.abls-habitat.fr/keys/RPM-GPG-KEY-ABLS
+    [watchdog@Server ~]$ sudo dnf makecache
+
+Vous pouvez ensuite lancer l'installation de l'agent avec la procédure ci-dessous.
+
 Depuis un terminal, lancez la commande suivante:
 
     [watchdog@Server ~]$ sudo bash -c "$(wget https://raw.githubusercontent.com/sebaru/Watchdog/main/INSTALL.sh -q -O -)"
