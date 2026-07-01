@@ -20,9 +20,17 @@ Ce connecteur permet de piloter et controler les éléments suivants:
 
 Il suffit de brancher les alimentations, les pinces ampèremetriques, et le reseau (wifi ou rj45).
 
+Dans l'interface d'administration du Shelly, la configuration MQTT doit être adaptée au connecteur ABLS:
+
+* Sélectionner `Generic status update over MQTT`
+* L'option `RPC status notifications over MQTT` n'est pas nécessaire.
+* Cocher l'option `Enable MQTT Control`
+
 Une fois la connectique assemblée, il suffit de lancer le script suivant pour le raccrocher au serveur principal:
 
     [watchdog@Server ~]$ ./SRC/scripts/shellypro_set_mqtt.sh @IP_du_shelly @IP_du_master
+
+Ce script configure le broker MQTT du Shelly, mais ne remplace pas les options précédentes qui doivent être activées dans l'interface web du module.
 
 ---
 ## Mapping D.L.S
@@ -87,4 +95,3 @@ Pour le module triphasé:
 | INJECTION1  | Wh | Energie injectée Phase 1
 | INJECTION2  | Wh | Energie injectée Phase 2
 | INJECTION3  | Wh | Energie injectée Phase 3
-
