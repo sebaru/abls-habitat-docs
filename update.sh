@@ -38,7 +38,7 @@ for CAT in $CATEGORIES
     echo "------------- processing $CAT - $FORME - $EXTENSION - $IHM_AFFICHAGE"
 
     echo "---" >> $RESULT
-    echo "## La forme '**$FORME**'" >> $RESULT
+    echo "## La forme **$FORME**" >> $RESULT
     echo "    #define VISUEL <-> _I(forme='$FORME')" >> $RESULT
 
     if [ $CONTROLE = "static" ]
