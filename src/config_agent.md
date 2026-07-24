@@ -1,10 +1,10 @@
-# Référence de configuration — Agent (`abls-habitat-agent.conf`)
+# Référence de configuration — Agent (`abls-agent.conf`)
 
 Le fichier de configuration de l'agent est un fichier **JSON** situé à :
 
-    /etc/abls-habitat-agent.conf
+    /etc/abls-agent.conf
 
-Il est créé automatiquement lors de la commande `Watchdogd --save ...`.
+Il est créé automatiquement lors de la commande `abls-agent-server --save ...`.
 Vous pouvez aussi l'éditer manuellement pour y ajouter des options non accessibles via la ligne de commande (MQTT TLS, etc.).
 
 ---
@@ -94,7 +94,7 @@ Ces variables peuvent être définies dans l'environnement du processus (utile p
 | `--domain-secret <secret>` | Surcharge `domain_secret` |
 | `--agent-uuid <uuid>` | Surcharge `agent_uuid` |
 | `--api-url <url>` | Surcharge `api_url` |
-| `--save` | Écrit la configuration résultante dans `/etc/abls-habitat-agent.conf` |
+| `--save` | Écrit la configuration résultante dans `/etc/abls-agent.conf` |
 | `--debug <niveau>` | Définit le niveau de log (0 = urgence … 7 = debug) |
 | `--single` | Démarre sans lancer les threads connecteurs |
 

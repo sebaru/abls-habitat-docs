@@ -95,7 +95,7 @@ Depuis [/threads](https://console.abls-habitat.fr/threads) :
 
 1. Trouvez le thread concerné
 2. Cliquez sur **Activer le debug**
-3. Consultez les logs de l'agent (`journalctl -u watchdogd -f` sur le serveur)
+3. Consultez les logs de l'agent (`journalctl -u abls-agent-server.service -f` sur le serveur)
 
 !!! tip "Désactivez le debug en production"
     Le mode debug génère un volume important de logs. Pensez à le désactiver une fois la mise en service terminée.

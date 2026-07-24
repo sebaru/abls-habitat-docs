@@ -61,7 +61,7 @@ Chaque étape est détaillée dans une page dédiée. Suivez l'ordre recommandé
 ## Concepts clés à retenir
 
 ### Agent
-Un **agent** est un processus logiciel (`Watchdogd`) qui s'exécute sur un serveur et communique avec l'API centrale.
+Un **agent** est un processus logiciel (`abls-agent-server`) qui s'exécute sur un serveur et communique avec l'API centrale.
 Il porte les **threads** (connecteurs) qui dialoguent avec les équipements physiques.
 
 ### Thread (Connecteur)

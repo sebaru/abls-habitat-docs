@@ -1,6 +1,6 @@
 # Étape 1 — Ajouter et gérer les agents
 
-Un **agent** (`Watchdogd`) est le processus logiciel qui s'exécute sur votre serveur et qui fait le lien entre l'API centrale Abls-Habitat et vos équipements physiques.
+Un **agent** (`abls-agent-server`) est le processus logiciel qui s'exécute sur votre serveur et qui fait le lien entre l'API centrale Abls-Habitat et vos équipements physiques.
 Avant toute mise en service, au moins un agent doit être déployé et lié au domaine.
 
 !!! info "Position dans le workflow"
@@ -67,7 +67,18 @@ Si vous préférez une installation native sur Debian/Fedora/RaspiOS :
 ### Installation
 
 ```bash
-sudo bash -c "$(wget https://raw.githubusercontent.com/sebaru/Watchdog/main/INSTALL.sh -q -O -)"
+sudo wget -O /etc/yum.repos.d/abls-rpms.repo https://pkgs.abls-habitat.fr/abls-rpms.repo
+sudo rpm --import https://pkgs.abls-habitat.fr/rpms/keys/RPM-GPG-KEY-ABLS
+sudo dnf makecache
+sudo dnf install abls-agent-server
+```
+
+Pour Debian/RaspiOS, utilisez :
+
+```bash
+sudo wget -O /etc/apt/sources.list.d/abls-deb.sources https://pkgs.abls-habitat.fr/abls-deb.sources
+sudo apt update
+sudo apt install abls-agent-server
 ```
 
 ### Liaison au domaine
@@ -75,18 +86,18 @@ sudo bash -c "$(wget https://raw.githubusercontent.com/sebaru/Watchdog/main/INST
 Une fois installé, liez l'agent :
 
 ```bash
-sudo Watchdogd --save --domain-uuid <domain_uuid> --domain-secret <domain_secret>
+sudo abls-agent-server --save --domain-uuid <domain_uuid> --domain-secret <domain_secret>
 ```
 
 ### Démarrage du service
 
 ```bash
-sudo systemctl enable --now watchdogd
+sudo systemctl enable --now abls-agent-server.service
 ```
 
 ### Configuration MQTT TLS (optionnel)
 
-Si le broker MQTT utilise SSL/TLS, éditez `/etc/abls-habitat-agent.conf` pour y ajouter les clés CA :
+Si le broker MQTT utilise SSL/TLS, éditez `/etc/abls-agent.conf` pour y ajouter les clés CA :
 
 ```json
 {
@@ -108,13 +119,13 @@ La liste affiche tous les agents connus du domaine. Votre nouvel agent doit appa
 | Colonne | Valeur attendue |
 |---|---|
 | **Hostname** | Nom du serveur |
-| **Version** | Version de Watchdogd |
+| **Version** | Version de abls-agent-server |
 | **État** | `Actif` (pastille verte) |
 | **Master** | `Oui` si c'est le seul agent ou le principal |
 
 !!! warning "L'agent n'apparaît pas ?"
     Vérifiez que :
-    - Le service tourne bien (`systemctl status watchdogd` ou `podman ps`)
+    - Le service tourne bien (`systemctl status abls-agent-server.service` ou `podman ps`)
     - Le serveur peut atteindre `api.abls-habitat.fr` sur le port 5559
     - Le `domain_uuid` et le `domain_secret` sont corrects
 
@@ -126,7 +137,7 @@ Depuis la liste des agents ([/agents](https://console.abls-habitat.fr/agents)), 
 
 | Action | Description |
 |---|---|
-| **Redémarrer** | Relance le processus Watchdogd sur le serveur distant |
+| **Redémarrer** | Relance le processus abls-agent-server sur le serveur distant |
 | **Mettre à jour** | Télécharge et installe la dernière version de l'agent |
 | **Promouvoir en Master** | Désigne cet agent comme agent principal du domaine |
 | **Mettre à jour tous les slaves** | Met à jour en masse tous les agents secondaires |

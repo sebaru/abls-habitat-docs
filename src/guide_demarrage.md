@@ -17,40 +17,40 @@ Les socles minimums sur lesquels les agents ont été testés puis validés:
     Vous aurez également besoin des droits d'administration, via **sudo** par exemple.
 
 ---
-##Installation d'un agent depuis un container
-
-La solution la plus simple pour installer un agent est d'utiliser le format container.
-
-Depuis votre hote, tapez la commande suivante:
-
-    [watchdog@Server ~]$ podman run -d --name abls-agent --restart always --tz local -p 5559:5559 -v /dev/log:/dev/log --env ABLS_API_URL=api.abls-habitat.fr --env ABLS_DOMAIN_UUID=`domain_uuid` --env ABLS_DOMAIN_SECRET=`domain_secret` --group-add keep-groups docker.io/sebaru/abls-agent:latest
-
-Retrouvez aussi ces instructions sur la console, en cliquant sur le menu [Ajouter un agent](https://console.abls-habitat.fr/agent/add)
-
----
 ##Installation d'un agent en natif
 
-Si vous souhaitez ajouter manuellement un agent
+Si vous souhaitez ajouter un agent
 
 1. Suivez la procédure d'installation en [ligne de commande](#installation-en-ligne-de-commande)
 1. Puis complétez par [lier l'agent à l'API](#lier-un-agent).
 1. Si besoin, vous pouvez également positionner les [options avancées](#options-avancees)
 
-Vous pouvez également, dans le cadre d'upgrade par exemple, utiliser la méthode de mise à jour basée sur [le repository GIT](#upgrader-un-agent-natif-deja-installe).
-
 ###Installation en ligne de commande
 
-Sur un système basé sur RPM (Fedora/RHEL), vous pouvez d'abord ajouter le dépôt **ABLS-PKGS** pour installer et mettre à jour les paquets Abls-Habitat via `dnf`:
+#### Fedora/RHEL (RPM)
+
+Sur un système basé sur RPM (Fedora/RHEL), ajoutez le dépôt **ABLS-PKGS** puis installez le paquet `abls-agent-server`:
 
     [watchdog@Server ~]$ sudo wget -O /etc/yum.repos.d/abls-rpms.repo https://pkgs.abls-habitat.fr/abls-rpms.repo
     [watchdog@Server ~]$ sudo rpm --import https://pkgs.abls-habitat.fr/rpms/keys/RPM-GPG-KEY-ABLS
     [watchdog@Server ~]$ sudo dnf makecache
+    [watchdog@Server ~]$ sudo dnf install abls-agent-server
 
-Vous pouvez ensuite lancer l'installation de l'agent avec la procédure ci-dessous.
+#### Debian/RaspiOS (APT)
 
-Depuis un terminal, lancez la commande suivante:
+Sur un système basé sur APT (Debian/RaspiOS), ajoutez la source **ABLS-PKGS** puis installez `abls-agent-server`:
 
-    [watchdog@Server ~]$ sudo bash -c "$(wget https://raw.githubusercontent.com/sebaru/Watchdog/main/INSTALL.sh -q -O -)"
+    [watchdog@Server ~]$ sudo wget -O /etc/apt/sources.list.d/abls-deb.sources https://pkgs.abls-habitat.fr/abls-deb.sources
+    [watchdog@Server ~]$ sudo apt update
+    [watchdog@Server ~]$ sudo apt install abls-agent-server
+
+!!! Note
+    Le fichier `abls-deb.sources` utilise la clé `Signed-By: /usr/share/keyrings/abls-archive-keyring.gpg`.
+    Assurez-vous que cette clé est installée sur votre système.
+
+Dans les deux cas, activez ensuite le service de l'agent:
+
+    [watchdog@Server ~]$ sudo systemctl enable --now abls-agent-server.service
 
 [Liez](#lier-un-agent) ensuite votre agent à votre domaine.
 
@@ -69,7 +69,7 @@ Manuellement, vous pouvez également, depuis votre [console](https://console.abl
 
 Via votre terminal, tapez ensuite la commande suivante:
 
-    [watchdog@Server ~]$ sudo Watchdogd --save --domain-uuid `domain_uuid` --domain-secret `domain-secret`
+    [watchdog@Server ~]$ sudo abls-agent-server --save --domain-uuid `domain_uuid` --domain-secret `domain-secret`
 
 Votre agent est désormais lié à l'API.
 
@@ -88,14 +88,14 @@ via les options de démarrage suivantes:
 
 Via votre terminal, tapez ensuite la commande suivante:
 
-    [watchdog@Server ~]$ sudo Watchdogd --save --domain-uuid `domain_uuid` --domain-secret `domain-secret` --api-url `api_url` --agent-uuid `agent_uuid`
+    [watchdog@Server ~]$ sudo abls-agent-server --save --domain-uuid `domain_uuid` --domain-secret `domain-secret` --api-url `api_url` --agent-uuid `agent_uuid`
 
 Votre agent est désormais lié à l'API.
 
 ###Configuration MQTT_API TLS
 
 Si votre broker MQTT_API est configuré en SSL/TLS, vous pouvez indiquer explicitement le fichier CA ou le répertoire CA à utiliser pour valider le certificat du broker.
-Ces options sont à ajouter manuellement dans `/etc/abls-habitat-agent.conf` :
+Ces options sont à ajouter manuellement dans `/etc/abls-agent.conf` :
 
 ```json
 {
@@ -115,9 +115,9 @@ Consultez la [référence complète de configuration de l'agent](config_agent.md
 
 Les commandes suivantes permettent alors de demarrer, stopper, redémarrer l'agent sur votre Système:
 
-    [watchdog@Server ~]$ sudo systemctl start Watchdogd.service
-    [watchdog@Server ~]$ sudo systemctl stop Watchdogd.service
-    [watchdog@Server ~]$ sudo systemctl restart Watchdogd.service
+    [watchdog@Server ~]$ sudo systemctl start abls-agent-server.service
+    [watchdog@Server ~]$ sudo systemctl stop abls-agent-server.service
+    [watchdog@Server ~]$ sudo systemctl restart abls-agent-server.service
 
 Attention, l'arrêt d'un agent nécessite de sauvegarder beaucoup d'éléments vers l'API, cela peut prendre 2 à 5 minutes.
 
@@ -125,31 +125,33 @@ Attention, l'arrêt d'un agent nécessite de sauvegarder beaucoup d'éléments v
 
 Les commandes suivantes permettent d'afficher les logs de l'agent:
 
-    [watchdog@Server ~]$ sudo journalctl -f -u Watchdogd.service
+    [watchdog@Server ~]$ sudo journalctl -f -u abls-agent-server.service
 
 ---
-##Upgrader un agent natif déjà installé
+## Upgrader un agent natif déjà installé
 
 Un agent peut etre automatiquement upgradé depuis la console, via la page de [gestion des agents](https://console.abls-habitat.fr/agents).
 
-Vous pouvez également le mettre à niveau via l'utilisation du repository [**Github**](https://github.com/sebaru/Watchdog.git).
+Vous pouvez également le mettre à niveau via le gestionnaire de paquets natif de votre distribution.
 
-Pour cela, tapez les commandes suivantes dans un terminal:
+### Upgrade RPM (Fedora/RHEL)
 
-    [watchdog@Server ~]$ git clone https://github.com/sebaru/Watchdog.git abls-habitat-agent
-    [watchdog@Server ~]$ cd abls-habitat-agent
-    [watchdog@Server ~]$ ./build.sh
-    [watchdog@Server ~]$ sudo ./install.sh
-    [watchdog@Server ~]$ cd ..
-    [watchdog@Server ~]$ rm -rf abls-habitat-agent
-    [watchdog@Server ~]$ sudo systemctl restart Watchdogd
+    [watchdog@Server ~]$ sudo dnf makecache
+    [watchdog@Server ~]$ sudo dnf upgrade abls-agent-server
+    [watchdog@Server ~]$ sudo systemctl restart abls-agent-server.service
+
+### Upgrade APT (Debian/RaspiOS)
+
+    [watchdog@Server ~]$ sudo apt update
+    [watchdog@Server ~]$ sudo apt install --only-upgrade abls-agent-server
+    [watchdog@Server ~]$ sudo systemctl restart abls-agent-server.service
 
 ---
 ##Reinstaller un agent natif
 
 Pour relancer la phase d'installation, supprimez le fichier de configuration puis relancez l'agent:
 
-    $ sudo rm /etc/abls-habitat-agent.conf
-    $ sudo systemctl restart Watchdogd
+    $ sudo rm /etc/abls-agent.conf
+    $ sudo systemctl restart abls-agent-server.service
 
 Et enfin recommencer la [procédure](#installation-dun-agent-en-natif).
