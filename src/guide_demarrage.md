@@ -27,22 +27,25 @@ Si vous souhaitez ajouter un agent
 
 ###Installation en ligne de commande
 
+L'agent à déployer est **abls-agent-server**.
+L'installation revient à installer ce paquet via **dnf** ou **apt** selon votre distribution.
+
 #### Fedora/RHEL (RPM)
 
 Sur un système basé sur RPM (Fedora/RHEL), ajoutez le dépôt **ABLS-PKGS** puis installez le paquet `abls-agent-server`:
 
-    [watchdog@Server ~]$ sudo wget -O /etc/yum.repos.d/abls-rpms.repo https://pkgs.abls-habitat.fr/abls-rpms.repo
-    [watchdog@Server ~]$ sudo rpm --import https://pkgs.abls-habitat.fr/rpms/keys/RPM-GPG-KEY-ABLS
-    [watchdog@Server ~]$ sudo dnf makecache
-    [watchdog@Server ~]$ sudo dnf install abls-agent-server
+    sudo wget -O /etc/yum.repos.d/abls-rpms.repo https://pkgs.abls-habitat.fr/abls-rpms.repo
+    sudo rpm --import https://pkgs.abls-habitat.fr/rpms/keys/RPM-GPG-KEY-ABLS
+    sudo dnf makecache
+    sudo dnf install abls-agent-server
 
 #### Debian/RaspiOS (APT)
 
 Sur un système basé sur APT (Debian/RaspiOS), ajoutez la source **ABLS-PKGS** puis installez `abls-agent-server`:
 
-    [watchdog@Server ~]$ sudo wget -O /etc/apt/sources.list.d/abls-deb.sources https://pkgs.abls-habitat.fr/abls-deb.sources
-    [watchdog@Server ~]$ sudo apt update
-    [watchdog@Server ~]$ sudo apt install abls-agent-server
+    sudo wget -O /etc/apt/sources.list.d/abls-deb.sources https://pkgs.abls-habitat.fr/abls-deb.sources
+    sudo apt update
+    sudo apt install abls-agent-server
 
 !!! Note
     Le fichier `abls-deb.sources` utilise la clé `Signed-By: /usr/share/keyrings/abls-archive-keyring.gpg`.
@@ -50,7 +53,7 @@ Sur un système basé sur APT (Debian/RaspiOS), ajoutez la source **ABLS-PKGS** 
 
 Dans les deux cas, activez ensuite le service de l'agent:
 
-    [watchdog@Server ~]$ sudo systemctl enable --now abls-agent-server.service
+    sudo systemctl enable --now abls-agent-server.service
 
 [Liez](#lier-un-agent) ensuite votre agent à votre domaine.
 
@@ -69,7 +72,7 @@ Manuellement, vous pouvez également, depuis votre [console](https://console.abl
 
 Via votre terminal, tapez ensuite la commande suivante:
 
-    [watchdog@Server ~]$ sudo abls-agent-server --save --domain-uuid `domain_uuid` --domain-secret `domain-secret`
+    sudo abls-agent-server --save --domain-uuid `domain_uuid` --domain-secret `domain-secret`
 
 Votre agent est désormais lié à l'API.
 
@@ -88,7 +91,7 @@ via les options de démarrage suivantes:
 
 Via votre terminal, tapez ensuite la commande suivante:
 
-    [watchdog@Server ~]$ sudo abls-agent-server --save --domain-uuid `domain_uuid` --domain-secret `domain-secret` --api-url `api_url` --agent-uuid `agent_uuid`
+    sudo abls-agent-server --save --domain-uuid `domain_uuid` --domain-secret `domain-secret` --api-url `api_url` --agent-uuid `agent_uuid`
 
 Votre agent est désormais lié à l'API.
 
@@ -115,9 +118,9 @@ Consultez la [référence complète de configuration de l'agent](config_agent.md
 
 Les commandes suivantes permettent alors de demarrer, stopper, redémarrer l'agent sur votre Système:
 
-    [watchdog@Server ~]$ sudo systemctl start abls-agent-server.service
-    [watchdog@Server ~]$ sudo systemctl stop abls-agent-server.service
-    [watchdog@Server ~]$ sudo systemctl restart abls-agent-server.service
+    sudo systemctl start abls-agent-server.service
+    sudo systemctl stop abls-agent-server.service
+    sudo systemctl restart abls-agent-server.service
 
 Attention, l'arrêt d'un agent nécessite de sauvegarder beaucoup d'éléments vers l'API, cela peut prendre 2 à 5 minutes.
 
@@ -125,7 +128,7 @@ Attention, l'arrêt d'un agent nécessite de sauvegarder beaucoup d'éléments v
 
 Les commandes suivantes permettent d'afficher les logs de l'agent:
 
-    [watchdog@Server ~]$ sudo journalctl -f -u abls-agent-server.service
+    sudo journalctl -f -u abls-agent-server.service
 
 ---
 ## Upgrader un agent natif déjà installé
@@ -136,15 +139,15 @@ Vous pouvez également le mettre à niveau via le gestionnaire de paquets natif 
 
 ### Upgrade RPM (Fedora/RHEL)
 
-    [watchdog@Server ~]$ sudo dnf makecache
-    [watchdog@Server ~]$ sudo dnf upgrade abls-agent-server
-    [watchdog@Server ~]$ sudo systemctl restart abls-agent-server.service
+    sudo dnf makecache
+    sudo dnf upgrade abls-agent-server
+    sudo systemctl restart abls-agent-server.service
 
 ### Upgrade APT (Debian/RaspiOS)
 
-    [watchdog@Server ~]$ sudo apt update
-    [watchdog@Server ~]$ sudo apt install --only-upgrade abls-agent-server
-    [watchdog@Server ~]$ sudo systemctl restart abls-agent-server.service
+    sudo apt update
+    sudo apt install --only-upgrade abls-agent-server
+    sudo systemctl restart abls-agent-server.service
 
 ---
 ##Reinstaller un agent natif
