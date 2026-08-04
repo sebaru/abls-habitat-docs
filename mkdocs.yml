@@ -46,6 +46,7 @@ nav:
    - Monostables: dls_monostables.md
    - Messages: dls_messages.md
    - Watchdog: dls_watchdog.md
+   - Temporisations: dls_tempo.md
    - Compteurs d'impulsions: dls_cpti.md
    - Compteurs horaire: dls_cpth.md
    - Visuels: dls_visuels.md

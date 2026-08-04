@@ -139,7 +139,6 @@ Depuis la liste des agents ([/agents](https://console.abls-habitat.fr/agents)), 
 |---|---|
 | **Redémarrer** | Relance le processus abls-agent-server sur le serveur distant |
 | **Mettre à jour** | Télécharge et installe la dernière version de l'agent |
-| **Promouvoir en Master** | Désigne cet agent comme agent principal du domaine |
 | **Mettre à jour tous les slaves** | Met à jour en masse tous les agents secondaires |
 
 !!! tip "Agent Master vs Slave"
