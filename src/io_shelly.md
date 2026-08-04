@@ -28,7 +28,7 @@ Dans l'interface d'administration du Shelly, la configuration MQTT doit être ad
 
 Une fois la connectique assemblée, il suffit de lancer le script suivant pour le raccrocher au serveur principal:
 
-    [watchdog@Server ~]$ ./SRC/scripts/shellypro_set_mqtt.sh @IP_du_shelly @IP_du_master
+    ./SRC/scripts/shellypro_set_mqtt.sh @IP_du_shelly @IP_du_master
 
 Ce script configure le broker MQTT du Shelly, mais ne remplace pas les options précédentes qui doivent être activées dans l'interface web du module.
 
