@@ -54,6 +54,7 @@ Chaque étape est détaillée dans une page dédiée. Suivez l'ordre recommandé
 | 5 | [Mapping I/O ↔ D.L.S](technicien_mapping.md) | Relier les E/S physiques aux mnémoniques D.L.S |
 | 6 | [Synoptiques](technicien_synoptiques.md) | Créer la structure des pages de visualisation |
 | 7 | [Atelier graphique](technicien_atelier.md) | Placer les visuels sur les synoptiques |
+| — | [Tableau de courbes sur synoptique](technicien_tableau_courbes.md) | Ajouter des graphes historiques sur une vue technique |
 | — | [Mnémoniques](technicien_mnemos.md) | Consulter et gérer les variables du domaine |
 
 ---

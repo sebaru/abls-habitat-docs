@@ -76,7 +76,8 @@ sudo dnf install abls-agent-server
 Pour Debian/RaspiOS, utilisez :
 
 ```bash
-sudo wget -O /etc/apt/sources.list.d/abls-deb.sources https://pkgs.abls-habitat.fr/abls-deb.sources
+source /etc/os-release
+sudo wget -O /etc/apt/sources.list.d/abls-pkgs.sources https://pkgs.abls-habitat.fr/abls-pkgs-${VERSION_CODENAME}.sources
 sudo apt update
 sudo apt install abls-agent-server
 ```

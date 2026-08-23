@@ -78,6 +78,7 @@ nav:
    - "Étape 4 : Configurer le mapping I/O": technicien_mapping.md
    - "Étape 5 : Créer les synoptiques": technicien_synoptiques.md
    - "Étape 6 : Utiliser l'atelier graphique": technicien_atelier.md
+   - "Ajouter un tableau de courbes sur un synoptique": technicien_tableau_courbes.md
    - Gérer les mnémoniques: technicien_mnemos.md
 
 theme:

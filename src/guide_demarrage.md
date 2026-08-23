@@ -43,12 +43,13 @@ Sur un système basé sur RPM (Fedora/RHEL), ajoutez le dépôt **ABLS-PKGS** pu
 
 Sur un système basé sur APT (Debian/RaspiOS), ajoutez la source **ABLS-PKGS** puis installez `abls-agent-server`:
 
-    sudo wget -O /etc/apt/sources.list.d/abls-deb.sources https://pkgs.abls-habitat.fr/abls-deb.sources
+    source /etc/os-release
+    sudo wget -O /etc/apt/sources.list.d/abls-pkgs.sources https://pkgs.abls-habitat.fr/abls-pkgs-${VERSION_CODENAME}.sources
     sudo apt update
     sudo apt install abls-agent-server
 
 !!! Note
-    Le fichier `abls-deb.sources` utilise la clé `Signed-By: /usr/share/keyrings/abls-archive-keyring.gpg`.
+    Le fichier `abls-pkgs.sources` utilise la clé `Signed-By: /etc/apt/keyrings/abls-archive-keyring.gpg`.
     Assurez-vous que cette clé est installée sur votre système.
 
 Dans les deux cas, activez ensuite le service de l'agent:
