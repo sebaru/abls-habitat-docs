@@ -76,11 +76,16 @@ sudo dnf install abls-agent-server
 Pour Debian/RaspiOS, utilisez :
 
 ```bash
+sudo install -d -m 0755 /etc/apt/keyrings
+sudo wget -O /etc/apt/keyrings/abls-archive-keyring.gpg https://pkgs.abls-habitat.fr/abls-archive-keyring.gpg
+sudo chmod 0644 /etc/apt/keyrings/abls-archive-keyring.gpg
 source /etc/os-release
-sudo wget -O /etc/apt/sources.list.d/abls-pkgs.sources https://pkgs.abls-habitat.fr/abls-pkgs-${VERSION_CODENAME}.sources
+sudo wget -O /etc/apt/sources.list.d/abls-pkgs-${VERSION_CODENAME}.sources https://pkgs.abls-habitat.fr/abls-pkgs-${VERSION_CODENAME}.sources
 sudo apt update
 sudo apt install abls-agent-server
 ```
+
+La variable utilisée est `VERSION_CODENAME`, fournie par `/etc/os-release`.
 
 ### Liaison au domaine
 

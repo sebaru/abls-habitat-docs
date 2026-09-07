@@ -41,16 +41,24 @@ Sur un système basé sur RPM (Fedora/RHEL), ajoutez le dépôt **ABLS-PKGS** pu
 
 #### Debian/RaspiOS (APT)
 
-Sur un système basé sur APT (Debian/RaspiOS), ajoutez la source **ABLS-PKGS** puis installez `abls-agent-server`:
+Sur un système basé sur APT (Debian/RaspiOS), installez d'abord la clé de signature du dépôt:
+
+    sudo install -d -m 0755 /etc/apt/keyrings
+    sudo wget -O /etc/apt/keyrings/abls-archive-keyring.gpg https://pkgs.abls-habitat.fr/abls-archive-keyring.gpg
+    sudo chmod 0644 /etc/apt/keyrings/abls-archive-keyring.gpg
+
+Ajoutez ensuite la source **ABLS-PKGS** correspondant à votre distribution:
 
     source /etc/os-release
-    sudo wget -O /etc/apt/sources.list.d/abls-pkgs.sources https://pkgs.abls-habitat.fr/abls-pkgs-${VERSION_CODENAME}.sources
+    sudo wget -O /etc/apt/sources.list.d/abls-pkgs-${VERSION_CODENAME}.sources https://pkgs.abls-habitat.fr/abls-pkgs-${VERSION_CODENAME}.sources
+
+Puis mettez à jour le cache APT et installez `abls-agent-server`:
+
     sudo apt update
     sudo apt install abls-agent-server
 
 !!! Note
-    Le fichier `abls-pkgs.sources` utilise la clé `Signed-By: /etc/apt/keyrings/abls-archive-keyring.gpg`.
-    Assurez-vous que cette clé est installée sur votre système.
+    La variable utilisée est `VERSION_CODENAME`, fournie par `/etc/os-release`. Par exemple, RaspiOS 13 `trixie` télécharge `https://pkgs.abls-habitat.fr/abls-pkgs-trixie.sources`.
 
 Dans les deux cas, activez ensuite le service de l'agent:
 
