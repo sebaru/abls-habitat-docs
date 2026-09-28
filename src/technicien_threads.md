@@ -17,16 +17,16 @@ Cette page présente toutes les familles de connecteurs disponibles sous forme d
 
 | Connecteur | Usage | Page |
 |---|---|---|
-| **I/O Wago Modbus** | Automates Wago 750 via Modbus TCP | [/modbus](https://console.abls-habitat.fr/modbus) |
-| **Raspberry PI GPIO** | Entrées/sorties GPIO | [/gpiod](https://console.abls-habitat.fr/gpiod) |
-| **Phidget** | Modules I/O USB | [/phidget](https://console.abls-habitat.fr/phidget) |
-| **Audio** | Diffusion audio multizone | [/audio](https://console.abls-habitat.fr/audio) |
-| **GSM / SMS** | Notifications par SMS | [/smsg](https://console.abls-habitat.fr/smsg) |
-| **Messagerie XMPP** | Messagerie instantanée | [/imsgs](https://console.abls-habitat.fr/imsgs) |
-| **Téléinfo EDF** | Compteur Linky | [/teleinfoedf](https://console.abls-habitat.fr/teleinfoedf) |
-| **SHELLY** | Modules domotiques Wi-Fi | [/shelly](https://console.abls-habitat.fr/shelly) |
-| **Onduleurs UPS** | Surveillance via NUT | [/ups](https://console.abls-habitat.fr/ups) |
-| **Météo API** | Données météo en ligne | [/meteo](https://console.abls-habitat.fr/meteo) |
+| **I/O Wago Modbus** | Automates Wago 750 via Modbus TCP | [/agents/modbus](https://console.abls-habitat.fr/agents/modbus) |
+| **Raspberry PI GPIO** | Entrées/sorties GPIO | [/agents/gpiod](https://console.abls-habitat.fr/agents/gpiod) |
+| **Phidget** | Modules I/O USB | [/agents/phidget](https://console.abls-habitat.fr/agents/phidget) |
+| **Audio** | Diffusion audio multizone | [/agents/audio](https://console.abls-habitat.fr/agents/audio) |
+| **GSM / SMS** | Notifications par SMS | [/agents/sms](https://console.abls-habitat.fr/agents/sms) |
+| **Messagerie XMPP** | Messagerie instantanée | [/agents/imsg](https://console.abls-habitat.fr/agents/imsg) |
+| **Téléinfo EDF** | Compteur Linky | [/agents/teleinfoedf](https://console.abls-habitat.fr/agents/teleinfoedf) |
+| **SHELLY** | Modules domotiques Wi-Fi | [/agents/shelly](https://console.abls-habitat.fr/agents/shelly) |
+| **Onduleurs UPS** | Surveillance via NUT | [/agents/ups](https://console.abls-habitat.fr/agents/ups) |
+| **Météo API** | Données météo en ligne | [/agents/meteo](https://console.abls-habitat.fr/agents/meteo) |
 | **Caméras** | Flux vidéo IP | [/cameras](https://console.abls-habitat.fr/cameras) |
 
 ---
@@ -38,7 +38,7 @@ L'exemple ci-dessous détaille la création d'un thread **Wago Modbus TCP**, le 
 ### Étape 2.1 — Ouvrir la configuration Modbus
 
 Depuis [/io/config](https://console.abls-habitat.fr/io/config), cliquez sur la carte **I/O Wago Modbus**.
-Vous arrivez sur la page [/modbus](https://console.abls-habitat.fr/modbus).
+Vous arrivez sur la page [/agents/modbus](https://console.abls-habitat.fr/agents/modbus).
 
 ### Étape 2.2 — Ajouter un nouveau thread Modbus
 
@@ -123,7 +123,7 @@ Pour chaque thread sont affichés :
 
 ## 6. Supprimer un thread
 
-Depuis la page de configuration du connecteur concerné (ex : [/modbus](https://console.abls-habitat.fr/modbus)) :
+Depuis la page de configuration du connecteur concerné (ex : [/agents/modbus](https://console.abls-habitat.fr/agents/modbus)) :
 
 1. Trouvez le thread à supprimer
 2. Cliquez sur l'icône **Supprimer**

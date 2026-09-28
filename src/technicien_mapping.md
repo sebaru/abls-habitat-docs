@@ -28,7 +28,7 @@ Le mapping est bidirectionnel :
 
 ## 1. Accéder au mapping Modbus (exemple Wago)
 
-Depuis [/modbus](https://console.abls-habitat.fr/modbus), retrouvez votre thread Wago et cliquez sur l'icône de **mapping** (ou accédez directement via le lien du thread).
+Depuis [/agents/modbus](https://console.abls-habitat.fr/agents/modbus), retrouvez votre thread Wago et cliquez sur l'icône de **mapping** (ou accédez directement via le lien du thread).
 
 La page de mapping Modbus présente quatre onglets :
 
@@ -117,7 +117,7 @@ Le principe est identique aux sorties TOR, mais pour des valeurs numériques (po
 
 Le principe est identique pour tous les connecteurs :
 
-### GPIO Raspberry Pi → [/gpiod](https://console.abls-habitat.fr/gpiod)
+### GPIO Raspberry Pi → [/agents/gpiod](https://console.abls-habitat.fr/agents/gpiod)
 
 | Champ | Description |
 |---|---|
@@ -125,11 +125,11 @@ Le principe est identique pour tous les connecteurs :
 | **Sens** | Entrée ou Sortie |
 | **Tech_ID + Acronyme** | Mnémonique D.L.S cible |
 
-### Phidget → [/phidget](https://console.abls-habitat.fr/phidget)
+### Phidget → [/agents/phidget](https://console.abls-habitat.fr/agents/phidget)
 
 Les cartes Phidget s'associent via leur numéro de port et leur canal.
 
-### SHELLY → [/shelly](https://console.abls-habitat.fr/shelly)
+### SHELLY → [/agents/shelly](https://console.abls-habitat.fr/agents/shelly)
 
 Les modules SHELLY s'associent via leur adresse IP et leur canal (relais, mesure de puissance, etc.).
 

@@ -16,16 +16,16 @@ Elle présente l'ensemble des familles de connecteurs disponibles sous forme de 
 
 | Connecteur | Description | Page de configuration |
 |---|---|---|
-| **I/O Wago Modbus** | Automates Wago série 750 via Modbus TCP | [/modbus](https://console.abls-habitat.fr/modbus) |
-| **Raspberry PI GPIO** | Entrées/sorties GPIO d'un Raspberry Pi | [/gpiod](https://console.abls-habitat.fr/gpiod) |
-| **Phidget** | Modules I/O USB Phidget | [/phidget](https://console.abls-habitat.fr/phidget) |
-| **Audio** | Diffusion audio (zones et sources) | [/audio](https://console.abls-habitat.fr/audio) |
-| **GSM / SMS** | Envoi de SMS via modem GSM | [/smsg](https://console.abls-habitat.fr/smsg) |
-| **Messagerie XMPP** | Messagerie instantanée XMPP | [/imsgs](https://console.abls-habitat.fr/imsgs) |
-| **Téléinfo EDF** | Lecture du compteur Linky via téléinfo | [/teleinfoedf](https://console.abls-habitat.fr/teleinfoedf) |
-| **SHELLY** | Modules domotiques SHELLY | [/shelly](https://console.abls-habitat.fr/shelly) |
-| **Onduleurs UPS** | Surveillance des onduleurs via NUT | [/ups](https://console.abls-habitat.fr/ups) |
-| **Météo API** | Données météorologiques en ligne | [/meteo](https://console.abls-habitat.fr/meteo) |
+| **I/O Wago Modbus** | Automates Wago série 750 via Modbus TCP | [/agents/modbus](https://console.abls-habitat.fr/agents/modbus) |
+| **Raspberry PI GPIO** | Entrées/sorties GPIO d'un Raspberry Pi | [/agents/gpiod](https://console.abls-habitat.fr/agents/gpiod) |
+| **Phidget** | Modules I/O USB Phidget | [/agents/phidget](https://console.abls-habitat.fr/agents/phidget) |
+| **Audio** | Diffusion audio (zones et sources) | [/agents/audio](https://console.abls-habitat.fr/agents/audio) |
+| **GSM / SMS** | Envoi de SMS via modem GSM | [/agents/sms](https://console.abls-habitat.fr/agents/sms) |
+| **Messagerie XMPP** | Messagerie instantanée XMPP | [/agents/imsg](https://console.abls-habitat.fr/agents/imsg) |
+| **Téléinfo EDF** | Lecture du compteur Linky via téléinfo | [/agents/teleinfoedf](https://console.abls-habitat.fr/agents/teleinfoedf) |
+| **SHELLY** | Modules domotiques SHELLY | [/agents/shelly](https://console.abls-habitat.fr/agents/shelly) |
+| **Onduleurs UPS** | Surveillance des onduleurs via NUT | [/agents/ups](https://console.abls-habitat.fr/agents/ups) |
+| **Météo API** | Données météorologiques en ligne | [/agents/meteo](https://console.abls-habitat.fr/agents/meteo) |
 | **Caméras** | Flux vidéo IP | [/cameras](https://console.abls-habitat.fr/cameras) |
 
 ---
