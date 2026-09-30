@@ -4,9 +4,19 @@ source_json=`curl https://static.abls-habitat.fr/inventory.json`
 CATEGORIES=`echo $source_json | jq '.icons[].categorie' | sort -u | sed -e 's/"//g'`
 echo $CATEGORIES
 
-SOMMAIRE=src/visuels.md
+VISUELS_DIR=src/technicien/visuels
+mkdir -p $VISUELS_DIR/categories
+
+SOMMAIRE=$VISUELS_DIR/index.md
 echo "" > $SOMMAIRE
 echo "# Liste des visuels par catégorie" >> $SOMMAIRE
+echo "" >> $SOMMAIRE
+echo "Cette page est générée automatiquement par \`update.sh\` depuis l'inventaire" >> $SOMMAIRE
+echo "<https://static.abls-habitat.fr/inventory.json>. Ne l'éditez pas à la main." >> $SOMMAIRE
+echo "" >> $SOMMAIRE
+echo "Chaque forme s'utilise dans un module D.L.S via un objet [visuel](../dls/objets/visuels.md) :" >> $SOMMAIRE
+echo "" >> $SOMMAIRE
+echo '    #define MON_VISUEL <-> _I(forme="nom_de_la_forme");' >> $SOMMAIRE
 echo "" >> $SOMMAIRE
 
 
@@ -15,9 +25,9 @@ for CAT in $CATEGORIES
   echo;
   echo "------------- Processing Categorie $CAT"
 
-  echo "* [$CAT](visuels_$CAT.md)" >> $SOMMAIRE
+  echo "* [$CAT](categories/$CAT.md)" >> $SOMMAIRE
 
-  RESULT=src/visuels_$CAT.md
+  RESULT=$VISUELS_DIR/categories/$CAT.md
   echo "" > $RESULT
   echo "# Liste des visuels de la catégorie **"$CAT"**" >> $RESULT
   echo "" >> $RESULT

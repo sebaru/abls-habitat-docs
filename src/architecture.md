@@ -17,29 +17,31 @@ d'un domaine sont les suivants:
 Il s'agit de tous les éléments capturant l'environnement ou pouvant agir dessus. Par exemple, une prise electrique commandable,
 un télérupteur ou encore un contacteur.
 
-Tous ces capteurs et actionneurs sont pilotés au travers des différents [connecteurs](connecteurs.md).
+Tous ces capteurs et actionneurs sont pilotés au travers des différents [connecteurs](technicien/connecteurs/index.md).
 
 ##Les Agents
 
 Les agents sont des composants logiciels installés sur une ou plusieurs de vos machines, chez vous. Il ont la mission
-d'échanger avec vos capteurs et actionneurs, via leur capacité à se [connecter](connecteurs.md) à ces éléments.
+d'échanger avec vos capteurs et actionneurs, via leur capacité à se [connecter](technicien/connecteurs/index.md) à ces éléments.
 
 L'ensemble des agents sont inter-connectés au travers d'un bus.
-Chacun des agents se synchronise avec [la plateforme cloud](#la-plateforme-cloud) qui sera détaillée ci dessous.
-Pour installer un agent sur une de vos machines, suivez la [procédure d'installation](guide_demarrage.md).
+Chacun des agents se synchronise avec [la plateforme cloud](#linterface-de-navigation-et-de-controle) qui sera détaillée ci dessous.
+Pour installer un agent sur une de vos machines, suivez la [procédure d'installation](admin/agents/installation.md).
 
-##L'agent principal
+##Le serveur principal (master)
 
-Dans un domaine, un agent particulier a pour objet de faire tourner [l'intelligence](dls.md) de la plateforme. Cet agent est dit
-**principal** ou, en anglais, **master**
+Dans un domaine, un serveur particulier a pour objet de faire tourner [l'intelligence](technicien/dls/index.md)
+de la plateforme : il héberge le moteur D.L.S et le broker MQTT local auquel se raccordent les autres
+agents du site. Ce serveur est dit **principal** ou, en anglais, **master**.
 
 !!! note
 
-    Un seul et unique agent est ***principal*** à l'intérieur d'un même domaine. Les autres sont des agents secondaires.
+    Un seul et unique serveur est ***principal*** à l'intérieur d'un même domaine.
+    Sa désignation se fait depuis la console, page **Serveurs**.
 
 ##L'interface de navigation et de contrôle
 
-Elle permet aux [utilisateurs](users.md) de visualiser et d'interagir avec leur habitat connecté via une interface web conviviale.
+Elle permet aux [utilisateurs](admin/habilitations.md) de visualiser et d'interagir avec leur habitat connecté via une interface web conviviale.
 On y retrouve des tableaux de bord personnalisables pour suivre en temps réel :
 
 * Les températures (intérieures/extérieures)
@@ -51,10 +53,11 @@ Cette plateforme est le point d'entrée pour les utilisateurs réguliers.
 Elle est disponible à travers [ce lien](https://home.abls-habitat.fr).
 
 
-##La plateforme des utilisateurs à privilèges
+## La plateforme des utilisateurs à privilèges
 
 Cette plateforme est reservée aux utilisateurs à privilèges.
 Elle permet:
+
 * de centraliser la gestion des agents
 * de définir les synoptiques et les tableaux de bord
 * de rediger les modules D.L.S

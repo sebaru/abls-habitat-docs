@@ -13,78 +13,141 @@ nav:
 
  - Découverte:
    - Tour d'horizon: index.md
-   - Galerie: galerie.md
- - Prise en main:
-   - Guide de démarrage: guide_demarrage.md
+   - Les trois rôles: roles.md
    - Architecture: architecture.md
-   - Configuration de l'agent: config_agent.md
-   - Configuration de l'API: config_api.md
- - Guide de l'utilisateur:
-   - Les Utilisateurs: users.md
- - Connecteurs:
-   - Description: connecteurs.md
-   - I/O Wago modbus: io_modbus.md
-   - I/O RaspberryPI: io_gpiod.md
-   - I/O Phidget: io_phidget.md
-   - Audio output: io_audio.md
-   - Instant Messaging: io_imsgs.md
-   - SMS Short Message System: io_smsg.md
-   - E.D.F Teleinfo: io_teleinfoedf.md
-   - SHELLY: io_shelly.md
-   - UPS Uninterruptible Power Supply: io_ups.md
-   - Météo API: io_meteo.md
-   - DMX Projecteurs: io_dmx.md
-   - Benq Projecteurs: io_projo.md
- - D.L.S:
-   - Concept: dls.md
-   - Acronymes: dls_acronymes.md
-   - Paramètres: dls_param.md
-   - Logique: dls_logique.md
-   - Bits système SYS: dls_bit_systeme.md
-   - Entrées T.O.R: dls_entre_tor.md
-   - Registres: dls_registres.md
-   - Monostables: dls_monostables.md
-   - Messages: dls_messages.md
-   - Watchdog: dls_watchdog.md
-   - Temporisations: dls_tempo.md
-   - Compteurs d'impulsions: dls_cpti.md
-   - Compteurs horaire: dls_cpth.md
-   - Visuels: dls_visuels.md
-   - Liens: dls_link.md
-   - Exemple d'anatomie: dls_anatomie.md
-   - Grammaire complète: dls_grammaire.md
- - Mapping:
-   - Lien entre connecteur et D.L.S: mapping.md
- - Visuels:
-   - L'inventaire de visuels: visuels.md
-   - Les boutons: dls_visuel_bouton.md
-   - Les commentaires: dls_visuel_comment.md
- - Contacts:
+   - Glossaire: glossaire.md
+   - Galerie: galerie.md
    - Qui sommes-nous ?: auteurs.md
- - Console:
-   - Présentation: console.md
-   - Synoptiques: console_synoptiques.md
-   - Modules D.L.S: console_dls.md
-   - Connecteurs et Agents: console_connecteurs.md
-   - Archives: console_archives.md
-   - Configuration du domaine: console_domaine.md
-   - Utilisateurs et Invitations: console_utilisateurs.md
-   - Accéder à la console: https://console.abls-habitat.fr
- - Guide du Technicien:
-   - Vue d'ensemble et workflow: technicien_overview.md
-   - "Étape 1 : Ajouter un agent": technicien_agents.md
-   - "Étape 2 : Configurer les threads": technicien_threads.md
-   - "Étape 3 : Créer les modules D.L.S": technicien_dls.md
-   - "Étape 4 : Configurer le mapping I/O": technicien_mapping.md
-   - "Étape 5 : Créer les synoptiques": technicien_synoptiques.md
-   - "Étape 6 : Utiliser l'atelier graphique": technicien_atelier.md
-   - "Ajouter un tableau de courbes sur un synoptique": technicien_tableau_courbes.md
-   - Gérer les mnémoniques: technicien_mnemos.md
+
+ - Administrateur:
+   - admin/index.md
+   - Pré-requis: admin/prerequis.md
+   - Le socle:
+     - Choisir son hébergement: admin/socle/architecture.md
+     - Installer l'API: admin/socle/api.md
+     - Base de données: admin/socle/base-de-donnees.md
+     - Broker MQTT: admin/socle/mqtt.md
+     - Console et Home: admin/socle/console-home.md
+   - Les agents:
+     - Dépôts de paquets: admin/agents/depots.md
+     - Installation et services: admin/agents/installation.md
+     - Enrôlement sur le domaine: admin/agents/enrolement.md
+     - Configuration et précédence: admin/agents/configuration.md
+     - Paramètres communs: admin/agents/parametres-communs.md
+     - Mode standalone: admin/agents/standalone.md
+   - Catalogue des agents:
+     - admin/agents/catalogue/index.md
+     - SERVER: admin/agents/catalogue/server.md
+     - DLS: admin/agents/catalogue/dls.md
+     - MODBUS: admin/agents/catalogue/modbus.md
+     - GPIOD: admin/agents/catalogue/gpiod.md
+     - PHIDGET: admin/agents/catalogue/phidget.md
+     - AUDIO: admin/agents/catalogue/audio.md
+     - SMS: admin/agents/catalogue/sms.md
+     - IMSG: admin/agents/catalogue/imsg.md
+     - TELEINFOEDF: admin/agents/catalogue/teleinfoedf.md
+     - SHELLY: admin/agents/catalogue/shelly.md
+     - UPS: admin/agents/catalogue/ups.md
+     - METEO: admin/agents/catalogue/meteo.md
+   - Exploitation:
+     - Journaux: admin/exploitation/journaux.md
+     - Supervision: admin/exploitation/supervision.md
+     - Mise à jour: admin/exploitation/mise-a-jour.md
+     - Sauvegarde et restauration: admin/exploitation/sauvegarde.md
+     - Dépannage: admin/exploitation/depannage.md
+   - Habilitations: admin/habilitations.md
+
+ - Technicien:
+   - technicien/index.md
+   - Parcours de mise en service:
+     - "1. Ajouter un agent": technicien/parcours/01-agent.md
+     - "2. Configurer les threads": technicien/parcours/02-threads.md
+     - "3. Mapper les I/O": technicien/parcours/03-mapping.md
+     - "4. Écrire les modules D.L.S": technicien/parcours/04-dls.md
+     - "5. Créer les synoptiques": technicien/parcours/05-synoptiques.md
+     - "6. Peupler l'atelier graphique": technicien/parcours/06-atelier.md
+     - "7. Gérer les mnémoniques": technicien/parcours/07-mnemos.md
+     - "8. Ajouter des tableaux de courbes": technicien/parcours/08-tableaux.md
+     - "9. Paramétrer les archives": technicien/parcours/09-archives.md
+   - Le langage D.L.S:
+     - technicien/dls/index.md
+     - Anatomie d'un module: technicien/dls/anatomie.md
+     - Grammaire complète: technicien/dls/grammaire.md
+     - Acronymes: technicien/dls/acronymes.md
+     - Paramètres de module: technicien/dls/parametres.md
+     - Logique booléenne: technicien/dls/logique.md
+     - Zone de calculs: technicien/dls/calculs.md
+     - Bits système SYS: technicien/dls/bits-systeme.md
+     - Liens inter-modules: technicien/dls/liens.md
+   - Objets D.L.S:
+     - technicien/dls/objets/index.md
+     - Entrées T.O.R _DI: technicien/dls/objets/di.md
+     - Sorties T.O.R _DO: technicien/dls/objets/do.md
+     - Entrées analogiques _AI: technicien/dls/objets/ai.md
+     - Sorties analogiques _AO: technicien/dls/objets/ao.md
+     - Bistables _B: technicien/dls/objets/bistables.md
+     - Monostables _M: technicien/dls/objets/monostables.md
+     - Temporisations _T: technicien/dls/objets/tempos.md
+     - Horloges _HORLOGE: technicien/dls/objets/horloges.md
+     - Registres _R: technicien/dls/objets/registres.md
+     - Compteurs horaires _CH: technicien/dls/objets/compteurs-horaires.md
+     - Compteurs d'impulsions _CI: technicien/dls/objets/compteurs-impulsions.md
+     - Messages _MSG: technicien/dls/objets/messages.md
+     - Watchdog _WATCHDOG: technicien/dls/objets/watchdog.md
+     - Visuels _I: technicien/dls/objets/visuels.md
+     - Régulateurs _PID: technicien/dls/objets/pid.md
+     - Bus _BUS: technicien/dls/objets/bus.md
+   - Exemples commentés:
+     - technicien/dls/exemples/index.md
+     - Éclairage centralisé: technicien/dls/exemples/eclairage.md
+     - Pompe à chaleur: technicien/dls/exemples/pompe-pac.md
+     - Météo et notifications: technicien/dls/exemples/meteo.md
+     - Bits système et supervision: technicien/dls/exemples/sys.md
+   - Connecteurs et I/O:
+     - technicien/connecteurs/index.md
+     - Modbus (Wago): technicien/connecteurs/modbus.md
+     - GPIO Raspberry Pi: technicien/connecteurs/gpiod.md
+     - Phidget: technicien/connecteurs/phidget.md
+     - Téléinfo E.D.F: technicien/connecteurs/teleinfoedf.md
+     - Shelly: technicien/connecteurs/shelly.md
+     - Onduleur UPS: technicien/connecteurs/ups.md
+     - Météo: technicien/connecteurs/meteo.md
+     - Audio: technicien/connecteurs/audio.md
+     - SMS: technicien/connecteurs/sms.md
+     - Messagerie XMPP: technicien/connecteurs/imsg.md
+   - Bibliothèque de visuels:
+     - technicien/visuels/index.md
+     - Les boutons: technicien/visuels/boutons.md
+     - Les commentaires: technicien/visuels/commentaires.md
+   - Référence de la Console:
+     - technicien/console/index.md
+     - Synoptiques: technicien/console/synoptiques.md
+     - Modules D.L.S: technicien/console/dls.md
+     - Agents et connecteurs: technicien/console/agents.md
+     - Domaine: technicien/console/domaine.md
+     - Utilisateurs et invitations: technicien/console/utilisateurs.md
+     - Ouvrir la console: https://console.abls-habitat.fr
+
+ - Utilisateur:
+   - utilisateur/index.md
+   - Lire un synoptique: utilisateur/synoptiques.md
+   - Le fil de l'eau: utilisateur/messages.md
+   - L'historique: utilisateur/historique.md
+   - Les caméras: utilisateur/cameras.md
+   - Les courbes: utilisateur/tableaux-courbes.md
+   - Être notifié: utilisateur/notifications.md
+   - Commander par SMS: utilisateur/commandes-sms.md
+   - Mon profil et mes domaines: utilisateur/profil.md
+   - Questions fréquentes: utilisateur/faq.md
+
+# Pages générées par update.sh depuis l'inventaire des visuels : liées depuis
+# technicien/visuels/index.md mais volontairement absentes de la navigation.
+not_in_nav: |
+  /technicien/visuels/categories/
 
 theme:
  name: material
  logo: https://static.abls-habitat.fr/img/abls.svg
- locale: fr
  language: fr
  features:
   - navigation.instant
@@ -92,11 +155,13 @@ theme:
   - navigation.tracking
   - navigation.tabs.sticky
   - navigation.sections
-  - toc.integrate
+  - navigation.indexes
   - navigation.top
+  - navigation.footer
+  - toc.follow
+  - content.code.copy
   - search.suggest
   - search.share
-#  - navigation.indexes
  palette: # (1)!
     - media: "(prefers-color-scheme: dark)"
       primary: indigo
@@ -121,7 +186,22 @@ plugins:
   - git-revision-date-localized:
       type: datetime
       enable_creation_date: true
+      enable_git_follow: false
   - search
 
 markdown_extensions:
   - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true

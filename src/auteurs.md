@@ -31,18 +31,12 @@ L'équipe Abls-Habitat.
 
 ## Feuille de route
 
-Nos ambitions pour la suite:
+Nos ambitions pour la suite :
 
-### Pour l'API
+* Finaliser la plateforme Cloud et la bascule complète des interfaces utilisateur sur
+  [home.abls-habitat.fr](https://home.abls-habitat.fr)
+* Enrichir le catalogue d'agents et de connecteurs
+* Compléter la bibliothèque de visuels
 
-
-* **v0.7** Coder l'interface de debug
-* **v.??** Intégrer l'authentification via keycloak
-
-### Pour l'agent
-
-
-* **v3.11** Migrer l'interface de debug sur l'API
-* **v3.12** Déporter les valeurs des visuels sur le cloud
-* **v3.13** Migrer ou refaire l'interface utilisateur sur home/abls-habitat.fr
-* **v4.0** Activer completement la plateforme Cloud
+Le détail des travaux en cours est suivi directement dans les dépôts
+[GitHub](https://github.com/sebaru?tab=repositories) du projet.
