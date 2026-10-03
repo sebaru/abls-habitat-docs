@@ -122,8 +122,8 @@ Si la valeur ne change pas :
 2. Recherchez par Tech_ID le module concerné
 3. Observez les valeurs pendant l'exécution
 
-!!! tip "Utilisez la vue RUN pour un suivi plus complet"
-    La page [/dls/run](https://console.abls-habitat.fr/dls/run) offre une vue plus détaillée et interactive de tous les mnémoniques d'un seul module.
+!!! tip "Utilisez la vue Monitor pour un suivi plus complet"
+    La page [/dls/monitor](https://console.abls-habitat.fr/dls/monitor) offre une vue plus détaillée et interactive de tous les mnémoniques d'un seul module.
     Utilisez-la pour suivre en détail la logique d'un module spécifique.
 
 ---

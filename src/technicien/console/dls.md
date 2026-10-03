@@ -51,16 +51,16 @@ L'éditeur ([/dls/source](https://console.abls-habitat.fr/dls/source)) propose :
 - Un **éditeur de texte** avec coloration syntaxique (CodeMirror)
 - Un bouton **Compiler** : compile le code et affiche les erreurs éventuelles
 - Un bouton **Restart** : redémarre le module après modification
-- Un bouton **RUN** : accède à la vue d'exécution temps réel du module
+- Un bouton **Monitor** : accède à la vue d'exécution temps réel du module
 - Un bouton **Messages** : accède à l'historique des messages générés par ce module
 
 Le résultat de la compilation s'affiche en bas de l'éditeur : erreurs de syntaxe, avertissements, etc.
 
 ---
 
-## Vue d'exécution (RUN)
+## Vue d'exécution (Monitor)
 
-La page [/dls/run](https://console.abls-habitat.fr/dls/run) affiche l'**état temps réel** d'un module D.L.S en cours d'exécution :
+La page [/dls/monitor](https://console.abls-habitat.fr/dls/monitor) affiche l'**état temps réel** d'un module D.L.S en cours d'exécution :
 
 - Valeur instantanée de chaque mnémonique (bits internes, monostables, registres, messages…)
 - Statut d'exécution (actif, erreur, arrêté)

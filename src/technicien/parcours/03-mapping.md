@@ -67,7 +67,7 @@ Cliquez sur **Valider**.
 
 ### Étape 2.3 — Vérifier la mise à jour
 
-Accédez à la vue RUN du module D.L.S ([/dls/run](https://console.abls-habitat.fr/dls/run)) et actionnez physiquement le bouton ou capteur.
+Accédez à la vue Monitor du module D.L.S ([/dls/monitor](https://console.abls-habitat.fr/dls/monitor)) et actionnez physiquement le bouton ou capteur.
 La valeur du mnémonique doit basculer en temps réel.
 
 ---
@@ -157,7 +157,7 @@ Filtrez par type (Entrée_TOR, Sortie_TOR, Entrée_Ana…) et vérifiez que les 
    a. Identifier le numéro de borne
    b. Sélectionner le Tech_ID et l'acronyme D.L.S
    c. Valider
-4. Vérifier en vue RUN que les valeurs remontent correctement
+4. Vérifier en vue Monitor que les valeurs remontent correctement
 5. → Passer à l'étape suivante : créer les synoptiques
 ```
 

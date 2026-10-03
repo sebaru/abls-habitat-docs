@@ -127,17 +127,17 @@ Depuis la liste [/dls](https://console.abls-habitat.fr/dls), vous pouvez :
 - Cliquer sur **Activer** pour démarrer un module arrêté
 - Cliquer sur **Désactiver** pour arrêter un module sans le supprimer
 
-### Étape 5.3 — Vue d'exécution temps réel (RUN)
+### Étape 5.3 — Vue d'exécution temps réel (Monitor)
 
-Cliquez sur le bouton **RUN** dans l'éditeur (ou depuis la liste) pour accéder à la page [/dls/run](https://console.abls-habitat.fr/dls/run).
+Cliquez sur le bouton **Monitor** dans l'éditeur (ou depuis la liste) pour accéder à la page [/dls/monitor](https://console.abls-habitat.fr/dls/monitor).
 
 Cette vue affiche en temps réel :
 - La **valeur instantanée** de chaque mnémonique du module
 - Le **statut de calcul** (actif, erreur, arrêté)
 - Les **compteurs** de cycles d'exécution
 
-!!! tip "Utiliser la vue RUN pour debugger"
-    La vue RUN est votre outil principal pour vérifier que la logique fonctionne comme attendu.
+!!! tip "Utiliser la vue Monitor pour debugger"
+    La vue Monitor est votre outil principal pour vérifier que la logique fonctionne comme attendu.
     Observez les valeurs des mnémoniques pendant que vous agissez sur les entrées physiques.
 
 ---
@@ -177,7 +177,7 @@ Exemple : un seuil de température, une durée de tempo paramétrée depuis l'in
 3. Ouvrir l'éditeur et écrire le code D.L.S
 4. Compiler → corriger les erreurs → recompiler
 5. Cliquer sur Restart pour prendre en compte le nouveau code
-6. Vérifier l'exécution dans la vue RUN
+6. Vérifier l'exécution dans la vue Monitor
 7. → Passer à l'étape suivante : mapping I/O ↔ D.L.S
 ```
 
