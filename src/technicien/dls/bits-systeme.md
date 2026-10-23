@@ -103,5 +103,3 @@ Exemple d'usage :
 
     /* Alerte secondaire : simple notification */
     - SYS:TOP_ALERTE_2 → MSG_ALERTE_SECONDAIRE;
-
-
