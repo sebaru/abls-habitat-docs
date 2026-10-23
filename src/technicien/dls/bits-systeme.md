@@ -2,7 +2,7 @@
 
 Le module **SYS** expose un ensemble de bits positionnés automatiquement par le moteur D.L.S. Ces bits sont accessibles en lecture depuis n'importe quel module, via le préfixe `SYS:`.
 
-Ils se divisent en deux catégories : les **tops horodatés** (monostables périodiques) et les **bits d'alerte** (entrées TOR gérées par les connecteurs).
+Ils se divisent en trois catégories : les **tops horodatés** (monostables périodiques), les **bascules horodatées** (bistables périodiques) et les **bits d'alerte** (entrées TOR gérées par les connecteurs).
 
 ---
 
@@ -51,6 +51,34 @@ Exemple d'usage :
 
 !!! warning
     Ces bits appartiennent au module système `SYS`. Il est donc obligatoire de les préfixer explicitement par `SYS:` dans le code d'un autre module D.L.S.
+
+---
+
+## Les bascules horodatées
+
+Les bits `SYS:FLIPFLOP_*` sont des [bistables](objets/bistables.md) (`_B`) dont le moteur D.L.S inverse périodiquement l'état : de `FALSE` à `TRUE`, puis de `TRUE` à `FALSE`. Contrairement aux tops, ils conservent leur état entre deux basculements au lieu de revenir à `FALSE` à la fin du cycle D.L.S.
+
+| Acronyme | Classe | Intervalle de basculement | Période complète |
+|:---------|:-------|:------------------------:|:----------------:|
+| `SYS:FLIPFLOP_5HZ` | `_B` | 200 ms | 400 ms |
+| `SYS:FLIPFLOP_2HZ` | `_B` | 500 ms | 1 s |
+| `SYS:FLIPFLOP_1SEC` | `_B` | 1 s | 2 s |
+| `SYS:FLIPFLOP_2SEC` | `_B` | 2 s | 4 s |
+
+La période complète comprend un intervalle à `TRUE` et un intervalle à `FALSE`. Les suffixes `5HZ` et `2HZ` désignent donc la cadence des basculements, pas la fréquence du signal complet.
+
+### SYS:FLIPFLOP_1SEC
+
+`SYS:FLIPFLOP_1SEC` change d'état **toutes les secondes**. Il peut servir à faire clignoter une sortie ou un visuel, avec une seconde à `TRUE`, puis une seconde à `FALSE`.
+
+Exemple d'usage pour une sortie TOR :
+
+    - SYS:FLIPFLOP_1SEC → SORTIE_CLIGNOTANTE;
+
+La sortie suit l'état de la bascule : active pendant 1 seconde, puis inactive pendant 1 seconde, soit une période complète de 2 secondes.
+
+!!! warning
+    Ces bits sont pilotés automatiquement par le moteur D.L.S. Utilisez-les en lecture, avec le préfixe `SYS:` dans le code d'un autre module D.L.S.
 
 ---
 
