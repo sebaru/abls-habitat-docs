@@ -89,7 +89,8 @@ sequenceDiagram
     API-->>A: enable, log_level, mqtt_hostname/port/password,<br/>mqtt_over_ssl, mqtt_qos, master_hostname
     A->>MA: Connexion, abonnements TEST et LOG, testament STATUS
     A->>ML: Connexion, abonnements SET_DO/ et SET_AO/
-    A->>MA: HEARTBEAT périodique
+    A->>MA: STATUS retenu (état, alive=true)
+    A->>MA: Signe de vie STATUS toutes les 60 s
 ```
 
 ### 1. Appel d'enrôlement
@@ -147,9 +148,11 @@ L'API répond `200` avec la configuration à distance :
 | **MQTT API** | `mqtt_hostname:mqtt_port` | `<domain>/AGENT/<tech_id>/TEST`, `.../LOG` | Pilotage à distance, remontée d'état |
 | **MQTT local** | `master_hostname:1883` | `SET_DO/<tech_id>/#`, `SET_AO/<tech_id>/#` | Commandes du moteur D.L.S vers les sorties |
 
-L'agent publie un **testament** (*last will*) sur `<domain>/AGENT/<tech_id>/STATUS` :
-si la liaison tombe, le broker publie `{"status": "dead"}` et la Console affiche l'agent hors
-service. Un `HEARTBEAT` périodique entretient l'indicateur de vie.
+L'agent publie son état sur `<domain>/AGENT/<tech_id>/STATUS`, avec un indicateur `alive` :
+un message retenu à chaque changement d'état, un signe de vie non retenu et sans `status` toutes
+les 60 secondes, et `alive=false` lors d'un arrêt propre. Il y déclare aussi un **testament**
+(*last will*) : si la liaison tombe, le broker publie `{"status": "dead", "alive": false}` et la
+Console affiche aussitôt l'agent hors service.
 
 ---
 

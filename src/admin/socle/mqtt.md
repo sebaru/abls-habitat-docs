@@ -131,7 +131,7 @@ système de la distribution. Le détail des chemins explorés figure dans
 | Symptôme | Piste |
 |---|---|
 | L'agent s'enrôle mais ne remonte aucun état | Connexion au bus API refusée : vérifier `mqtt_password` renvoyé par l'API et le pare-feu |
-| L'agent apparaît « mort » dans la Console alors qu'il tourne | Le testament MQTT a été publié : la connexion au bus API a été coupée |
+| L'agent apparaît « mort » dans la Console alors qu'il tourne | Infobulle « Connexion perdue » : le testament MQTT a été publié, la connexion au bus API a été coupée. Sans cette mention : aucun signe de vie depuis 75 s, agent bloqué ou d'une version antérieure au topic `STATUS` unifié |
 | Les sorties ne s'actionnent pas | Vérifier le bus **local** : `mosquitto_sub -h <master> -t 'SET_DO/#' -v` |
 | `Unable to find CA` au démarrage | `mqtt_over_ssl` actif sans magasin CA trouvé : renseigner `mqtt_ca_file` |
 | Erreur TLS *certificate verify failed* | Autorité privée non déclarée côté agent |
