@@ -59,7 +59,7 @@ sudo systemctl enable --now abls-agent-modbus@MODBUS_CHAUFFERIE.service
     sudo tee /etc/abls/abls-agent-modbus@MODBUS_CHAUFFERIE.conf >/dev/null <<'EOF'
     {
       "agent_tech_id": "MODBUS_CHAUFFERIE",
-      "domain_uuid":   "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "domain_uuid":   "aaaaaaaa-0000-0000-0000-000000000001",
       "domain_secret": "votre-secret-ici",
       "api_url":       "api.abls-habitat.fr"
     }
@@ -67,6 +67,8 @@ sudo systemctl enable --now abls-agent-modbus@MODBUS_CHAUFFERIE.service
     sudo chown root:abls /etc/abls/abls-agent-modbus@MODBUS_CHAUFFERIE.conf
     sudo chmod 0640      /etc/abls/abls-agent-modbus@MODBUS_CHAUFFERIE.conf
     ```
+
+    Remplacez cet UUID d'exemple par le véritable UUID du domaine.
 
     Attention : ce fichier n'est lu qu'**après** résolution du `tech_id`. L'unité templatée
     fournissant `--agent-tech-id %i`, la séquence fonctionne. Pour un agent à unité simple
@@ -110,8 +112,8 @@ La requête est signée. Les en-têtes portent l'identité et la preuve :
 
 | En-tête | Contenu |
 |---|---|
-| `X-ABLS-DOMAIN` | `domain_uuid` |
-| `X-ABLS-SERVER` | `server_uuid` |
+| `X-ABLS-DOMAIN` | `domain_uuid` au format UUID `8-4-4-4-12` hexadécimal |
+| `X-ABLS-SERVER` | `server_uuid` au format UUID `8-4-4-4-12` hexadécimal |
 | `X-ABLS-AGENT` | `agent_tech_id` |
 | `X-ABLS-TIMESTAMP` | Horodatage de la requête |
 | `X-ABLS-SIGNATURE` | HMAC-SHA256 sur l'ensemble, salé par le `domain_secret` |
